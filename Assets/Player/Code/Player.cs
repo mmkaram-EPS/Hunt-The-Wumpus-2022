@@ -13,14 +13,13 @@ public class Player : MonoBehaviour{
     
     
     void Start(){
-        GameObject childObject = transform.GetChild(0).gameObject;
-        childObject.SetActive(!gameObject.activeSelf);
-        
+        GameObject UI = transform.GetChild(0).gameObject;
+        UI.SetActive(!gameObject.activeSelf);
     }
     
     void Update(){
             //debug
-        Debug.Log(UIActive);
+        // Debug.Log(UIActive);
 
 
 
@@ -33,7 +32,7 @@ public class Player : MonoBehaviour{
         if (targetPos.x == 0 && targetPos.y == 0){  //This is a very bad fix to a bug which I cannot even begin to understand
                                                     //When the game is intialized the mouse position is auto-set to 0,0
                                                     //The player always goes to 0,0 at the start, and I don't want it to
-            Debug.Log("TargetPos: x:" + targetPos.x + " y: " + targetPos.y);
+            // Debug.Log("TargetPos: x:" + targetPos.x + " y: " + targetPos.y);
         }else{
             if (UIActive == false){
                 transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
@@ -42,13 +41,14 @@ public class Player : MonoBehaviour{
 
         //UI
         if (Input.GetButtonDown("Fire1")){
-            GameObject childObject = transform.GetChild(0).gameObject;
+            GameObject UI = transform.GetChild(0).gameObject;
             
             if(UIActive == false){
-                childObject.SetActive(gameObject.activeSelf);
+                UI.SetActive(gameObject.activeSelf);
+                targetPos = new Vector2(transform.position.x, transform.position.y);
                 UIActive = true;
             }else{
-                childObject.SetActive(!gameObject.activeSelf);
+                UI.SetActive(!gameObject.activeSelf);
                 UIActive = false;
 
             }
