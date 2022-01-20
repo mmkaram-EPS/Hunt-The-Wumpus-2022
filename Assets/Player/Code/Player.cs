@@ -1,25 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
-{
+
+public class Player : MonoBehaviour{
     private Vector2 targetPos;
     public float speed = 5;
-    // Start is called before the first frame update
-    void Start()
-    {
+    
+    private bool UIActive = false;
+    
+    
+    void Start(){
+        GameObject childObject = transform.GetChild(0).gameObject;
+        childObject.SetActive(!gameObject.activeSelf);
         
     }
+    
+    void Update(){
+            //debug
+        Debug.Log(UIActive);
 
-    // Update is called once per frame
-    void Update()
-    {
+
+
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButton(0)){
+        //Movement
+        if (Input.GetMouseButton(0) && UIActive == false){
             targetPos = new Vector2(mousePos.x, mousePos.y);
         }
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
 
+        if (targetPos.x == 0 && targetPos.y == 0){  //This is a very bad fix to a bug which I cannot even begin to understand
+                                                    //When the game is intialized the mouse position is auto-set to 0,0
+                                                    //The player always goes to 0,0 at the start, and I don't want it to
+            Debug.Log("TargetPos: x:" + targetPos.x + " y: " + targetPos.y);
+        }else{
+            if (UIActive == false){
+                transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
+            }
+        }
+
+        //UI
+        if (Input.GetButtonDown("Fire1")){
+            GameObject childObject = transform.GetChild(0).gameObject;
+            
+            if(UIActive == false){
+                childObject.SetActive(gameObject.activeSelf);
+                UIActive = true;
+            }else{
+                childObject.SetActive(!gameObject.activeSelf);
+                UIActive = false;
+
+            }
+        }
     }
 }
