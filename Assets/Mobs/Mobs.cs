@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mobs : MonoBehaviour
+abstract public class Mobs : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -15,4 +16,10 @@ public class Mobs : MonoBehaviour
     {
         
     }
+
+    abstract public void animate();
+    abstract public void whenPlayer(Player p);
+
+    abstract public void init();
+    
 }
