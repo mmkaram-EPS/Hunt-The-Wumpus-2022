@@ -45,7 +45,10 @@ public override void whenPlayer(Player p){
                 }
             }
         }
-        this.rl.room = locations[Random.Range(0, locations.count)];
+        
+        Destroy(batPB); //HOPEFULLY this doesn't destroy my variable and just the attatched game object (im not super familiar w destroy)
+        GameObject newLoc = rl.rooms[Random.Range(1,30)];
+        newLoc.containsBat = True;
 `*/
 
 }
