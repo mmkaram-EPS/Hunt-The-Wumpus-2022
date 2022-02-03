@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hole : Mobs{
     // Start is called before the first frame update
-    public Trivia tr;
+    //public Trivia tr;
     public GameObject holePB;
     //public RoomGeneration rg
     void Start()
