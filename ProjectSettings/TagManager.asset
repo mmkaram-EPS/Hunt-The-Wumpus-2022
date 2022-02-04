@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PickUpAble
   - Mob
+  - RoomMain
   layers:
   - Default
   - TransparentFX
