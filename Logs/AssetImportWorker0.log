@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit Education' Language: 'en' Physical Memory: 16095 MB
+OS: 'Windows 10  (10.0.19043) 64bit Education' Language: 'en' Physical Memory: 16052 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,116 +11,113 @@ C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/mkaram/Documents/GitHub/Hunt-The-Wumpus-2022
+C:/Users/ajosan25/OneDrive - Eastside Preparatory School/Documents/GitHub/Hunt-The-Wumpus-2022
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54719
-Successfully changed project path to: C:/Users/mkaram/Documents/GitHub/Hunt-The-Wumpus-2022
-C:/Users/mkaram/Documents/GitHub/Hunt-The-Wumpus-2022
+59899
+Successfully changed project path to: C:/Users/ajosan25/OneDrive - Eastside Preparatory School/Documents/GitHub/Hunt-The-Wumpus-2022
+C:/Users/ajosan25/OneDrive - Eastside Preparatory School/Documents/GitHub/Hunt-The-Wumpus-2022
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 146.31 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 170.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/mkaram/Documents/GitHub/Hunt-The-Wumpus-2022/Assets
+[Subsystems] Discovering subsystems at path C:/Users/ajosan25/OneDrive - Eastside Preparatory School/Documents/GitHub/Hunt-The-Wumpus-2022/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics (ID=0x9b41)
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
     Vendor:   
-    VRAM:     8047 MB
-    Driver:   30.0.100.9976
+    VRAM:     8026 MB
+    Driver:   30.0.101.1122
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56300
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56436
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007303 seconds.
+Registered in 0.007541 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 113.04 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 161.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.692 seconds
+- Completed reload, in  2.133 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1692ms)
-		BeginReloadAssembly (242ms)
+	ReloadAssembly (2133ms)
+		BeginReloadAssembly (317ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1231ms)
-			LoadAssemblies (241ms)
+		EndReloadAssembly (1561ms)
+			LoadAssemblies (311ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (410ms)
+			SetupTypeCache (523ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (81ms)
-			SetupLoadedEditorAssemblies (445ms)
+			RebuildScriptCaches (95ms)
+			SetupLoadedEditorAssemblies (557ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (113ms)
-				BeforeProcessingInitializeOnLoad (23ms)
-				ProcessInitializeOnLoadAttributes (224ms)
-				ProcessInitializeOnLoadMethodAttributes (70ms)
+				RefreshPlugins (162ms)
+				BeforeProcessingInitializeOnLoad (28ms)
+				ProcessInitializeOnLoadAttributes (254ms)
+				ProcessInitializeOnLoadMethodAttributes (97ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.025641 seconds.
+Registered in 0.032868 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 70.02 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 151.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.702 seconds
+- Completed reload, in  4.000 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2708ms)
-		BeginReloadAssembly (485ms)
+	ReloadAssembly (4004ms)
+		BeginReloadAssembly (612ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (22ms)
+			DisableScriptedObjects (19ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (47ms)
-		EndReloadAssembly (2082ms)
-			LoadAssemblies (380ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (3169ms)
+			LoadAssemblies (533ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (606ms)
+			SetupTypeCache (1007ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (80ms)
-			SetupLoadedEditorAssemblies (849ms)
+			RebuildScriptCaches (158ms)
+			SetupLoadedEditorAssemblies (1192ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (70ms)
-				BeforeProcessingInitializeOnLoad (128ms)
-				ProcessInitializeOnLoadAttributes (468ms)
-				ProcessInitializeOnLoadMethodAttributes (130ms)
-				AfterProcessingInitializeOnLoad (44ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (151ms)
+				BeforeProcessingInitializeOnLoad (261ms)
+				ProcessInitializeOnLoadAttributes (676ms)
+				ProcessInitializeOnLoadMethodAttributes (67ms)
+				AfterProcessingInitializeOnLoad (23ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (44ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
-Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
+Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2203 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.1 MB.
-System memory in use after: 96.1 MB.
+System memory in use before: 96.8 MB.
+System memory in use after: 96.9 MB.
 
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2636.
-Total: 5.434900 ms (FindLiveObjects: 0.252300 ms CreateObjectMapping: 0.168400 ms MarkObjects: 4.920500 ms  DeleteObjects: 0.092000 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2637.
+Total: 8.997000 ms (FindLiveObjects: 0.460200 ms CreateObjectMapping: 0.209800 ms MarkObjects: 8.138800 ms  DeleteObjects: 0.184100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -134,428 +131,176 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Minecraftia-Regular.ttf
-  artifactKey: Guid(d71720d2218814c4cb093bb22f405140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minecraftia-Regular.ttf using Guid(d71720d2218814c4cb093bb22f405140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2e814abdc49437f88ce55351bdb09f') in 0.343667 seconds 
-  Import took 0.350661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.719861 seconds.
-  path: Assets/Object.cs
-  artifactKey: Guid(50541aaa140d79e428832553f7cfb490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object.cs using Guid(50541aaa140d79e428832553f7cfb490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91a0b232dbed8537e2195778fd55308a') in 0.026208 seconds 
-  Import took 0.038035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.592164 seconds.
-  path: Assets/Inventory.json
-  artifactKey: Guid(55b23053be700b0488d4411afe822bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Inventory.json using Guid(55b23053be700b0488d4411afe822bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5debaced1287bd81a6f192dbdc9f0eaf') in 0.113013 seconds 
-  Import took 0.120830 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.503762 seconds.
-  path: Assets/Start Screen
-  artifactKey: Guid(5948371d49ad6a245be547e1c141d6be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Start Screen using Guid(5948371d49ad6a245be547e1c141d6be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c24d1db3ba84bd96b50e07f736168cb1') in 0.009377 seconds 
-  Import took 0.015188 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.826541 seconds.
-  path: Assets/Backgrouds/prelim bg.png
-  artifactKey: Guid(2088a401cc7f44c42a003b9a7dbafc24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Backgrouds/prelim bg.png using Guid(2088a401cc7f44c42a003b9a7dbafc24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84d92cd6421c5aa5a86dd61247c06640') in 0.078567 seconds 
-  Import took 0.085304 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.411353 seconds.
-  path: Assets/Mobs/bat_sprite_temp.PNG
-  artifactKey: Guid(7f40a09a79abf3d4d82bfc520a421375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mobs/bat_sprite_temp.PNG using Guid(7f40a09a79abf3d4d82bfc520a421375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c4023fe2bcc8d35c296e13231a7fb98') in 0.034537 seconds 
-  Import took 0.041809 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000620 seconds.
-  path: Assets/Mobs/HolePFB.prefab
-  artifactKey: Guid(9201a32d4f07efa41af3ed6c12db1d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mobs/HolePFB.prefab using Guid(9201a32d4f07efa41af3ed6c12db1d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f745405d988e26ed656b6cc451aa69ab') in 0.046002 seconds 
-  Import took 0.053163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000606 seconds.
-  path: Assets/Mobs/BatPFB.prefab
-  artifactKey: Guid(5b42cad9af836b04ea85a54d347ff46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mobs/BatPFB.prefab using Guid(5b42cad9af836b04ea85a54d347ff46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ac5fe19b859125beb71e08a4a007dba') in 0.031991 seconds 
-  Import took 0.038278 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000587 seconds.
-  path: Assets/Mobs/WumpusPFB.prefab
-  artifactKey: Guid(afbec7e727562cb4185c83f652eb7a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mobs/WumpusPFB.prefab using Guid(afbec7e727562cb4185c83f652eb7a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c84bd6b8795f61206d394d51cd353ba9') in 0.022839 seconds 
-  Import took 0.030488 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000553 seconds.
-  path: Assets/Mobs/wumpus_sprite_temp.PNG
-  artifactKey: Guid(38544657141c1074dbb89527d15d950d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mobs/wumpus_sprite_temp.PNG using Guid(38544657141c1074dbb89527d15d950d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c538b9aad567170bdb543f590eedb46c') in 0.040773 seconds 
-  Import took 0.049597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.313778 seconds.
-  path: Assets/Start Screen/prelim start bg.png
-  artifactKey: Guid(c058e000b83619e43bf001434f1727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Start Screen/prelim start bg.png using Guid(c058e000b83619e43bf001434f1727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6183df87f70377aa3300e96dbd15785') in 0.032558 seconds 
-  Import took 0.038382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000481 seconds.
   path: Assets/Start Screen/prelim start pattern.png
   artifactKey: Guid(5fc9e0c0a8b782a489411505b5c89e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Start Screen/prelim start pattern.png using Guid(5fc9e0c0a8b782a489411505b5c89e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91a6fe9e849892ec432607627eaab5a9') in 0.029104 seconds 
-  Import took 0.034196 seconds .
+Start importing Assets/Start Screen/prelim start pattern.png using Guid(5fc9e0c0a8b782a489411505b5c89e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91a6fe9e849892ec432607627eaab5a9') in 0.652464 seconds 
+  Import took 0.668434 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000884 seconds.
+  Time since last request: 0.000574 seconds.
+  path: Assets/Start Screen/prelim start bg.png
+  artifactKey: Guid(c058e000b83619e43bf001434f1727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Start Screen/prelim start bg.png using Guid(c058e000b83619e43bf001434f1727f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6183df87f70377aa3300e96dbd15785') in 0.059100 seconds 
+  Import took 0.080584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
   path: Assets/Start Screen/press to start.png
   artifactKey: Guid(65ce4523543b6c948b6dfaee44a85436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Start Screen/press to start.png using Guid(65ce4523543b6c948b6dfaee44a85436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2e08fa9527020badee2de363e7006d5') in 0.028488 seconds 
-  Import took 0.034065 seconds .
+Start importing Assets/Start Screen/press to start.png using Guid(65ce4523543b6c948b6dfaee44a85436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2e08fa9527020badee2de363e7006d5') in 0.057679 seconds 
+  Import took 0.075804 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000521 seconds.
+  Time since last request: 0.000477 seconds.
   path: Assets/Start Screen/prelim title.png
   artifactKey: Guid(786587c7845ca6a4b98d869553ba46b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Start Screen/prelim title.png using Guid(786587c7845ca6a4b98d869553ba46b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce19b07a8e73e52e39a88cfcb99240e') in 0.029844 seconds 
-  Import took 0.037659 seconds .
+Start importing Assets/Start Screen/prelim title.png using Guid(786587c7845ca6a4b98d869553ba46b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce19b07a8e73e52e39a88cfcb99240e') in 0.055018 seconds 
+  Import took 0.072125 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 247.833236 seconds.
-  path: Assets/Object/Object.cs
-  artifactKey: Guid(ed1a7d0602df5e04684767bc72832bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Object.cs using Guid(ed1a7d0602df5e04684767bc72832bdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c89ca85f5524c31e558ac5867c8bb7a8') in 0.007146 seconds 
-  Import took 0.012496 seconds .
+  Time since last request: 240.815517 seconds.
+  path: Assets/Player/Code
+  artifactKey: Guid(709ee55cb19d810469649e99788089b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/Code using Guid(709ee55cb19d810469649e99788089b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '762beec158ff5a935f6371c17158a002') in 0.019507 seconds 
+  Import took 0.037874 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.212260 seconds.
-  path: Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Closed Sprite Shape.prefab
-  artifactKey: Guid(c0583b4e855c74b8c82e7b9b5efb5ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Closed Sprite Shape.prefab using Guid(c0583b4e855c74b8c82e7b9b5efb5ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d633a999cd0db5a929fdc6b8a7f437c') in 0.033628 seconds 
-  Import took 0.037539 seconds .
+  Time since last request: 0.835025 seconds.
+  path: Assets/Player/Code/Player.cs
+  artifactKey: Guid(aa50bab19ee65b2458f1bca5525186b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/Code/Player.cs using Guid(aa50bab19ee65b2458f1bca5525186b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3a23533e99dd06476fc181b47467917') in 0.035021 seconds 
+  Import took 0.053538 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000322 seconds.
-  path: Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Open Sprite Shape.prefab
-  artifactKey: Guid(86ae7de409eb54f619fb1328e4d42480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Open Sprite Shape.prefab using Guid(86ae7de409eb54f619fb1328e4d42480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c78a7b90d603d0a33c7b4e3280488626') in 0.020062 seconds 
-  Import took 0.023888 seconds .
+  Time since last request: 110.117051 seconds.
+  path: Assets/Room Generation/RoomGen.cs
+  artifactKey: Guid(66075a3ebde385d49925e2f1a9e80168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Room Generation/RoomGen.cs using Guid(66075a3ebde385d49925e2f1a9e80168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25e6e03a6eea2e5932070864b5365b7') in 0.024733 seconds 
+  Import took 0.042302 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 24.416998 seconds.
-  path: Assets/Object/Circle.prefab
-  artifactKey: Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Circle.prefab using Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd204a604951fb77148aeb9075a42fc1b') in 0.026662 seconds 
-  Import took 0.031745 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.073798 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.905 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5907ms)
+		BeginReloadAssembly (978ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (60ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (240ms)
+		EndReloadAssembly (4588ms)
+			LoadAssemblies (962ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1647ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (221ms)
+			SetupLoadedEditorAssemblies (1543ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (382ms)
+				ProcessInitializeOnLoadAttributes (1038ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (33ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (48ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2192 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.1 MB.
+System memory in use after: 99.3 MB.
 
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2647.
+Total: 10.112100 ms (FindLiveObjects: 0.324100 ms CreateObjectMapping: 0.141800 ms MarkObjects: 9.577200 ms  DeleteObjects: 0.065100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 20.158941 seconds.
-  path: Assets/Object/Circle.prefab
-  artifactKey: Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Circle.prefab using Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff747613010 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> 4bb9b3fbc8d25a1ea353b447cf28f126 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff7475f1fe1 (Unity) ProduceArtifactV2
-0x00007ff74758883e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff747572798 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7476133e2 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> 4bb9b3fbc8d25a1ea353b447cf28f126 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '452124585642c521444f0a146ed10d02') in 0.808526 seconds 
-  Import took 0.816155 seconds .
+  Time since last request: 355.598409 seconds.
+  path: Assets/Room Generation/RoomGen.cs
+  artifactKey: Guid(66075a3ebde385d49925e2f1a9e80168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Room Generation/RoomGen.cs using Guid(66075a3ebde385d49925e2f1a9e80168) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df74fb30b176bce63bbdb61b3ebb3b75') in 0.030361 seconds 
+  Import took 0.048756 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 23.106194 seconds.
-  path: Assets/Scenes/Base Room.unity
-  artifactKey: Guid(18db38c9e1389c945b122cc27b41be5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Base Room.unity using Guid(18db38c9e1389c945b122cc27b41be5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '635cd56330c2499e6e4e9102faec00d6') in 0.013566 seconds 
-  Import took 0.028966 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.052447 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.378 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4379ms)
+		BeginReloadAssembly (585ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (25ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (134ms)
+		EndReloadAssembly (3516ms)
+			LoadAssemblies (651ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1303ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (176ms)
+			SetupLoadedEditorAssemblies (1178ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (268ms)
+				ProcessInitializeOnLoadAttributes (822ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (29ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2192 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.2 MB.
+System memory in use after: 99.3 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 131.288681 seconds.
-  path: Assets/Object/Circle.prefab
-  artifactKey: Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Circle.prefab using Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff747613010 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2649.
+Total: 8.344300 ms (FindLiveObjects: 0.297900 ms CreateObjectMapping: 0.133000 ms MarkObjects: 7.865000 ms  DeleteObjects: 0.045000 ms)
 
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> dada0acbaff81b1b507e54b6400befd5 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff7475f1fe1 (Unity) ProduceArtifactV2
-0x00007ff74758883e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff747572798 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7476133e2 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> dada0acbaff81b1b507e54b6400befd5 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '0886101682ce41de185c96950b7f2422') in 0.013375 seconds 
-  Import took 0.020620 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.456478 seconds.
-  path: Assets/Object/Circle.prefab
-  artifactKey: Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Circle.prefab using Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff747613010 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> f4c637f2aea8248cad0e84e52152fd57 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff7475f1fe1 (Unity) ProduceArtifactV2
-0x00007ff74758883e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff747572798 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7476133e2 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> f4c637f2aea8248cad0e84e52152fd57 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '71e7e830ce94df04f5c5f672bab67b4d') in 0.013451 seconds 
-  Import took 0.020776 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.468826 seconds.
-  path: Assets/Object/Circle.prefab
-  artifactKey: Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Circle.prefab using Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff747613010 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> f4c637f2aea8248cad0e84e52152fd57 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff7475f1fe1 (Unity) ProduceArtifactV2
-0x00007ff74758883e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff747572798 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7476133e2 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> f4c637f2aea8248cad0e84e52152fd57 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '71e7e830ce94df04f5c5f672bab67b4d') in 0.011924 seconds 
-  Import took 0.017345 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.929736 seconds.
-  path: Assets/Object/Circle.prefab
-  artifactKey: Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Object/Circle.prefab using Guid(829065ce448e47e44b19ac687657809a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff747613010 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> f4c637f2aea8248cad0e84e52152fd57 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7476280c2 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7475f9e82 (Unity) ResolveArtifactV2
-0x00007ff7475f1fe1 (Unity) ProduceArtifactV2
-0x00007ff74758883e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff747572798 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7476133e2 (Unity) ImportToObjects
-0x00007ff747612458 (Unity) ImportAsset
-0x00007ff7475ac998 (Unity) AssetImportWorker::Import
-0x00007ff7475d203a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff7476595a2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff74765b700 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff74765ee7e (Unity) asio::io_service::run
-0x00007ff7475fab9b (Unity) RunAssetImportWorkerClientV2
-0x00007ff7475fabf0 (Unity) RunAssetImporterV2
-0x00007ff7470a23dd (Unity) Application::InitializeProject
-0x00007ff7474f7252 (Unity) WinMain
-0x00007ff748b85752 (Unity) __scrt_common_main_seh
-0x00007ffca78454e0 (KERNEL32) BaseThreadInitThunk
-0x00007ffca908485b (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000), Assets/Object/Circle.prefab from editor
-Resuming Guid(829065ce448e47e44b19ac687657809a) Importer(-1,00000000000000000000000000000000) -> f4c637f2aea8248cad0e84e52152fd57 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '71e7e830ce94df04f5c5f672bab67b4d') in 0.026881 seconds 
-  Import took 0.036830 seconds .
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
