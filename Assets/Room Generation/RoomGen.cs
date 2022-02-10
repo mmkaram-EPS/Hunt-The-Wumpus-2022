@@ -8,21 +8,26 @@ public class RoomGen : MonoBehaviour
     ArrayList rooms = new ArrayList();
     //ArrayList roomsAsIntegers = new ArrayList();
 
+    public GameObject roomPrefab;
+
     void Start()
     {
         RoomGenerate();
-        Debug.Log(rooms.Count);
     }
 
     void RoomGenerate()
     {
         for (int i = 0; i < 30; i++)
         {
-            rooms.Add(new Room(i));
+            GameObject instance = Instantiate(roomPrefab);
+            Room instanceRoom = instance.GetComponent<Room>();
+            rooms.Add(instanceRoom);
+            instanceRoom.Create(i);
             notVisited.Add(i);
             //roomsAsIntegers += i;
         }
         RoomConnect(rooms);
+        Debug.Log(rooms.Count);
     }
 
     void RoomConnect(ArrayList arr)
