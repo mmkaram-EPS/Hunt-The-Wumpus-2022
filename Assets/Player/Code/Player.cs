@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour{
+
+    public int coins;
+
     private Vector2 targetPos;
     public float speed = 5;
     
