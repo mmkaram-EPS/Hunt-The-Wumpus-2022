@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomGen : MonoBehaviour
 {
-    ArrayList visited = new ArrayList();
+    ArrayList notVisited = new ArrayList();
     ArrayList rooms = new ArrayList();
     //ArrayList roomsAsIntegers = new ArrayList();
 
@@ -19,14 +19,15 @@ public class RoomGen : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             rooms.Add(new Room(i));
+            notVisited.Add(i);
             //roomsAsIntegers += i;
         }
-        RoomConnect((Room) rooms[0], (Room) rooms[29], 0);
+        RoomConnect(rooms);
     }
 
-    void RoomConnect(Room room, Room prevRoom, int id)
+    void RoomConnect(ArrayList arr)
     {
-        if (id == 29)
+        /*if (id == 29)
         {
             return;
         }
@@ -63,21 +64,7 @@ public class RoomGen : MonoBehaviour
             Room hie = (Room)roomsToConnect[i];
             hi += hie.id;
         }
-        Debug.Log("Room " + id + "Connected: " + hi);
+        Debug.Log("Room " + id + "Connected: " + hi);*/
     }
 }
 
-public class Room : MonoBehaviour
-{
-    ArrayList connected;
-    public int id;
-    public Room(int _id)
-    {
-        id = _id;
-        Debug.Log(id);
-    }
-    public void Assign(ArrayList _connected)
-    {
-        connected = _connected;
-    }
-}
