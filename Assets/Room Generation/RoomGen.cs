@@ -5,7 +5,8 @@ using UnityEngine;
 public class RoomGen : MonoBehaviour
 {
     ArrayList notVisited = new ArrayList();
-    ArrayList rooms = new ArrayList();
+    //needed this public for my code
+    public ArrayList rooms = new ArrayList();
     //ArrayList roomsAsIntegers = new ArrayList();
 
     public GameObject roomPrefab;
