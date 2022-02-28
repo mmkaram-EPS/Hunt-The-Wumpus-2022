@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Hole : Mobs{
     // Start is called before the first frame update
-    //public Trivia tr;
+    public Trivia tr;
     public GameObject holePB;
-    //public RoomGeneration rg
+    public RoomGen rg;
     void Start()
     {
         
@@ -22,8 +22,7 @@ public class Hole : Mobs{
     }
     public override void whenPlayer(Player p){
         //again assuming im getting a bool from trivia
-        /*
-        if (tr.askQuestion){
+        /*if (tr.askQuestion){
             GameObject newLoc = rg.locations[Random.Range(1,30)];
             //if location is stored by player
             p.location = newLoc;
@@ -33,12 +32,12 @@ public class Hole : Mobs{
                     Destroy(p);
                     newLoc.codeThatInitializesPlayer();
                 }
-                else(){
+                else{
                     pass;
                 }
             }
-        }
-        */
+        }*/
+    
     }
 
     public override void init(){

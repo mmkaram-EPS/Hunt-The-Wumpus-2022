@@ -64,3 +64,5 @@ public class Trivia : MonoBehaviour
             array[i] = t;
         }
     }
+//missing this :p
+}
