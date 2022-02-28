@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class RoomGen : MonoBehaviour
 {
+
     ArrayList notVisited = new ArrayList();
     //needed this public for my code
     public ArrayList rooms = new ArrayList();
 
+    ArrayList rooms = new ArrayList();
     public int roomWithWumpus;
 
     public GameObject roomPrefab;
