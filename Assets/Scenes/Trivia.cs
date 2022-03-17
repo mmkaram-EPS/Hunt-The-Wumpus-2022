@@ -65,4 +65,9 @@ public class Trivia : MonoBehaviour
         }
     }
 //missing this :p
+
+    public static boolean toAnswer()
+    {
+
+    }
 }
