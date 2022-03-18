@@ -8,9 +8,9 @@ public class Trivia : MonoBehaviour
     void Start()
     {
         string[] input = System.IO.File.ReadAllLines(@"C: \Users\jespelien\Documents\GitHub\Hunt - The - Wumpus - 2022\data.txt"); //read data from file
-        string[,,] organizedQuestions;
+        ArrayList organizedData = new ArrayList();
         string[] questions;
-        string[] toShuffle;
+        string[] toShuffle = new string[4];
 
         /*data is formatted as follows: 
          Question
@@ -25,18 +25,19 @@ public class Trivia : MonoBehaviour
         //Each row of the array has a set of 4 answers, correct, wrong1, wrong2, wrong3
         //to be shuffled
         for (int i = 0; i < 350; i = i+5) {
-            questions[i] = input[i]; //question
+            // If we need to read from questions ever, we will uncomment this
+            //questions[i] = input[i]; //question
             toShuffle[i] = input[i + 1]; //right
             toShuffle[i + 1] = input[i + 2]; //wrong1
             toShuffle[i + 2] = input[i + 3]; //wrong2
             toShuffle[i + 3] = input[i + 4]; //wrong3
-            Shuffle<toShuffle>;
+            Shuffle(toShuffle);
 
 
-            organizedData[i, 0] = toShuffle[i]; //right
-            organizedData[i, 1] = toShuffle[i + 1]; //wrong1
-            organizedData[i, 2] = toShuffle[i + 2]; //wrong2
-            organizedData[i, 3] = toShuffle[i + 3]; //wrong3
+            organizedData.Add(toShuffle[i]); //right
+            organizedData.Add(toShuffle[i]); //wrong1
+            organizedData.Add(toShuffle[i]); //wrong2
+            organizedData.Add(toShuffle[i]); //wrong3
         }
         
 
@@ -50,7 +51,7 @@ public class Trivia : MonoBehaviour
     }
 
     //took this pretty straightforward fischer yates shuffle from somewhere
-    static void Shuffle<T>(T[] array)
+    static void Shuffle(string[] array)
     {
         int n = array.Length;
         for (int i = 0; i < (n - 1); i++)
@@ -58,16 +59,16 @@ public class Trivia : MonoBehaviour
             // Use Next on random instance with an argument.
             // ... The argument is an exclusive bound.
             //     So we will not go past the end of the array.
-            int r = i + _random.Next(n - i);
-            T t = array[r];
+            int r = i + Random.Range(0, n - i);
+            string t = array[r];
             array[r] = array[i];
             array[i] = t;
         }
     }
 //missing this :p
 
-    public static boolean toAnswer()
+    public static bool toAnswer()
     {
-
+        return true;
     }
 }
