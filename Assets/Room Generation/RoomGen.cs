@@ -9,7 +9,6 @@ public class RoomGen : MonoBehaviour
     //needed this public for my code
     public ArrayList rooms = new ArrayList();
 
-    ArrayList rooms = new ArrayList();
     public int roomWithWumpus;
 
     public GameObject roomPrefab;
