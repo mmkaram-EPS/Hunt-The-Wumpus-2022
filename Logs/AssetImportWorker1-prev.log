@@ -139,3 +139,36 @@ Received Import Request.
 Start importing Assets/Room Generation/Room.prefab using Guid(c8997084b406456498ec6c7139acbf44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a6a629c7e5f012a94b6178e8afd5c06') in 0.391032 seconds 
   Import took 0.408224 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 10587.989557 seconds.
+  path: Assets/Start.cs
+  artifactKey: Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Start.cs using Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a23cc08350c50495378147a6487bd5') in 0.093832 seconds 
+  Import took 0.412837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 172.007733 seconds.
+  path: Assets/begin.cs
+  artifactKey: Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/begin.cs using Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c3d585ea1cfceb0ef6584bb2959dde0') in 0.019344 seconds 
+  Import took 0.035402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.797541 seconds.
+  path: Assets/begin.cs
+  artifactKey: Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/begin.cs using Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878370d577b98f09382e2fe46a2f7fde') in 0.019889 seconds 
+  Import took 0.033037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 563.169581 seconds.
+  path: Assets/begin.cs
+  artifactKey: Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/begin.cs using Guid(5fa99ce0a63eca44290172bbb3e5ba2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50955cb51ccaedbba8a89dd938b7cb24') in 0.021767 seconds 
+  Import took 0.052970 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
