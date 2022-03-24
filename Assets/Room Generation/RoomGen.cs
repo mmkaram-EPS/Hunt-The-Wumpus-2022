@@ -19,6 +19,11 @@ public class RoomGen : MonoBehaviour
         RoomGenerate();
     }
 
+    void LoadRoom()
+    {
+
+    }
+
     // Create all of the rooms
     void RoomGenerate()
     {
