@@ -9,6 +9,8 @@ public class RoomGen : MonoBehaviour
     //needed this public for my code
     public ArrayList rooms = new ArrayList();
 
+    public Room activeRoom;
+
     public int roomWithWumpus;
 
     public GameObject roomPrefab;
@@ -21,7 +23,7 @@ public class RoomGen : MonoBehaviour
 
     void LoadRoom()
     {
-
+         
     }
 
     // Create all of the rooms

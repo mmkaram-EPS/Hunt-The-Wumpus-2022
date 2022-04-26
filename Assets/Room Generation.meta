@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:Assets/Mobs.meta
-guid: 728591b0dbbb4e94eb225f6be2069a87
-=======
-guid: a6d850d6e29ac0f418d0f53186f0c263
->>>>>>> Stashed changes:Assets/Room Generation.meta
+guid: cff9908f49d62664691da960e16b240c
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
