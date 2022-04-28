@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    coins = 100;
+    int coins = 100;
     ArrayList arrowArray = new ArrayList();
     // Start is called before the first frame update
     void Start()
@@ -22,21 +22,21 @@ public class Shop : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            Arrows arrow = new Arrows()
+            Arrows arrow = new Arrows();
             arrowArray.Add(arrow);
             coins -= arrow.cost;
         }
     }
 }
     
-abstract class Item 
+public abstract class Item 
     {
       
     }
 
 public class Arrows : Item 
     {
-        static int cost = 100;
+        public int cost = 100;
     }
 
 public class WumpusLocation : Item 
