@@ -13,10 +13,11 @@ public class Player : MonoBehaviour{
     public float speed = 5;
     
     private bool UIActive = false;
+
+    public GameObject UI;
     
     
     void Start(){
-        GameObject UI = transform.GetChild(0).gameObject;
         UI.SetActive(!gameObject.activeSelf);
     }
     
