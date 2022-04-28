@@ -9,10 +9,16 @@ public class RoomGen : MonoBehaviour
     //needed this public for my code
     public ArrayList rooms = new ArrayList();
 
-    public Room activeRoom;
+    ArrayList roomsAsGameObjects = new ArrayList();
 
-    public int roomWithWumpus;
+    // Currently Opened Room
+    public GameObject activeRoom;
 
+    // Room With Wumpus object
+    // This is not working yet, need to still work with Julian
+    // public GameObject roomWithWumpus;
+
+    // Prefab for rooms
     public GameObject roomPrefab;
 
     // Start Function
@@ -21,9 +27,14 @@ public class RoomGen : MonoBehaviour
         RoomGenerate();
     }
 
-    void LoadRoom()
+    void LoadRoom(GameObject roomToLoad)
     {
-         
+        roomToLoad.SetActive(true);
+        if (activeRoom != null)
+        {
+            activeRoom.SetActive(false);
+        }
+        activeRoom = roomToLoad;
     }
 
     // Create all of the rooms
@@ -34,10 +45,14 @@ public class RoomGen : MonoBehaviour
         {
             // Instantiate the room prefab
             GameObject instance = Instantiate(roomPrefab);
+
+            roomsAsGameObjects.Add(roomPrefab);
+
             // Get the room class from the prefab
             Room instanceRoom = instance.GetComponent<Room>();
             // Add the room class to the list of rooms
             rooms.Add(instanceRoom);
+
             // Assign the Id to the room class
             instanceRoom.Create(i);
 
@@ -45,7 +60,9 @@ public class RoomGen : MonoBehaviour
         }
 
         // Call the method to connect the rooms
-        RoomConnect((Room) rooms[0]);
+        // This is commented out because the code is currently not working
+        //RoomConnect((Room) rooms[0]);
+        LoadRoom((GameObject)roomsAsGameObjects[1]);
     }
 
     // Connect the Rooms to each other, randomly
@@ -106,7 +123,9 @@ public class RoomGen : MonoBehaviour
             // Add this room to the rooms that have been assigned
             assigned.Add(current);
         }
-        Debug.Log("Done!");
+
+        // Load the First Room
+        LoadRoom((GameObject) roomsAsGameObjects[1]);
 
         #region old_code
         /*if (id == 29)

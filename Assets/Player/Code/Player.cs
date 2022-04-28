@@ -15,6 +15,7 @@ public class Player : MonoBehaviour{
     private bool UIActive = false;
 
     public GameObject UI;
+    public Rigidbody2D rb;
     
     
     void Start(){
@@ -33,15 +34,7 @@ public class Player : MonoBehaviour{
             targetPos = new Vector2(mousePos.x, mousePos.y);
         }
 
-        if (targetPos.x == 0 && targetPos.y == 0){  //This is a very bad fix to a bug which I cannot even begin to understand
-                                                    //When the game is intialized the mouse position is auto-set to 0,0
-                                                    //The player always goes to 0,0 at the start, and I don't want it to
-            // Debug.Log("TargetPos: x:" + targetPos.x + " y: " + targetPos.y);
-        }else{
-            if (UIActive == false){
-                transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
-            }
-        }
+        
 
         //UI
         if (Input.GetButtonDown("Fire1")){
@@ -56,6 +49,20 @@ public class Player : MonoBehaviour{
                 UIActive = false;
 
             }
+        }
+    }
+
+    // Doing movement in this method makes the code smoother, as per the docs.
+    void FixedUpdate()
+    {
+        if (!(targetPos.x == 0 && targetPos.y == 0) && UIActive == false)
+        {
+            // New GigaChad rigidbody code
+            // Using the same vector, just changing to Rigidbody
+            rb.MovePosition(Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed));
+            // Old transform.position code
+            // We need to use Rigidbody to get smooth movement with colliders
+            //transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
         }
     }
 }

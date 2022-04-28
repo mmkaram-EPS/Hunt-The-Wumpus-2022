@@ -8,11 +8,9 @@ public class Room : MonoBehaviour
 {
     public ArrayList connected = new ArrayList();
     public int id;
-    public TMP_Text tmp;
     public void Create(int _id)
     {
         id = _id;
-        tmp.text = _id.ToString();
     }
 
     public void toString()
