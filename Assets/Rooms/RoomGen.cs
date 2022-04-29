@@ -4,40 +4,49 @@ using UnityEngine;
 
 public class RoomGen : MonoBehaviour
 {
-
+    #region old_variables
+    /*
     ArrayList notVisited = new ArrayList();
     //needed this public for my code
     public ArrayList rooms = new ArrayList();
 
     ArrayList roomsAsGameObjects = new ArrayList();
+    // public GameObject roomWithWumpus;
+    */
+    #endregion
 
     // Currently Opened Room
     public GameObject activeRoom;
 
     // Room With Wumpus object
     // This is not working yet, need to still work with Julian
-    // public GameObject roomWithWumpus;
+    
 
     // Prefab for rooms
-    public GameObject roomPrefab;
+    public GameObject[] rooms;
 
     // Start Function
     void Start()
     {
-        RoomGenerate();
+        LoadRoom(0);
     }
 
-    void LoadRoom(GameObject roomToLoad)
+    public void LoadRoom(int roomToLoad)
     {
-        roomToLoad.SetActive(true);
+        GameObject roomObj = Instantiate(rooms[roomToLoad]);
+
         if (activeRoom != null)
         {
-            activeRoom.SetActive(false);
+            Destroy(activeRoom);
         }
-        activeRoom = roomToLoad;
+
+        activeRoom = roomObj;
     }
 
-    // Create all of the rooms
+    // Old, not hardcoded, code
+    #region old_code
+    /*
+     * // Create all of the rooms
     void RoomGenerate()
     {
         // For loop that loops through 30 rooms to create
@@ -62,7 +71,7 @@ public class RoomGen : MonoBehaviour
         // Call the method to connect the rooms
         // This is commented out because the code is currently not working
         //RoomConnect((Room) rooms[0]);
-        LoadRoom((GameObject)roomsAsGameObjects[1]);
+        LoadRoom(1);
     }
 
     // Connect the Rooms to each other, randomly
@@ -125,10 +134,9 @@ public class RoomGen : MonoBehaviour
         }
 
         // Load the First Room
-        LoadRoom((GameObject) roomsAsGameObjects[1]);
+        LoadRoom(1);
 
-        #region old_code
-        /*if (id == 29)
+        if (id == 29)
         {
             return;
         }
@@ -166,8 +174,7 @@ public class RoomGen : MonoBehaviour
             hi += hie.id;
         }
         Debug.Log("Room " + id + "Connected: " + hi);*/
-        #endregion
-    }
+    #endregion
 
     // Gain information about the rooms
     #region access_the_rooms
