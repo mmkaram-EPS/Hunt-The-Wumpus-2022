@@ -16,6 +16,7 @@ public class Player : MonoBehaviour{
 
     public GameObject UI;
     public Rigidbody2D rb;
+    public Animator anim;
     
     
     void Start(){
@@ -34,11 +35,14 @@ public class Player : MonoBehaviour{
             targetPos = new Vector2(mousePos.x, mousePos.y);
         }
 
-        
+        Vector2 animPos = new Vector2(transform.position.x - targetPos.x, transform.position.y - targetPos.y);
+
+        anim.SetFloat("x", animPos.x);
+        anim.SetFloat("y", animPos.y);
 
         //UI
         if (Input.GetButtonDown("Fire1")){
-            GameObject UI = transform.GetChild(0).gameObject;
+            //GameObject UI = transform.GetChild(0).gameObject;
             
             if(UIActive == false){
                 UI.SetActive(gameObject.activeSelf);
