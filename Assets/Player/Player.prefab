@@ -104,6 +104,7 @@ MonoBehaviour:
   coins: 0
   speed: 3
   UI: {fileID: 8310091607620113500}
+  rb: {fileID: 1250470833726159838}
   anim: {fileID: 994778399}
 --- !u!95 &994778399
 Animator:

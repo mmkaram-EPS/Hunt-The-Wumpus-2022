@@ -305,9 +305,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  doorUIPanel: {fileID: 5263742736258623306}
   roomLoader: {fileID: 0}
   roomConnectedTo: 0
+  doorCanvas: {fileID: 5263742736258623310}
+  doorUIPanel: {fileID: 5263742736258623306}
 --- !u!1 &5263742736752078186
 GameObject:
   m_ObjectHideFlags: 0
