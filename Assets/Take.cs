@@ -7,8 +7,6 @@ public class Take : MonoBehaviour
 
     public GameObject button;
     public bool isCorrect = false;
-    public static Take instance;
-
 
     // Start is called before the first frame update
     void Start()

@@ -16,11 +16,15 @@ public class Player : MonoBehaviour{
 
     public GameObject UI;
     public Rigidbody2D rb;
+    public GameObject player;
     public Animator anim;
     
     
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
+        rb = GetComponent<Rigidbody2D>();
+        anim = player.gameObject.GetComponent<Animator>();
+        anim.runtimeAnimatorController = Resources.Load("Assests/Player/Animation/Player.controller") as RuntimeAnimatorController;
     }
     
     void Update(){
