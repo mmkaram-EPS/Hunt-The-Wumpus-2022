@@ -18,6 +18,7 @@ public class Player : MonoBehaviour{
     public Rigidbody2D rb;
     public GameObject player;
     public Animator anim;
+    public Wumpus w;
     
     
     void Start(){
@@ -57,6 +58,12 @@ public class Player : MonoBehaviour{
                 UIActive = false;
 
             }
+        }
+        if(Input.GetKeyDown(KeyCode.P)){
+            w.forceSpawn();
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+            w.forceUISpawn();
         }
     }
 

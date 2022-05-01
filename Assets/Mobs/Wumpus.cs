@@ -7,62 +7,88 @@ public class Wumpus : Mobs
     //RoomGeneration room;
     // Start is called before the first frame update
     public GameObject wumpusPB;
-    //public RoomGeneration rg
-    //public Trivia tr
+    public RoomGen rg;
+    public Trivia tr;
+    public GameObject ph; 
+
+    public GameObject[] objs;
+
+    public bool wumpSpawned;
+
+    Room wumpusLoc;
+    public GameObject tempConversion;
+    public Player p;
+    public GameObject wumpusUI;
     void Start()
     {
+    wumpusPB.SetActive(false);   
+    foreach (GameObject go in objs){
+        /*if (((GameObject.FindGameObjectWithTag("Mobs")) && (wumpSpawned = false))){
+            init(wumpusLoc);
+            wumpSpawned = true;
+        }*/
+        if (go.name == "WumpusPFB"){
+            wumpSpawned = true;
+        }
+    }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+    public void forceSpawn(){
+        wumpusPB.SetActive(true);
+    }
+    public void forceUISpawn(){
+        wumpusUI.SetActive(true);
     }
 
+
     public override void whenPlayer(Player p){
-        //activate trivia
-        //im assuming that the function will return a true or false based on persons answer?
-        //so
-        /*if (!tr.askQuestion){
-            //switch scenes to death scene
+        wumpusUI.SetActive(true);
+        if (!tr.toAnswer()){
+            //switch scenes to death scene via destroying all the rooms and other spawned game objects (excluding start and lore screen) to reset the game
+            /*
+            for (int p = 0; p < rg.rooms.count; p++){
+                Destroy(rg.rooms[i]);
+                }
+            foreach (GameObject o in objs){
+            for (int u = 0; u < 50; u++){ 
+            ph = GameObject.FindGameObjectWithTags(GameIntro)
+            if (ph != null){
+                pass;
+                }
+            }
+            else{
+                Destroy(objs[u]);
+                            }
+            }
+            Instantiate(DeathCanvas) //should include buttons for retry and everything
+            */
+            Debug.Log("Die");
         }
-        else(){
-            this.move();
+        else{
+            move();
         }
-        */
+        
     }
     public override void animate()
     {
 
     }
-    public override void init()
+    public override void init(Room r)
     {
         Instantiate(wumpusPB);
-    }
-    public void move()
-    {
-        /*
-           for (int i = 0; i < rg.rooms.count; i++){
-               wumpsLoc = rg.rooms[i].GameObject.Find("Wumpus"); //I have no idea if this will work cause im thinking its gonna throw the null before I can pass but we'll see
-               if (wumpsLoc == Null){
-                   pass;
-               }
-               else{
-                   Destroy(wumpusPB); //HOPEFULLY this doesn't destroy my variable and just the attatched game object (im not super familiar w destroy)
-                   GameObject newLoc = rg.rooms[Random.Range(1,30)];
-                   newLoc.containsWumpus = True;
-                        //After this I assume we can just put some code in the rg file like
-                        //run it in update
-                        //if (this.containsWumpus){
-                            //Wumpus.init();
-                        //} 
-                        //idrk
-                  
-               }
-               }
-           } 
+        wumpusLoc = r;
 
-        */
     }
-}
+    public override void move()
+    {
+        Destroy(wumpusPB);
+        wumpSpawned = false;
+        Debug.Log(rg.rooms[Random.Range(0,30)]);//wait for angads updates to change into different location
+    }
+    
+} 
