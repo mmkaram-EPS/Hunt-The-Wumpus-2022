@@ -18,6 +18,8 @@ public class Trivia : MonoBehaviour
     public Take Q4;
     public Button newButton;
     int j = 0;
+    //missing reference on 154
+    public GameObject QuestionBox;
 
 
     // Start is called before the first frame update
@@ -104,7 +106,8 @@ public class Trivia : MonoBehaviour
         toAnswer();
     }
 
-    public static bool toAnswer()
+    //removed static to prevent reference error on the globals
+    public bool toAnswer()
     {
         if(Q1.isCorrect == true)
         {
