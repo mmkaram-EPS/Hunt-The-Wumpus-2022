@@ -85,8 +85,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8793768434406488444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef34d607ae238f94f8239b6355429192, type: 3}
+  m_Script: {fileID: 11500000, guid: 4015c2d8d0b9cf04684d118e7224940a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ps: {fileID: 0}
-  batPB: {fileID: 8793768434406488444}
+  batPB: {fileID: 0}
+  objs: []
+  bat1Spawned: 0
+  bat2Spawned: 0
+  batNo: 0
