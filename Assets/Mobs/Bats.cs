@@ -64,12 +64,6 @@ public void Start(){
 
 }
 
-public override void init(Room r){
-    //inst prefab
-   // Debug.Log(batPB);
-    Instantiate(batPB);
-    batLoc = r;
-}
 
 public override void move(){
     for (int i = 0; i < rg.rooms.Length; i++){

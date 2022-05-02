@@ -79,12 +79,6 @@ public class Wumpus : Mobs
     {
 
     }
-    public override void init(Room r)
-    {
-        Instantiate(wumpusPB);
-        wumpusLoc = r;
-
-    }
     public override void move()
     {
         Destroy(wumpusPB);

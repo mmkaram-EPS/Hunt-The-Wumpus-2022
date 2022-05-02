@@ -41,9 +41,6 @@ public class Hole : Mobs{
         */
     }
 
-    public override void init(Room r){
-        Instantiate(holePB);
-    }
     public override void move()
     {
         throw new System.NotImplementedException();
