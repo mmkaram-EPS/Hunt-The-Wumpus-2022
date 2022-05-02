@@ -31,6 +31,7 @@ public class Wumpus : Mobs
             wumpSpawned = true;
         }
     }
+    wumpusUI.SetActive(false);
         
     }
 

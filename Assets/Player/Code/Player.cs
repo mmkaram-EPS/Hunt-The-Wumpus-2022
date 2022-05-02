@@ -19,6 +19,7 @@ public class Player : MonoBehaviour{
     public GameObject player;
     public Animator anim;
     public Wumpus w;
+    public GameObject wumpus;
     
     
     void Start(){
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour{
         rb = GetComponent<Rigidbody2D>();
         anim = player.gameObject.GetComponent<Animator>();
         anim.runtimeAnimatorController = Resources.Load("Assets/Player/Animation/Player.controller") as RuntimeAnimatorController;
+        wumpus.SetActive(false);
     }
     
     void Update(){
