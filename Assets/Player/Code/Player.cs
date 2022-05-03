@@ -34,11 +34,8 @@ public class Player : MonoBehaviour{
         anim = player.gameObject.GetComponent<Animator>();
         anim.runtimeAnimatorController = Resources.Load("Assets/Player/Animation/Player.controller") as RuntimeAnimatorController;
         //wumpus spawn
-        //i.wumpinit();
-        wumpus = GameObject.Find("WumpusPFB");
-        Debug.Log(wumpus);
-//        wumpus.SetActive(false);
     }
+
     
     void Update(){
             //debug
@@ -72,10 +69,13 @@ public class Player : MonoBehaviour{
             }
         }
         if(Input.GetKeyDown(KeyCode.P)){
-            //wumpus.SetActive(true);
+            i.wumpinit(wumpus);
+            wumpus = GameObject.Find("WumpusPFB(Clone)");
+            wumpus.SetActive(true);
+            Debug.Log(wumpus.activeSelf);
         }
         if(Input.GetKeyDown(KeyCode.L)){
-           // wumpus.GetComponent("WumpUI").enabled = true;
+           GameObject.Find("WumpusUI").SetActive(true);
         }
     }
 

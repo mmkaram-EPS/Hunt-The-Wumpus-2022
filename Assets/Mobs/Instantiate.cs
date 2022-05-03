@@ -18,19 +18,18 @@ public class Instantiate : MonoBehaviour {
     {
         
     }
-    public void wumpinit()
+    public void wumpinit(GameObject pfab)
     {
         //Instantiate(wumpusPB);
-        Instantiate(Resources.Load("WumpusPFB"));
-        
+        Instantiate(pfab);
     }
-    public void batinit()
+    public void batinit(GameObject pfab)
     {
         //Instantiate(wumpusPB);
         Instantiate(Resources.Load("BatPFB"));
 
     }
-    public void holeinit()
+    public void holeinit(GameObject pfab)
     {
         //Instantiate(wumpusPB);
         Instantiate(Resources.Load("WumpusPFB"));

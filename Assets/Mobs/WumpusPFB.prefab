@@ -1092,14 +1092,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wumpusPB: {fileID: 8960823132468390223}
-  rg: {fileID: 0}
+  rg: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
   tr: {fileID: 0}
   ph: {fileID: 0}
   objs: []
   wumpSpawned: 0
   tempConversion: {fileID: 0}
-  p: {fileID: 0}
-  wumpusUI: {fileID: 0}
+  p: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
+  wumpusUI: {fileID: 9070658001178930034}
 --- !u!222 &5411500418105505564
 CanvasRenderer:
   m_ObjectHideFlags: 0
