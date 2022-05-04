@@ -21,7 +21,6 @@ public class Wumpus : Mobs
     public GameObject wumpusUI;
     void Start()
     {
-    wumpusPB.SetActive(false);   
     foreach (GameObject go in objs){
         /*if (((GameObject.FindGameObjectWithTag("Mobs")) && (wumpSpawned = false))){
             init(wumpusLoc);
@@ -31,7 +30,6 @@ public class Wumpus : Mobs
             wumpSpawned = true;
         }
     }
-    wumpusUI.SetActive(false);
         
     }
 

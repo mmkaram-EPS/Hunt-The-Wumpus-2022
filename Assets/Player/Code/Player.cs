@@ -70,12 +70,12 @@ public class Player : MonoBehaviour{
         }
         if(Input.GetKeyDown(KeyCode.P)){
             i.wumpinit(wumpus);
-            wumpus = GameObject.Find("WumpusPFB(Clone)");
+           // wumpus = GameObject.Find("WumpusPFB(Clone)");
             wumpus.SetActive(true);
             Debug.Log(wumpus.activeSelf);
         }
         if(Input.GetKeyDown(KeyCode.L)){
-           GameObject.Find("WumpusUI").SetActive(true);
+           //wumpus.transform.GetChild(0).SetActive(true);
         }
     }
 
