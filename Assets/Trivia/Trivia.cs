@@ -1,29 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Trivia : MonoBehaviour
 {
     public static Take grabar;
     public bool isRight = false;
 
-    List<string> questions;
     List<string> toShuffle;
     List<List<string>> mainThing;
     ArrayList organizedData = new ArrayList();
     List<string> placeholder;
-    public static Take Q1;
-    public static Take Q2;
-    public static Take Q3;
-    public static Take Q4;
-    GameObject QuestionBox;
+    public Take Q1;
+    public Take Q2;
+    public Take Q3;
+    public Take Q4;
+    public Button newButton;
+    int j = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
         string[] input = System.IO.File.ReadAllLines(@"C: \Users\jespelien\Documents\GitHub\Hunt - The - Wumpus - 2022\data.txt"); //read data from file
-        /*data is formatted as follows: 
+        List<string> questions = new List<string>();
+        /*data is formatted as follows:
          Question
          Answer 1 (correct)
          Answer 2
@@ -36,14 +38,20 @@ public class Trivia : MonoBehaviour
         //Organize answers into 2d array, answers into separate array to make shuffling easier
         //Each row of the array has a set of 4 answers, correct, wrong1, wrong2, wrong3
         //to be shuffled
-
-        for (int i = 0; i < 350; i = i+5) {
+        List<string> temp = new List<string>(5);
+        for (int i = 0; i < input.Length; i = i + 5)
+        {
+            for (j = 0; j < 5; j++)
+            {
+                temp.Add(input[i]);
+                i++;
+            }
             // If we need to read from questions ever, we will uncomment this
-            questions[i] = input[i]; //question
-            toShuffle[i] = input[i + 1]; //right
-            toShuffle[i + 1] = input[i + 2]; //wrong1
-            toShuffle[i + 2] = input[i + 3]; //wrong2
-            toShuffle[i + 3] = input[i + 4]; //wrong3
+            questions.Add(temp[0]); //question
+            toShuffle.Add(temp[1]); //right
+            toShuffle.Add(temp[2]); //wrong1
+            toShuffle.Add(temp[3]); //wrong2
+            toShuffle.Add(temp[4]); //wrong3
             Shuffle(toShuffle);
 
             organizedData.Add(toShuffle[i]); //right
@@ -56,20 +64,23 @@ public class Trivia : MonoBehaviour
         {
             placeholder.Add(questions[i]);
             placeholder.Add(toShuffle[i]);
-            placeholder.Add(toShuffle[i+1]);
-            placeholder.Add(toShuffle[i+2]);
+            placeholder.Add(toShuffle[i + 1]);
+            placeholder.Add(toShuffle[i + 2]);
             placeholder.Add(toShuffle[i + 3]);
             mainThing.Add(placeholder);
         }
-   
 
+        j = 0;
+        temp.Clear();
+        newButton = GetComponent<Button>();
+        newButton.onClick.AddListener(tooAnswer);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //took this pretty straightforward fischer yates shuffle from somewhere
@@ -87,11 +98,16 @@ public class Trivia : MonoBehaviour
             array[i] = t;
         }
     }
-//missing this :p
+    //missing this :p
+
+    public void tooAnswer()
+    {
+        toAnswer();
+    }
 
     public static bool toAnswer()
     {
-        if(Q1.isCorrect == true)
+        if (Q1.isCorrect == true)
         {
             return true;
         }
@@ -115,7 +131,7 @@ public class Trivia : MonoBehaviour
         List<string> use;
         use = mainThing[Random.Range(0, mainThing.Count)];
         Q1.button.GetComponent<UnityEngine.UI.Text>().text = mainThing[0][1];
-        if(mainThing[0][1] == organizedData[0])
+        if (mainThing[0][1] == organizedData[0])
         {
             Q1.isCorrect = true;
         }
