@@ -14,6 +14,7 @@ public class Door : MonoBehaviour
     public Canvas doorCanvas;
     public GameObject doorUIPanel;
 
+    [SerializeField]
     private bool canPressE = false;
 
     void Awake()
@@ -54,7 +55,7 @@ public class Door : MonoBehaviour
     void Update()
     {
         // If they can press E and do
-        if (canPressE && Input.GetKeyDown(KeyCode.E))
+        if (canPressE && Input.GetKey(KeyCode.E))
         {
             // Load the next room
             roomLoader.LoadRoom(roomConnectedTo);

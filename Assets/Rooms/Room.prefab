@@ -52,6 +52,8 @@ GameObject:
   - component: {fileID: 1399739342}
   - component: {fileID: 103055489}
   - component: {fileID: 8703718608331898930}
+  - component: {fileID: 871388905}
+  - component: {fileID: 3585891679079701302}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -164,7 +166,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0250573, y: 0.38825512}
+  m_Offset: {x: -1.440352, y: 0.38825512}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -175,7 +177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.98671633, y: 1.0234897}
+  m_Size: {x: 0.1561271, y: 1.0234897}
   m_EdgeRadius: 0
 --- !u!61 &3585891679875188966
 BoxCollider2D:
@@ -346,6 +348,58 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25449795, y: 0.5449563}
   m_EdgeRadius: 0
+--- !u!61 &871388905
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585891679875188985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.81130403, y: 0.38541257}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 1.8}
+    newSize: {x: 3.2, y: 1.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.57126725, y: 1.0291748}
+  m_EdgeRadius: 0
+--- !u!61 &3585891679079701302
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585891679875188985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.2287138, y: 0.5341218}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.2, y: 1.8}
+    newSize: {x: 3.2, y: 1.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25413275, y: 0.7317563}
+  m_EdgeRadius: 0
 --- !u!1001 &3585891679911693245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,6 +407,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 861272442}
     m_Modifications:
+    - target: {fileID: 5263742736372208947, guid: aebb7042df0aa0545ac954296b649288, type: 3}
+      propertyPath: roomConnectedTo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5263742736752078186, guid: aebb7042df0aa0545ac954296b649288, type: 3}
       propertyPath: m_Name
       value: Door (1)

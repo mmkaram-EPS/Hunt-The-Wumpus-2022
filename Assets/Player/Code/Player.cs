@@ -16,13 +16,13 @@ public class Player : MonoBehaviour{
 
     public GameObject UI;
     public Rigidbody2D rb;
-    public GameObject player;
     public Animator anim;
 
     //wumpus spawn
     //im gonna move this to a separate script later if needed
     public Wumpus w;
-    public Room r;
+    // We can use RoomGen.activeRoom for this
+    //public Room r;
     public GameObject wumpus;
     public Instantiate i;
     
@@ -30,9 +30,6 @@ public class Player : MonoBehaviour{
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player");
-        anim = player.gameObject.GetComponent<Animator>();
-        anim.runtimeAnimatorController = Resources.Load("Assets/Player/Animation/Player.controller") as RuntimeAnimatorController;
         //wumpus spawn
     }
 
