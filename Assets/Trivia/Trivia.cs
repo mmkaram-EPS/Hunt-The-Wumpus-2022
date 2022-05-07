@@ -18,6 +18,8 @@ public class Trivia : MonoBehaviour
     public Take Q4;
     public Button newButton;
     int j = 0;
+    //missing reference on 154
+    public GameObject QuestionBox;
 
 
     // Start is called before the first frame update
@@ -25,7 +27,7 @@ public class Trivia : MonoBehaviour
     {
         string[] input = System.IO.File.ReadAllLines(@"C: \Users\jespelien\Documents\GitHub\Hunt - The - Wumpus - 2022\data.txt"); //read data from file
         List<string> questions = new List<string>();
-        /*data is formatted as follows:
+        /*data is formatted as follows: 
          Question
          Answer 1 (correct)
          Answer 2
@@ -39,9 +41,8 @@ public class Trivia : MonoBehaviour
         //Each row of the array has a set of 4 answers, correct, wrong1, wrong2, wrong3
         //to be shuffled
         List<string> temp = new List<string>(5);
-        for (int i = 0; i < input.Length; i = i + 5)
-        {
-            for (j = 0; j < 5; j++)
+        for (int i = 0; i < input.Length; i = i+5) {
+            for(j = 0; j < 5; j++)
             {
                 temp.Add(input[i]);
                 i++;
@@ -64,8 +65,8 @@ public class Trivia : MonoBehaviour
         {
             placeholder.Add(questions[i]);
             placeholder.Add(toShuffle[i]);
-            placeholder.Add(toShuffle[i + 1]);
-            placeholder.Add(toShuffle[i + 2]);
+            placeholder.Add(toShuffle[i+1]);
+            placeholder.Add(toShuffle[i+2]);
             placeholder.Add(toShuffle[i + 3]);
             mainThing.Add(placeholder);
         }
@@ -80,7 +81,7 @@ public class Trivia : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     //took this pretty straightforward fischer yates shuffle from somewhere
@@ -98,16 +99,17 @@ public class Trivia : MonoBehaviour
             array[i] = t;
         }
     }
-    //missing this :p
+//missing this :p
 
     public void tooAnswer()
     {
         toAnswer();
     }
 
-    public static bool toAnswer()
+    //removed static to prevent reference error on the globals
+    public bool toAnswer()
     {
-        if (Q1.isCorrect == true)
+        if(Q1.isCorrect == true)
         {
             return true;
         }
@@ -131,7 +133,7 @@ public class Trivia : MonoBehaviour
         List<string> use;
         use = mainThing[Random.Range(0, mainThing.Count)];
         Q1.button.GetComponent<UnityEngine.UI.Text>().text = mainThing[0][1];
-        if (mainThing[0][1] == organizedData[0])
+        if(mainThing[0][1] == organizedData[0])
         {
             Q1.isCorrect = true;
         }

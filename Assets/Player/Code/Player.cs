@@ -16,12 +16,26 @@ public class Player : MonoBehaviour{
 
     public GameObject UI;
     public Rigidbody2D rb;
+    public GameObject player;
     public Animator anim;
+
+    //wumpus spawn
+    //im gonna move this to a separate script later if needed
+    public Wumpus w;
+    public Room r;
+    public GameObject wumpus;
+    public Instantiate i;
     
     
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Player");
+        anim = player.gameObject.GetComponent<Animator>();
+        anim.runtimeAnimatorController = Resources.Load("Assets/Player/Animation/Player.controller") as RuntimeAnimatorController;
+        //wumpus spawn
     }
+
     
     void Update(){
             //debug
@@ -53,6 +67,15 @@ public class Player : MonoBehaviour{
                 UIActive = false;
 
             }
+        }
+        if(Input.GetKeyDown(KeyCode.P)){
+            i.wumpinit(wumpus);
+           // wumpus = GameObject.Find("WumpusPFB(Clone)");
+            wumpus.SetActive(true);
+            Debug.Log(wumpus.activeSelf);
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+           //wumpus.transform.GetChild(0).SetActive(true);
         }
     }
 

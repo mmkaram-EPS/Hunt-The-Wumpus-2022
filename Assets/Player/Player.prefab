@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
-  speed: 9
+  speed: 3
   UI: {fileID: 8310091607620113500}
   rb: {fileID: 1250470833726159838}
   anim: {fileID: 994778399}
@@ -159,7 +159,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0014048144, y: 0.078372896}
+  m_Offset: {x: 0.00013136491, y: 0.078372896}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -170,7 +170,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18627359, y: 0.1725282}
+  m_Size: {x: 0.15486196, y: 0.1725282}
   m_EdgeRadius: 0
 --- !u!58 &994778398
 CircleCollider2D:
