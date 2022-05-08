@@ -12,17 +12,15 @@ public class Door : MonoBehaviour
     public int roomConnectedTo;
 
     // Door UI
-    public GameObject doorUIPanel;
+    public TextMeshProUGUI doorUIPanel;
 
     [SerializeField]
     private bool canPressE = false;
 
-    void Awake()
+    void Start()
     {
         // Set Room Loader (not in prefab)
         roomLoader = GameObject.FindWithTag("RoomMain").GetComponent<RoomGen>();
-
-        doorUIPanel.GetComponent<TextMeshPro>().SetText(roomConnectedTo.ToString());
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -47,11 +45,18 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        doorUIPanel.SetText(roomConnectedTo.ToString());
         // If they can press E and do
         if (canPressE && Input.GetKey(KeyCode.E))
         {
             // Load the next room
-            roomLoader.LoadRoom(roomConnectedTo);
+            // Start Counting from 1
+            roomLoader.LoadRoom(roomConnectedTo - 1);
+
+            GameObject player = GameObject.FindWithTag(playerTag);
+            player.GetComponent<Player>().Reset();
+
+            // Trigger some sort of fade animation in the future
         }
     }
 }

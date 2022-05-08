@@ -279,7 +279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3585891678896564669, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
       propertyPath: roomConnectedTo
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3585891679012805568, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
       propertyPath: m_Camera
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705237467102598781, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
       propertyPath: roomConnectedTo
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8705237467615747726, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
       propertyPath: roomLoader
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705237467615747726, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
       propertyPath: roomConnectedTo
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}

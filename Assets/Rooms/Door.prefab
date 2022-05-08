@@ -307,7 +307,7 @@ MonoBehaviour:
   playerTag: Player
   roomLoader: {fileID: 0}
   roomConnectedTo: 1
-  doorUIPanel: {fileID: 5263742735355315830}
+  doorUIPanel: {fileID: 5263742735355315828}
   canPressE: 0
 --- !u!1 &5263742736752078186
 GameObject:
