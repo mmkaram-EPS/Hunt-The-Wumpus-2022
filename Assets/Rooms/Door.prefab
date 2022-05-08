@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0041007996, y: 0.91880035}
+  m_AnchoredPosition: {x: 0, y: 0.735}
   m_SizeDelta: {x: -99.0132, y: -99.6233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5263742735355315829
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press E
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289874272
-  m_fontColor: {r: 0.37647063, g: 0.28627452, b: 0.69803923, a: 1}
+    rgba: 4283738032
+  m_fontColor: {r: 0.6901961, g: 0.654902, b: 0.32941177, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -307,8 +307,7 @@ MonoBehaviour:
   playerTag: Player
   roomLoader: {fileID: 0}
   roomConnectedTo: 1
-  doorCanvas: {fileID: 5263742736258623310}
-  doorUIPanel: {fileID: 5263742736258623306}
+  doorUIPanel: {fileID: 5263742735355315830}
   canPressE: 0
 --- !u!1 &5263742736752078186
 GameObject:

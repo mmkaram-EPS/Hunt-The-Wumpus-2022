@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Door : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class Door : MonoBehaviour
     public int roomConnectedTo;
 
     // Door UI
-    public Canvas doorCanvas;
     public GameObject doorUIPanel;
 
     [SerializeField]
@@ -22,11 +22,7 @@ public class Door : MonoBehaviour
         // Set Room Loader (not in prefab)
         roomLoader = GameObject.FindWithTag("RoomMain").GetComponent<RoomGen>();
 
-        // Set Main Camera on Canvas
-        doorCanvas.worldCamera = Camera.main;
-
-        // Disable the UI
-        doorUIPanel.SetActive(false);
+        doorUIPanel.GetComponent<TextMeshPro>().SetText(roomConnectedTo.ToString());
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -34,8 +30,6 @@ public class Door : MonoBehaviour
         // If hit by player
         if (col.gameObject.tag == playerTag)
         {  
-            // Show the UI
-            doorUIPanel.SetActive(true);
             // Can Press E
             canPressE = true;
         }
@@ -46,7 +40,6 @@ public class Door : MonoBehaviour
         // Opposite of on Trigger Enter
         if (col.gameObject.tag == playerTag)
         {
-            doorUIPanel.SetActive(false);
             canPressE = false;
         }
     }
