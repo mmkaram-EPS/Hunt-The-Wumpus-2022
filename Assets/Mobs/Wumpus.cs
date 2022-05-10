@@ -15,9 +15,9 @@ public class Wumpus : Mobs
 
     public bool wumpSpawned;
 
-    Room wumpusLoc;
+    public GameObject wumpLoc;
     public GameObject tempConversion;
-    public Player p;
+    public Player wp;
     public GameObject wumpusUI;
     void Start()
     {
@@ -30,6 +30,7 @@ public class Wumpus : Mobs
             wumpSpawned = true;
         }
     }
+    //wumpusUI = Instantiate(Resources.Load("Assets/Mobs/WumpusPFB/WumpUI")) as GameObject;
         
     }
 
@@ -43,11 +44,18 @@ public class Wumpus : Mobs
     public void forceUISpawn(){
         wumpusUI.SetActive(true);
     }
-
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.name == "Player"){
+            whenPlayer(wp);
+        }
+    }
 
     public override void whenPlayer(Player p){
+        Debug.Log("JAN X WUMPUS");
         wumpusUI.SetActive(true);
-        if (!tr.toAnswer()){
+        //for when trivia ready :D
+        //tr.tooAnswer();
+        /*if (!tr.toAnswerResult){
             //switch scenes to death scene via destroying all the rooms and other spawned game objects (excluding start and lore screen) to reset the game
             /*
             for (int p = 0; p < rg.rooms.count; p++){
@@ -65,12 +73,13 @@ public class Wumpus : Mobs
                             }
             }
             Instantiate(DeathCanvas) //should include buttons for retry and everything
-            */
+            
             Debug.Log("Die");
         }
         else{
-            move();
-        }
+            
+        }*/
+        Invoke("move", 2);
         
     }
     public override void animate()
@@ -81,7 +90,8 @@ public class Wumpus : Mobs
     {
         Destroy(wumpusPB);
         wumpSpawned = false;
-        Debug.Log(rg.rooms[Random.Range(0,30)]);//wait for angads updates to change into different location
+        wumpLoc = rg.rooms[Random.Range(0,30)];//wait for angads updates to change into different location
+        Debug.Log(wumpLoc);
     }
     
 } 

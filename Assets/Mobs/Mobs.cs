@@ -4,11 +4,11 @@ using UnityEngine;
 
 abstract public class Mobs : MonoBehaviour
 {
+
     void Start(){
 
     }
     void Update(){
-
     }
     abstract public void animate();
     abstract public void whenPlayer(Player p);

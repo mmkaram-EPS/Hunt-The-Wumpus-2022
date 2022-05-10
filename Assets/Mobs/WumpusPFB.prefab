@@ -518,6 +518,7 @@ GameObject:
   - component: {fileID: 5781811659753648989}
   - component: {fileID: 2438096374445386523}
   - component: {fileID: 3993255472493475724}
+  - component: {fileID: 1576135919449445936}
   m_Layer: 0
   m_Name: WumpFight
   m_TagString: Untagged
@@ -560,7 +561,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -660,6 +661,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &1576135919449445936
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6551109928372064000}
+  m_CullTransparentMesh: 1
 --- !u!1 &7067216514155625875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1061,7 @@ GameObject:
   - component: {fileID: 5411500418105505564}
   - component: {fileID: 1322705051557008263}
   - component: {fileID: 7583854337587051995}
+  - component: {fileID: 9041201884428662564}
   m_Layer: 0
   m_Name: WumpusPFB
   m_TagString: Untagged
@@ -1067,16 +1077,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960823132468390223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5780633532587238643}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.71400005}
+  m_AnchorMax: {x: 0.5, y: 0.71400005}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8725230186538022210
@@ -1097,8 +1107,9 @@ MonoBehaviour:
   ph: {fileID: 0}
   objs: []
   wumpSpawned: 0
+  wumpLoc: {fileID: 0}
   tempConversion: {fileID: 0}
-  p: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
+  wp: {fileID: 0}
   wumpusUI: {fileID: 9070658001178930034}
 --- !u!222 &5411500418105505564
 CanvasRenderer:
@@ -1115,7 +1126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960823132468390223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1189,6 +1200,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &9041201884428662564
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960823132468390223}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.77, y: 3.74}
+    newSize: {x: 6.77, y: 3.74}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7, y: 4}
+  m_EdgeRadius: 0
 --- !u!1 &9070658001178930034
 GameObject:
   m_ObjectHideFlags: 0

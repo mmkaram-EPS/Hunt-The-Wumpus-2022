@@ -20,6 +20,8 @@ public class Trivia : MonoBehaviour
     int j = 0;
     //missing reference on 154
     public GameObject QuestionBox;
+    //need to store value of toAnswer in tooAnswer uwu
+    public bool toAnswerResult;
 
 
     // Start is called before the first frame update
@@ -103,7 +105,7 @@ public class Trivia : MonoBehaviour
 
     public void tooAnswer()
     {
-        toAnswer();
+        toAnswerResult=toAnswer();
     }
 
     //removed static to prevent reference error on the globals

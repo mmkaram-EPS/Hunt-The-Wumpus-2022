@@ -22,7 +22,7 @@ public class Player : MonoBehaviour{
     //wumpus spawn
     //im gonna move this to a separate script later if needed
     public Wumpus w;
-    public Room r;
+    public GameObject r;
     public GameObject wumpus;
     public Instantiate i;
     
@@ -40,8 +40,12 @@ public class Player : MonoBehaviour{
     void Update(){
             //debug
         // Debug.Log(UIActive);
-
-
+        r = GameObject.Find("Room");
+        if(r = w.wumpLoc){
+            i.wumpinit(wumpus);
+           // wumpus = GameObject.Find("WumpusPFB(Clone)");
+            wumpus.SetActive(true);
+        }
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Movement
@@ -72,11 +76,12 @@ public class Player : MonoBehaviour{
             i.wumpinit(wumpus);
            // wumpus = GameObject.Find("WumpusPFB(Clone)");
             wumpus.SetActive(true);
-            Debug.Log(wumpus.activeSelf);
+            //Debug.Log(wumpus.activeSelf);
         }
         if(Input.GetKeyDown(KeyCode.L)){
            //wumpus.transform.GetChild(0).SetActive(true);
         }
+        
     }
 
     // Doing movement in this method makes the code smoother, as per the docs.
