@@ -10,7 +10,8 @@ public Player ps;
 
 public GameObject batPB;
 RoomGen rg;
-Room batLoc;
+GameObject batLoc1;
+GameObject batLoc2;
 public GameObject[] objs;
 public bool bat1Spawned;
 public bool bat2Spawned;
@@ -73,13 +74,13 @@ public override void move(){
             if (bat1Spawned = false){
                 if (this.batNo == 1){
                     Destroy(this.batPB); //HOPEFULLY this doesn't destroy my variable and just the attatched game object (im not super familiar w destroy)
-                   // this.batLoc = rg.rooms[Random.Range(1,30)]; reworking spawning system
+                   this.batLoc1 = rg.rooms[Random.Range(1,30)];
                 }
             }
             if (bat2Spawned = false){
                 if (this.batNo == 2){
                     Destroy(this.batPB);
-                   // this.batLoc = rg.rooms[Random.Range(1,30)];
+                   this.batLoc2 = rg.rooms[Random.Range(1,30)];
                 }
             }
 
