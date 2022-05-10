@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Door : MonoBehaviour
 {
@@ -11,21 +12,15 @@ public class Door : MonoBehaviour
     public int roomConnectedTo;
 
     // Door UI
-    public Canvas doorCanvas;
-    public GameObject doorUIPanel;
+    public TextMeshProUGUI doorUIPanel;
 
+    [SerializeField]
     private bool canPressE = false;
 
-    void Awake()
+    void Start()
     {
         // Set Room Loader (not in prefab)
         roomLoader = GameObject.FindWithTag("RoomMain").GetComponent<RoomGen>();
-
-        // Set Main Camera on Canvas
-        doorCanvas.worldCamera = Camera.main;
-
-        // Disable the UI
-        doorUIPanel.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -33,8 +28,6 @@ public class Door : MonoBehaviour
         // If hit by player
         if (col.gameObject.tag == playerTag)
         {  
-            // Show the UI
-            doorUIPanel.SetActive(true);
             // Can Press E
             canPressE = true;
         }
@@ -45,7 +38,6 @@ public class Door : MonoBehaviour
         // Opposite of on Trigger Enter
         if (col.gameObject.tag == playerTag)
         {
-            doorUIPanel.SetActive(false);
             canPressE = false;
         }
     }
@@ -53,11 +45,18 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        doorUIPanel.SetText(roomConnectedTo.ToString());
         // If they can press E and do
-        if (canPressE && Input.GetKeyDown(KeyCode.E))
+        if (canPressE && Input.GetKey(KeyCode.E))
         {
             // Load the next room
-            roomLoader.LoadRoom(roomConnectedTo);
+            // Start Counting from 1
+            roomLoader.LoadRoom(roomConnectedTo - 1);
+
+            GameObject player = GameObject.FindWithTag(playerTag);
+            player.GetComponent<Player>().Reset();
+
+            // Trigger some sort of fade animation in the future
         }
     }
 }

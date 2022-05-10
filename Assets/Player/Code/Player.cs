@@ -16,7 +16,6 @@ public class Player : MonoBehaviour{
 
     public GameObject UI;
     public Rigidbody2D rb;
-    public GameObject player;
     public Animator anim;
 
     //wumpus spawn
@@ -25,14 +24,13 @@ public class Player : MonoBehaviour{
     public GameObject r;
     public GameObject wumpus;
     public Instantiate i;
+
+    public Vector2 resetPos;
     
     
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player");
-        anim = player.gameObject.GetComponent<Animator>();
-        anim.runtimeAnimatorController = Resources.Load("Assets/Player/Animation/Player.controller") as RuntimeAnimatorController;
         //wumpus spawn
     }
 
@@ -96,5 +94,13 @@ public class Player : MonoBehaviour{
             // We need to use Rigidbody to get smooth movement with colliders
             //transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
         }
+    }
+
+    // Reset the player's position when called
+    // Called when new room is loaded
+    public void Reset()
+    {
+        transform.position = resetPos;
+        targetPos = resetPos;
     }
 }
