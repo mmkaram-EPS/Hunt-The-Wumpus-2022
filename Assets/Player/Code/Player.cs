@@ -80,6 +80,7 @@ public class Player : MonoBehaviour{
         if(Input.GetKeyDown(KeyCode.L)){
            i.batinit(bat);
            bat.SetActive(true);
+           Debug.Log(wumpus.activeSelf);
         }
         
     }
