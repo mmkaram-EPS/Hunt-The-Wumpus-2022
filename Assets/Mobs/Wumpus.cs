@@ -30,6 +30,7 @@ public class Wumpus : Mobs
             wumpSpawned = true;
         }
     }
+    wumpusUI = wumpusPB.transform.GetChild(0).gameObject;
     //wumpusUI = Instantiate(Resources.Load("Assets/Mobs/WumpusPFB/WumpUI")) as GameObject;
         
     }
@@ -53,6 +54,7 @@ public class Wumpus : Mobs
     public override void whenPlayer(Player p){
         Debug.Log("JAN X WUMPUS");
         wumpusUI.SetActive(true);
+        Debug.Log(wumpusUI.activeSelf);
         //for when trivia ready :D
         //tr.tooAnswer();
         /*if (!tr.toAnswerResult){
@@ -89,9 +91,10 @@ public class Wumpus : Mobs
     public override void move()
     {
         Destroy(wumpusPB);
+        wumpusUI.SetActive(false);
+        Debug.Log(wumpusUI.activeSelf);
         wumpSpawned = false;
         wumpLoc = rg.rooms[Random.Range(0,30)];//wait for angads updates to change into different location
-        Debug.Log(wumpLoc);
     }
     
 } 

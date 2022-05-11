@@ -23,6 +23,7 @@ public class Player : MonoBehaviour{
     public Wumpus w;
     public GameObject r;
     public GameObject wumpus;
+    public GameObject bat;
     public Instantiate i;
 
     public Vector2 resetPos;
@@ -77,7 +78,9 @@ public class Player : MonoBehaviour{
             //Debug.Log(wumpus.activeSelf);
         }
         if(Input.GetKeyDown(KeyCode.L)){
-           //wumpus.transform.GetChild(0).SetActive(true);
+           i.batinit(bat);
+           bat.SetActive(true);
+           Debug.Log(wumpus.activeSelf);
         }
         
     }
