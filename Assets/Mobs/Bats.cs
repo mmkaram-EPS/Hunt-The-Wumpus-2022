@@ -16,21 +16,31 @@ public GameObject[] objs;
 public bool bat1Spawned;
 public bool bat2Spawned;
 public int batNo;
+public RoomGen roomLoader;
 //assigning this object a room
 public Bats(){
 
 }
-
+private void OnCollisionEnter2D(Collision2D other) {
+    if (other.gameObject.name == "Player"){
+        whenPlayer(ps);
+    }
+}
 public override void whenPlayer(Player p){
     Debug.Log("player sensed");
-    if (this.batNo == 1){
+    move();
+    roomLoader.LoadRoom(Random.Range(1,30));
+    ps.Reset();
+    /*if (this.batNo == 1){
         bat1Spawned = false;
         move();
+        roomLoader.LoadRoom(rg.rooms[Random.Range(1,30)]);
     }
     if (this.batNo == 2){
         bat2Spawned = false;
         move();
-    }
+        roomLoader.LoadRoom(rg.rooms[Random.Range(1,30)]);
+    }*/
     /* 
     animate();
     Destroy(batPB)
@@ -67,7 +77,8 @@ public void Start(){
 
 
 public override void move(){
-    for (int i = 0; i < rg.rooms.Length; i++){
+    Debug.Log("nae nae");
+    /*for (int i = 0; i < rg.rooms.Length; i++){
         if (GameObject.Find("Bat") != null){
         }
         else{
@@ -92,6 +103,11 @@ public override void move(){
     public override void animate()
     {
         throw new System.NotImplementedException();
-    }
+    }*/
 
+}
+    public override void animate()
+    {
+        throw new System.NotImplementedException();
+    }
 }
