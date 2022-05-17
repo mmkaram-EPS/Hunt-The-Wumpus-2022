@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160564434675064211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 8310091607620113501}
@@ -105,11 +105,13 @@ MonoBehaviour:
   speed: 3
   UI: {fileID: 8310091607620113500}
   rb: {fileID: 1250470833726159838}
-  player: {fileID: 160564434675064211}
   anim: {fileID: 994778399}
   w: {fileID: 8725230186538022210, guid: afbec7e727562cb4185c83f652eb7a47, type: 3}
+  r: {fileID: 0}
   wumpus: {fileID: 8960823132468390223, guid: afbec7e727562cb4185c83f652eb7a47, type: 3}
+  bat: {fileID: 0}
   i: {fileID: 0}
+  resetPos: {x: 0, y: 0}
 --- !u!95 &994778399
 Animator:
   serializedVersion: 3
