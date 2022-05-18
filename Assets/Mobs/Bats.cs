@@ -27,10 +27,15 @@ private void OnCollisionEnter2D(Collision2D other) {
     }
 }
 public override void whenPlayer(Player p){
-    Debug.Log("player sensed");
     move();
-    roomLoader.LoadRoom(Random.Range(1,30));
-    ps.Reset();
+    if (bat1Spawned = false){
+        this.batNo = 1;
+        bat1Spawned = true;
+    }
+    if ((bat1Spawned = true)&&(bat2Spawned=false)){
+        this.batNo = 2;
+        bat2Spawned = true;
+    }
     /*if (this.batNo == 1){
         bat1Spawned = false;
         move();
@@ -58,6 +63,8 @@ public void Start(){
     //so im thinking just run this function with the room generation
     //putting the initialization in the construction is throwing an error for some reason
     //so this was my fix
+//    GameObject phder = GameObject.FindWithTag("playerTag");
+    //ps = phder.GetComponent<Player>();
     foreach (GameObject go in objs){
         if (((!GameObject.FindGameObjectWithTag("Mobs")) && (bat1Spawned = false))){
             //init(); going to rework initializing to a random room
@@ -77,7 +84,20 @@ public void Start(){
 
 
 public override void move(){
-    Debug.Log("nae nae");
+    roomLoader.LoadRoom(Random.Range(1,30));
+    ps.Reset();
+    Destroy(batPB);
+    //this.SetActive(false);
+   // Debug.Log(this.activeSelf);
+    if (this.batNo == 1){
+        bat1Spawned = false;
+        batLoc1 = rg.rooms[Random.Range(0,30)];
+    }
+    if (this.batNo == 2){
+        bat2Spawned = false;
+        batLoc2 = rg.rooms[Random.Range(0,30)];
+    }
+
     /*for (int i = 0; i < rg.rooms.Length; i++){
         if (GameObject.Find("Bat") != null){
         }
