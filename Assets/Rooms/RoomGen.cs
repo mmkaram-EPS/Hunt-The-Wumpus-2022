@@ -34,6 +34,7 @@ public class RoomGen : MonoBehaviour
     public void LoadRoom(int roomToLoad)
     {
         GameObject roomObj = Instantiate(rooms[roomToLoad]);
+        roomObj.tag = "Rooms";
 
         if (activeRoom != null)
         {
@@ -41,6 +42,7 @@ public class RoomGen : MonoBehaviour
         }
 
         activeRoom = roomObj;
+
     }
 
     // Old, not hardcoded, code

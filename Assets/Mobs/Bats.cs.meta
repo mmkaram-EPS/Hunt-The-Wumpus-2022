@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - ps: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
   - batPB: {fileID: 8793768434406488444, guid: 5b42cad9af836b04ea85a54d347ff46c, type: 3}
-  - roomLoader: {instanceID: 0}
+  - roomLoader: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
