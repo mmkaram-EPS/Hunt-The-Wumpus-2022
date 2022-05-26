@@ -9,6 +9,7 @@ public class New_Trivia : MonoBehaviour
     public Object data;
 
     public List<Question> dataFormatted = new List<Question>();
+    public List<Question> notDoneQuestion = new List<Question>();
 
     // Start is called before the first frame update
     void Start()
