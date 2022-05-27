@@ -192,3 +192,83 @@ Received Import Request.
 Start importing Assets/Mobs/bat_sprite_temp.PNG using Guid(7f40a09a79abf3d4d82bfc520a421375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c4023fe2bcc8d35c296e13231a7fb98') in 0.038474 seconds 
   Import took 0.050384 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.276824 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.271 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4273ms)
+		BeginReloadAssembly (503ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (24ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (112ms)
+		EndReloadAssembly (3545ms)
+			LoadAssemblies (800ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1145ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (178ms)
+			SetupLoadedEditorAssemblies (1149ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (266ms)
+				ProcessInitializeOnLoadAttributes (790ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (27ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2293 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.4 MB.
+System memory in use after: 106.6 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2795.
+Total: 8.475000 ms (FindLiveObjects: 0.443700 ms CreateObjectMapping: 0.211600 ms MarkObjects: 7.716100 ms  DeleteObjects: 0.099500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 309.477178 seconds.
+  path: Assets/Trivia/New_Trivia.cs
+  artifactKey: Guid(16077d5a7c2799f49bb7025acbf34ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Trivia/New_Trivia.cs using Guid(16077d5a7c2799f49bb7025acbf34ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62f844aca56caf5a87b1554a27535bb9') in 0.015655 seconds 
+  Import took 0.029410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 108.270885 seconds.
+  path: Assets/Trivia/data.csv
+  artifactKey: Guid(0d23148801cb5d645938ee6e20ddbee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Trivia/data.csv using Guid(0d23148801cb5d645938ee6e20ddbee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daf9c22820bcb932c915cfa0f33c5052') in 0.049192 seconds 
+  Import took 0.060403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.728969 seconds.
+  path: Assets/Scenes/TriviaScene.unity
+  artifactKey: Guid(079eebe10ba83734faa6a0a8466d549e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TriviaScene.unity using Guid(079eebe10ba83734faa6a0a8466d549e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16cc7a7038bd5c3932d499f429d88353') in 0.012358 seconds 
+  Import took 0.025453 seconds .
+
