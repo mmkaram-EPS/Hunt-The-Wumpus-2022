@@ -84,7 +84,6 @@ public void Start(){
 
 
 public override void move(){
-    Destroy(GameObject.FindGameObjectWithTag("Rooms"));
     roomLoader.LoadRoom(Random.Range(1,30));
     ps.Reset();
     Destroy(batPB);

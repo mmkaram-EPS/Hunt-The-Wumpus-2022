@@ -9,9 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4657637298044080833}
-  - component: {fileID: -6701546826809264322}
-  - component: {fileID: 659990129887756473}
-  - component: {fileID: 9042943952425321348}
   m_Layer: 0
   m_Name: HolePFB
   m_TagString: Untagged
@@ -33,6 +30,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &-6701546826809264322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,3 +125,5 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> 32df26dd91a9fbd96562d0381f3d6ff62b2588ee

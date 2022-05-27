@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
 
 public class Trivia : MonoBehaviour
 {
     public static Take grabar;
     public bool isRight = false;
-    
 
-    List<string> toShuffle = new List<string>();
-    List<List<string>> mainThing = new List<List<string>>();
+    List<string> toShuffle;
+    List<List<string>> mainThing;
     ArrayList organizedData = new ArrayList();
-    List<string> placeholder = new List<string>();
+    List<string> placeholder;
     public Take Q1;
     public Take Q2;
     public Take Q3;
@@ -26,14 +24,10 @@ public class Trivia : MonoBehaviour
     public bool toAnswerResult;
 
 
-    public Object assetObject;
-
-
     // Start is called before the first frame update
     void Start()
     {
-        
-        string[] input = System.IO.File.ReadAllLines(AssetDatabase.GetAssetPath(assetObject)); //read data from file
+        string[] input = System.IO.File.ReadAllLines(@"C: \Users\jespelien\Documents\GitHub\Hunt - The - Wumpus - 2022\data.txt"); //read data from file
         List<string> questions = new List<string>();
         /*data is formatted as follows: 
          Question
@@ -49,10 +43,11 @@ public class Trivia : MonoBehaviour
         //Each row of the array has a set of 4 answers, correct, wrong1, wrong2, wrong3
         //to be shuffled
         List<string> temp = new List<string>(5);
-        for (int i = 0; i < input.Length; i++) {
+        for (int i = 0; i < input.Length; i = i+5) {
             for(j = 0; j < 5; j++)
             {
-                    temp.Add(input[i]);
+                temp.Add(input[i]);
+                i++;
             }
             // If we need to read from questions ever, we will uncomment this
             questions.Add(temp[0]); //question
@@ -80,7 +75,9 @@ public class Trivia : MonoBehaviour
 
         j = 0;
         temp.Clear();
+        newButton = GetComponent<Button>();
         newButton.onClick.AddListener(tooAnswer);
+
     }
 
     // Update is called once per frame
