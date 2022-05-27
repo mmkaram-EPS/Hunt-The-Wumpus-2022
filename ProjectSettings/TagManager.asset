@@ -8,6 +8,7 @@ TagManager:
   - Mob
   - RoomMain
   - Interactable
+  - Rooms
   layers:
   - Default
   - TransparentFX

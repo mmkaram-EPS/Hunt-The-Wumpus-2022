@@ -33,7 +33,7 @@ public class Instantiate : MonoBehaviour {
     public void holeinit(GameObject pfab)
     {
         //Instantiate(wumpusPB);
-        Instantiate(Resources.Load("WumpusPFB"));
+        Instantiate(pfab);
 
     }
 }

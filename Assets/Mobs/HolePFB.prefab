@@ -45,7 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6adf54fe9244d44a74d3b6adf33f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holePB: {fileID: 0}
+  holePB: {fileID: 8930710696236910295}
+  playerDied: {fileID: 2274319318433575868, guid: dcfd2ba1d7f741c43a792bba9d21b0ac, type: 3}
+  p: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
+  triviaScreen: {fileID: 4795982913834150643, guid: 8533710201e8b06459b7d0b0884ec150, type: 3}
+  triviaActive: 0
 --- !u!61 &659990129887756473
 BoxCollider2D:
   m_ObjectHideFlags: 0

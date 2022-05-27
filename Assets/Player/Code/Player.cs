@@ -24,6 +24,7 @@ public class Player : MonoBehaviour{
     public GameObject r;
     public GameObject wumpus;
     public GameObject bat;
+    public GameObject hole;
     public Instantiate i;
 
     public Vector2 resetPos;
@@ -81,6 +82,10 @@ public class Player : MonoBehaviour{
            i.batinit(bat);
            bat.SetActive(true);
            Debug.Log(wumpus.activeSelf);
+        }
+        if(Input.GetKeyDown(KeyCode.H)){
+            i.holeinit(hole);
+            hole.SetActive(true);
         }
         
     }
