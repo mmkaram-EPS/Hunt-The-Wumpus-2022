@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using TMPro;
 
 public class New_Trivia : MonoBehaviour
 {
     public Object data;
 
-    public List<Question> dataFormatted = new List<Question>();
     public List<Question> notDoneQuestion = new List<Question>();
+
+    public TextMeshProUGUI button1;
+    public TextMeshProUGUI button2;
+    public TextMeshProUGUI button3;
+    public TextMeshProUGUI button4;
+
 
     // Start is called before the first frame update
     void Start()
     {
         FormatData();
+        LoadRandomQuestion();
     }
 
     void FormatData()
@@ -42,8 +49,55 @@ public class New_Trivia : MonoBehaviour
                 question.data.Add(item);
             }
 
-            dataFormatted.Add(question);
+            notDoneQuestion.Add(question);
         }
+    }
+
+    void LoadRandomQuestion()
+    {
+        // Random index
+        int index = Random.Range(0, notDoneQuestion.Count);
+        // Gets a random question from the list
+        Question currQ = notDoneQuestion[index];
+
+
+        List<int> randomizedOrder = RandomizeOrder(4);
+
+        // Set the text of all the buttons
+        button1.SetText(currQ.data[randomizedOrder[0]]);
+        button2.SetText(currQ.data[randomizedOrder[1]]);
+        button3.SetText(currQ.data[randomizedOrder[2]]);
+        button4.SetText(currQ.data[randomizedOrder[3]]);
+
+        // Removes the question from the list of selectable questions
+        notDoneQuestion.RemoveAt(index);
+    }
+
+    List<int> RandomizeOrder(int count)
+    {
+        // List which picks order of the data
+        List<int> normalOrder = new List<int>();
+
+        for (int i = 0; i < count; i++)
+        {
+            normalOrder.Add(i + 1);
+        }
+
+        // Randomized order 
+        List<int> randomOrder = new List<int>();
+        
+        // Randomly picks and adds item from normalOrder to random order
+        for (int i = 0; i < count; i++)
+        {
+            int rand = Random.Range(0, normalOrder.Count);
+
+            randomOrder.Add(normalOrder[rand]);
+
+            // Cannot pick the same slot twice
+            normalOrder.RemoveAt(rand);
+        }
+
+        return randomOrder;
     }
 }
 
