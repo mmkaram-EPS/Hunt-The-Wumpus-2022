@@ -13,32 +13,17 @@ public class New_Trivia : MonoBehaviour
 
     // Question Text Object
     public TextMeshProUGUI questionText;
+
     // Button Text Objects
     public TextMeshProUGUI button1;
     public TextMeshProUGUI button2;
     public TextMeshProUGUI button3;
     public TextMeshProUGUI button4;
 
-
-    // Correct Answer
-    [SerializeField]
-    private string correctAnswer = "";
-    // Questions needed
-    [SerializeField]
-    private int questionsNeeded = 0;
-    // Questions correct
-    [SerializeField]
-    private int questionsCorrect = 0;
-    // Trivia finished
-    [SerializeField]
-    private bool finished = false;
-
-
-    // Start is called before the first frame update
-    void Start()
+    // Awake for testing purposes
+    void Awake()
     {
         FormatData();
-        StartTrivia(1);
     }
 
     void FormatData()
@@ -70,20 +55,16 @@ public class New_Trivia : MonoBehaviour
         }
     }
 
-    void LoadRandomQuestion()
-    {
-        correctAnswer = "";
-
+    public string LoadRandomQuestion()
+    { 
         // Random index
         int index = Random.Range(0, notDoneQuestion.Count);
+
         // Gets a random question from the list
         Question currQ = notDoneQuestion[index];
 
         // Set Question Text
         questionText.SetText(currQ.data[0]);
-        //Set Right answer
-        correctAnswer = currQ.data[1];
-
 
         List<int> randomizedOrder = RandomizeOrder(4);
 
@@ -95,6 +76,8 @@ public class New_Trivia : MonoBehaviour
 
         // Removes the question from the list of selectable questions
         notDoneQuestion.RemoveAt(index);
+        
+        return currQ.data[1];
     }
 
     List<int> RandomizeOrder(int count)
@@ -122,35 +105,6 @@ public class New_Trivia : MonoBehaviour
         }
 
         return randomOrder;
-    }
-
-    public int StartTrivia(int questions)
-    {
-        questionsNeeded = questions;
-        questionsCorrect = 0;
-        finished = false;
-        LoadRandomQuestion();
-        while (!finished)
-        {
-        }
-        return questionsCorrect;
-    }
-    public void InputAnswer(TextMeshProUGUI answer)
-    {
-        // Questions needed reduce
-        questionsNeeded--;
-        //Load the next question
-        LoadRandomQuestion();
-        // If correct, increase score by 1
-        if (answer.text == correctAnswer)
-        {
-            questionsCorrect++;
-        }
-        // If done with all questions
-        if (questionsNeeded == 0)
-        {
-            finished = true;
-        }
     }
 }
 
