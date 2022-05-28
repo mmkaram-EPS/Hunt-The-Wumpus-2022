@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Threading;
 
 public class TriviaManager : MonoBehaviour
 {
@@ -15,10 +16,10 @@ public class TriviaManager : MonoBehaviour
     [SerializeField]
     private string correctAnswer = "";
 
+    private bool finished = false;
+
     void Start()
     {
-        // Set the Ui active to false by default
-        triviaUI.SetActive(false);
         // Test Load function
         Load(2, 1);
     }
@@ -27,9 +28,39 @@ public class TriviaManager : MonoBehaviour
     {
         triviaUI.SetActive(true);
 
+        finished = false;
+
         // Set the questionsNeeded, and start the first question
         questionsNeeded = amount;
         Next();
+
+        // Wait until finished
+        StartCoroutine(WaitUntilFinished());
+
+        // Check if enough are correct
+        if (questionsNeeded >= correctNeeded)
+        {
+            // Reset Everything
+            questionsNeeded = 0;
+            questionsCorrect = 0;
+            correctAnswer = "";
+            finished = false;
+
+            // Set the UI inactive
+            triviaUI.SetActive(false);
+
+            return true;
+        }
+
+        // Reset Everything
+        questionsNeeded = 0;
+        questionsCorrect = 0;
+        correctAnswer = "";
+
+        // Set the UI inactive
+        triviaUI.SetActive(false);
+
+        return false;
     }
 
     void Next()
@@ -37,13 +68,7 @@ public class TriviaManager : MonoBehaviour
         // If finished
         if (questionsNeeded == 0)
         {
-            // Reset Everything
-            questionsNeeded = 0;
-            questionsCorrect = 0;
-            correctAnswer = "";
-
-            // Set the UI inactive
-            triviaUI.SetActive(false);
+            finished = true;
         }
 
         questionsNeeded--;
@@ -62,5 +87,10 @@ public class TriviaManager : MonoBehaviour
         }
 
         Next();
+    }
+
+    IEnumerator WaitUntilFinished()
+    {
+        yield return new WaitWhile(() => finished);
     }
 }
