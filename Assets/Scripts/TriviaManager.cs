@@ -9,19 +9,15 @@ public class TriviaManager : MonoBehaviour
     public New_Trivia trivia;
     public GameObject triviaUI;
 
-    [SerializeField]
     private int questionsNeeded = 0;
-    [SerializeField]
     private int questionsCorrect = 0;
-    [SerializeField]
     private string correctAnswer = "";
 
     private bool finished = false;
 
     void Start()
     {
-        // Test Load function
-        StartCoroutine(Load(2, 1));
+        triviaUI.SetActive(false);
     }
 
     // Coroutine Because we need to wait until the cycle is finished
@@ -91,6 +87,8 @@ public class TriviaManager : MonoBehaviour
 
             // Set up correct UI anim here later
         }
+
+        // IF ANYONE WANTS TO PUT ANIMATIONS, PUT THEM HERE
 
         // Call the next question
         Next();

@@ -4,16 +4,6 @@ using UnityEngine;
 
 public class RoomGen : MonoBehaviour
 {
-    #region old_variables
-    /*
-    ArrayList notVisited = new ArrayList();
-    //needed this public for my code
-    public ArrayList rooms = new ArrayList();
-
-    ArrayList roomsAsGameObjects = new ArrayList();
-    // public GameObject roomWithWumpus;
-    */
-    #endregion
 
     // Currently Opened Room
     public GameObject activeRoom;
@@ -24,6 +14,8 @@ public class RoomGen : MonoBehaviour
 
     // Prefab for rooms
     public GameObject[] rooms;
+
+    public GameManager manager;
 
     // Start Function
     void Start()
@@ -41,140 +33,9 @@ public class RoomGen : MonoBehaviour
         }
 
         activeRoom = roomObj;
+
+        manager.turns++;
     }
-
-    // Old, not hardcoded, code
-    #region old_code
-    /*
-     * // Create all of the rooms
-    void RoomGenerate()
-    {
-        // For loop that loops through 30 rooms to create
-        for (int i = 0; i < 30; i++)
-        {
-            // Instantiate the room prefab
-            GameObject instance = Instantiate(roomPrefab);
-
-            roomsAsGameObjects.Add(roomPrefab);
-
-            // Get the room class from the prefab
-            Room instanceRoom = instance.GetComponent<Room>();
-            // Add the room class to the list of rooms
-            rooms.Add(instanceRoom);
-
-            // Assign the Id to the room class
-            instanceRoom.Create(i);
-
-            //roomsAsIntegers += i;
-        }
-
-        // Call the method to connect the rooms
-        // This is commented out because the code is currently not working
-        //RoomConnect((Room) rooms[0]);
-        LoadRoom(1);
-    }
-
-    // Connect the Rooms to each other, randomly
-    void RoomConnect(Room start)
-    {
-        // Already assigned nodes
-        ArrayList assigned = new ArrayList();
-        
-        // Not visited nodes
-        ArrayList notVisited = rooms;
-
-        // Fringe, helps us keep track of what we need to visit next
-        ArrayList fringe = new ArrayList();
-
-        // Add the start to the fringe
-        fringe.Add(start);
-
-
-        // While we still have not visited every room
-        while (notVisited.Count != 0)
-        {
-            // Popping from fringe
-            // We are taking the room object and removing it from the fringe
-            Room current = (Room) fringe[fringe.Count - 1];
-
-            // We must also remove the current room from the fringe
-            fringe.Remove(current);
-
-            // Because our Priority is to hit all thirty rooms, we have this notVisited ArrayList
-            // In this ArrayList, we must remove the current room
-            notVisited.Remove(current);
-
-            Debug.Log(current.id);
-            // Randomly select the neighboring nodes from notVisited list
-            for (int i = 0; i < 3; i++)
-            {
-                // Pick a random room that has not been visited
-                int randomRoomID = Random.Range(0, notVisited.Count - 1);
-
-                Debug.Log(randomRoomID);
-                Debug.Log(notVisited.Count);
-
-                // Relate the id to the room object
-                Room randomRoom = (Room)notVisited[randomRoomID];
-
-                // If we have not visited the new neighbor, or we are not planning to, add it to the fringe
-                // The fringe is kind of our to-do list
-                if (!fringe.Contains(randomRoom) && !assigned.Contains(randomRoom))
-                {
-                    // Add the new neighbor to the fringe, so we can connect this to the rooms as well
-                    fringe.Add(randomRoom);
-                }
-
-                // Add the new neighbor to the current room
-                current.connected.Add(randomRoom);
-            }
-
-            // Add this room to the rooms that have been assigned
-            assigned.Add(current);
-        }
-
-        // Load the First Room
-        LoadRoom(1);
-
-        if (id == 29)
-        {
-            return;
-        }
-        ArrayList roomsToConnect = new ArrayList();
-        roomsToConnect.Add(prevRoom);
-        if (visited.Count == 29)
-        {
-            for (int i = 0; i < 2; i++)
-            {
-                int connect = Random.Range(0, 29);
-                roomsToConnect.Add(rooms[connect]);
-            }
-        }
-        else
-        {
-            for (int i = 0; i < 2; i++)
-            {
-                int connect = Random.Range(0, 29);
-                if (visited.Contains(connect) || room.id == connect)
-                {
-                    RoomConnect(room, prevRoom, id);
-                    return;
-                }
-                visited.Add(connect);
-                roomsToConnect.Add(rooms[connect]);
-            }
-        }
-        room.Assign(roomsToConnect);
-        RoomConnect((Room) rooms[id + 1], room, id + 1);
-
-        string hi = "";
-        for (int i = 0; i < roomsToConnect.Count; i++)
-        {
-            Room hie = (Room)roomsToConnect[i];
-            hi += hie.id;
-        }
-        Debug.Log("Room " + id + "Connected: " + hi);*/
-    #endregion
 
     // Gain information about the rooms
     #region access_the_rooms

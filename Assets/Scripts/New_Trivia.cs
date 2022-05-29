@@ -11,6 +11,8 @@ public class New_Trivia : MonoBehaviour
 
     public List<Question> notDoneQuestion = new List<Question>();
 
+    public List<Question> doneQuestion = new List<Question>();
+
     // Question Text Object
     public TextMeshProUGUI questionText;
 
@@ -76,6 +78,7 @@ public class New_Trivia : MonoBehaviour
 
         // Removes the question from the list of selectable questions
         notDoneQuestion.RemoveAt(index);
+        doneQuestion.Add(currQ);
         
         return currQ.data[1];
     }
