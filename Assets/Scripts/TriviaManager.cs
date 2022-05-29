@@ -15,14 +15,17 @@ public class TriviaManager : MonoBehaviour
 
     private bool finished = false;
 
+    public Player player;
+
     void Start()
     {
         triviaUI.SetActive(false);
     }
 
     // Coroutine Because we need to wait until the cycle is finished
-    public IEnumerator Load(int amount, int correctNeeded)
+    public IEnumerator Load(int amount, int correctNeeded, System.Action<bool> callBack)
     {
+        player.Freeze();
         triviaUI.SetActive(true);
 
         finished = false;
@@ -38,16 +41,8 @@ public class TriviaManager : MonoBehaviour
         // Check if enough are correct
         if (questionsNeeded >= correctNeeded)
         {
-            // Reset Everything
-            questionsNeeded = 0;
-            questionsCorrect = 0;
-            correctAnswer = "";
-            finished = false;
 
-            // Set the UI inactive
-            triviaUI.SetActive(false);
-
-            yield return true;
+            callBack(true);
         }
 
         // Reset Everything
@@ -58,7 +53,9 @@ public class TriviaManager : MonoBehaviour
         // Set the UI inactive
         triviaUI.SetActive(false);
 
-        yield return false;
+        player.Freeze();
+
+        callBack(false);
     }
 
     void Next()

@@ -25,7 +25,8 @@ public class Player : MonoBehaviour{
     public Instantiate i;
 
     public Vector2 resetPos;
-    
+
+    bool isFrozen = false;
     
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
@@ -35,6 +36,11 @@ public class Player : MonoBehaviour{
 
     
     void Update(){
+
+        if (isFrozen)
+        {
+            return;
+        }
             //debug
         // Debug.Log(UIActive);
         r = GameObject.Find("Room");
@@ -107,5 +113,10 @@ public class Player : MonoBehaviour{
     {
         transform.position = resetPos;
         targetPos = resetPos;
+    }
+
+    public void Freeze()
+    {
+        isFrozen = !isFrozen;
     }
 }

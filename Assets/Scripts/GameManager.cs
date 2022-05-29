@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int coins;
-    public int turns;
+    // 0 coins at the start, 100 to collect
+    public int coins = 0;
+    // 0 turns at the start
+    public int turns = 0;
+    // Three arrows by default
+    public int arrowCount = 3;
 }

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    int coins = 100;
-    ArrayList arrowArray = new ArrayList();
+    public TriviaManager triviaManager;
+    public GameManager manager;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +20,13 @@ public class Shop : MonoBehaviour
         
     }
 
-    void purchaseArrows(int count)
+    void purchaseArrows()
     {
-        for (int i = 0; i < count; i++)
+        StartCoroutine(triviaManager.Load(2, 3, success =>
         {
-            Arrows arrow = new Arrows();
-            arrowArray.Add(arrow);
-            coins -= arrow.cost;
-        }
+            // Then get an arrow
+            manager.arrowCount++;
+        }));
     }
 }
     
