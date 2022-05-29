@@ -21,10 +21,11 @@ public class TriviaManager : MonoBehaviour
     void Start()
     {
         // Test Load function
-        Load(2, 1);
+        StartCoroutine(Load(2, 1));
     }
 
-    public bool Load(int amount, int correctNeeded)
+    // Coroutine Because we need to wait until the cycle is finished
+    public IEnumerator Load(int amount, int correctNeeded)
     {
         triviaUI.SetActive(true);
 
@@ -34,8 +35,9 @@ public class TriviaManager : MonoBehaviour
         questionsNeeded = amount;
         Next();
 
+
         // Wait until finished
-        StartCoroutine(WaitUntilFinished());
+        yield return new WaitUntil(() => finished);
 
         // Check if enough are correct
         if (questionsNeeded >= correctNeeded)
@@ -49,7 +51,7 @@ public class TriviaManager : MonoBehaviour
             // Set the UI inactive
             triviaUI.SetActive(false);
 
-            return true;
+            yield return true;
         }
 
         // Reset Everything
@@ -60,7 +62,7 @@ public class TriviaManager : MonoBehaviour
         // Set the UI inactive
         triviaUI.SetActive(false);
 
-        return false;
+        yield return false;
     }
 
     void Next()
@@ -69,16 +71,20 @@ public class TriviaManager : MonoBehaviour
         if (questionsNeeded == 0)
         {
             finished = true;
+            return;
         }
 
+        // Load the next question
         questionsNeeded--;
         correctAnswer = trivia.LoadRandomQuestion();
     }
 
     public void InputAnswer(TextMeshProUGUI answer)
     {
+        // Check if the answer is true
         if (answer.text == correctAnswer)
         {
+            // Update the questions correct count
             questionsCorrect++;
 
             Debug.Log("Correct");
@@ -86,11 +92,8 @@ public class TriviaManager : MonoBehaviour
             // Set up correct UI anim here later
         }
 
+        // Call the next question
         Next();
     }
 
-    IEnumerator WaitUntilFinished()
-    {
-        yield return new WaitWhile(() => finished);
-    }
 }
