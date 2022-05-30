@@ -22,11 +22,7 @@ public class Shop : MonoBehaviour
 
     void purchaseArrows()
     {
-        StartCoroutine(triviaManager.Load(2, 3, success =>
-        {
-            // Then get an arrow
-            manager.arrowCount++;
-        }));
+        triviaManager.LoadTrivia(2, 3);
     }
 }
     

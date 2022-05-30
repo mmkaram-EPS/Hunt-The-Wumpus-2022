@@ -22,8 +22,18 @@ public class TriviaManager : MonoBehaviour
         triviaUI.SetActive(false);
     }
 
+    public bool LoadTrivia(int amount, int correctNeeded)
+    {
+        StartCoroutine(Load(amount, correctNeeded, success =>
+        {
+            return true;
+        }));
+
+        return false;
+    }
+
     // Coroutine Because we need to wait until the cycle is finished
-    public IEnumerator Load(int amount, int correctNeeded, System.Action<bool> callBack)
+    IEnumerator Load(int amount, int correctNeeded, System.Action<bool> callBack)
     {
         player.Freeze();
         triviaUI.SetActive(true);
