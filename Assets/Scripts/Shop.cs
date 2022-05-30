@@ -7,41 +7,49 @@ public class Shop : MonoBehaviour
     public TriviaManager triviaManager;
     public GameManager manager;
 
+    public GameObject shopUI;
 
-    // Start is called before the first frame update
+    public Player player;
+
     void Start()
     {
-        
+        shopUI.SetActive(false);
+        ShopOpen();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShopInput(bool correct, string type)
     {
-        
+        Debug.Log(correct);
+        if(!correct)
+        {
+            return;
+        }
+
+        if(type == "arrow")
+        {
+            manager.arrowCount++;
+        }
+        else if (type == "secret")
+        {
+            manager.secretCount++;
+        }
+
+        ShopOpen();
     }
 
-    void purchaseArrows()
+    public void PurchaseArrows()
     {
-        triviaManager.LoadTrivia(2, 3);
+        triviaManager.LoadTrivia(3, 2, ShopInput, "arrow");
+    }
+
+    public void PurchaseSecret()
+    {
+        triviaManager.LoadTrivia(3, 2, ShopInput, "secret");
+    }
+
+    public void ShopOpen()
+    {
+        shopUI.SetActive(!shopUI.activeSelf);
+        player.Freeze();
     }
 }
-    
-public abstract class Item 
-    {
-      
-    }
-
-public class Arrows : Item 
-    {
-        public int cost = 100;
-    }
-
-public class WumpusLocation : Item 
-    {
-
-    }
-
-public class Hints : Item 
-    {
-
-    }

@@ -4,10 +4,14 @@ using UnityEngine;
 using TMPro;
 using System.Threading;
 
+
+public delegate void TriviaInput(bool correct, string type);
+
 public class TriviaManager : MonoBehaviour
 {
     public New_Trivia trivia;
     public GameObject triviaUI;
+    public GameObject shopUI;
 
     private int questionsNeeded = 0;
     private int questionsCorrect = 0;
@@ -22,18 +26,15 @@ public class TriviaManager : MonoBehaviour
         triviaUI.SetActive(false);
     }
 
-    public bool LoadTrivia(int amount, int correctNeeded)
+    public void LoadTrivia(int amount, int correctNeeded, TriviaInput target, string type)
     {
-        StartCoroutine(Load(amount, correctNeeded, success =>
-        {
-            return true;
-        }));
+        shopUI.SetActive(false);
 
-        return false;
+        StartCoroutine(Load(amount, correctNeeded, target, type));
     }
 
     // Coroutine Because we need to wait until the cycle is finished
-    IEnumerator Load(int amount, int correctNeeded, System.Action<bool> callBack)
+    IEnumerator Load(int amount, int correctNeeded, TriviaInput target, string type)
     {
         player.Freeze();
         triviaUI.SetActive(true);
@@ -49,10 +50,13 @@ public class TriviaManager : MonoBehaviour
         yield return new WaitUntil(() => finished);
 
         // Check if enough are correct
-        if (questionsNeeded >= correctNeeded)
+        if (questionsCorrect >= correctNeeded)
         {
-
-            callBack(true);
+            target(true, type);
+        }
+        else
+        {
+            target(false, type);
         }
 
         // Reset Everything
@@ -64,8 +68,6 @@ public class TriviaManager : MonoBehaviour
         triviaUI.SetActive(false);
 
         player.Freeze();
-
-        callBack(false);
     }
 
     void Next()

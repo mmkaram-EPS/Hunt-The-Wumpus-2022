@@ -10,4 +10,6 @@ public class GameManager : MonoBehaviour
     public int turns = 0;
     // Three arrows by default
     public int arrowCount = 3;
+    // Secrets start at 0
+    public int secretCount = 0;
 }

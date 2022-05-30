@@ -26,7 +26,7 @@ public class Player : MonoBehaviour{
 
     public Vector2 resetPos;
 
-    bool isFrozen = false;
+    public bool isFrozen = false;
     
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
