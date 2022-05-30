@@ -11,7 +11,6 @@ public class TriviaManager : MonoBehaviour
 {
     public New_Trivia trivia;
     public GameObject triviaUI;
-    public GameObject shopUI;
 
     private int questionsNeeded = 0;
     private int questionsCorrect = 0;
@@ -28,15 +27,12 @@ public class TriviaManager : MonoBehaviour
 
     public void LoadTrivia(int amount, int correctNeeded, TriviaInput target, string type)
     {
-        shopUI.SetActive(false);
-
         StartCoroutine(Load(amount, correctNeeded, target, type));
     }
 
     // Coroutine Because we need to wait until the cycle is finished
     IEnumerator Load(int amount, int correctNeeded, TriviaInput target, string type)
     {
-        player.Freeze();
         triviaUI.SetActive(true);
 
         finished = false;
@@ -44,7 +40,6 @@ public class TriviaManager : MonoBehaviour
         // Set the questionsNeeded, and start the first question
         questionsNeeded = amount;
         Next();
-
 
         // Wait until finished
         yield return new WaitUntil(() => finished);
@@ -66,8 +61,6 @@ public class TriviaManager : MonoBehaviour
 
         // Set the UI inactive
         triviaUI.SetActive(false);
-
-        player.Freeze();
     }
 
     void Next()

@@ -864,7 +864,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &4438147226124420949
 MonoBehaviour:
@@ -1220,7 +1220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trivia: {fileID: 4438147226394556849}
   triviaUI: {fileID: 4438147226124420947}
-  shopUI: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &4438147226394556849
 MonoBehaviour:
