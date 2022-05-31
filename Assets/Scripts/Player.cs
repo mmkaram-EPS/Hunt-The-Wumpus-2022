@@ -56,7 +56,7 @@ public class Player : MonoBehaviour{
             targetPos = new Vector2(mousePos.x, mousePos.y);
         }
 
-        Vector2 animPos = new Vector2(transform.position.x - targetPos.x, transform.position.y - targetPos.y);
+        Vector2 animPos = new Vector2(targetPos.x - transform.position.x , targetPos.y - transform.position.y);
 
         anim.SetFloat("x", animPos.x);
         anim.SetFloat("y", animPos.y);
