@@ -100,7 +100,6 @@ public class RoomGen : MonoBehaviour
     {
         // Coin anim + Trivia here !!!!
         manager.turns++;
-        manager.coins++;
 
         // Destroy Old Room
         if (roomObj != null)
@@ -115,6 +114,13 @@ public class RoomGen : MonoBehaviour
         Room room = roomObj.GetComponent<Room>();
         // Setting the currently active room
         activeRoom = room;
+
+        // If we haven't passed through the room, then give money
+        if (!room.hasPassed)
+        {
+            manager.coins++;
+            room.hasPassed = true;
+        }
 
         // Assign the door connections based off of the dictionary
         activeRoom.door1.roomConnectedTo = activeMap()[roomToLoad][0];

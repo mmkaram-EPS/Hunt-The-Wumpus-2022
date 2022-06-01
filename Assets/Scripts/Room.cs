@@ -13,4 +13,6 @@ public class Room : MonoBehaviour
     public ArrayList connected = new ArrayList();
     public int id;
 
+    public bool hasPassed = false;
+
 }

@@ -9,14 +9,13 @@ public class Bats : Mobs{
 public Player ps;
 
 public GameObject batPB;
-RoomGen rg;
 GameObject batLoc1;
 GameObject batLoc2;
 public GameObject[] objs;
 public bool bat1Spawned;
 public bool bat2Spawned;
 public int batNo;
-public RoomGen roomLoader;
+public RoomGen rg;
 //assigning this object a room
 public Bats(){
 
@@ -28,7 +27,7 @@ private void OnCollisionEnter2D(Collision2D other) {
 }
 public override void whenPlayer(Player p){
     move();
-    if (bat1Spawned = false){
+    if (!bat1Spawned){
         this.batNo = 1;
         bat1Spawned = true;
     }
@@ -84,14 +83,14 @@ public void Start(){
 
 
 public override void move(){
-    roomLoader.LoadRoom(Random.Range(1,30));
+    rg.LoadRoom(Random.Range(0,29));
     ps.Reset();
     Destroy(batPB);
     //this.SetActive(false);
    // Debug.Log(this.activeSelf);
     if (this.batNo == 1){
         bat1Spawned = false;
-        batLoc1 = rg.rooms[Random.Range(0,30)];
+        batLoc1 = rg.rooms[Random.Range(0,29)];
     }
     if (this.batNo == 2){
         bat2Spawned = false;

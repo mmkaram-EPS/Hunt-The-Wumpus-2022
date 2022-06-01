@@ -8,7 +8,6 @@ public class Wumpus : Mobs
     // Start is called before the first frame update
     public GameObject wumpusPB;
     public RoomGen rg;
-    public Trivia tr;
     public GameObject ph; 
 
     public GameObject[] objs;
