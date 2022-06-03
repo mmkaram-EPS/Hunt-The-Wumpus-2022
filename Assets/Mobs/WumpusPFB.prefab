@@ -1110,7 +1110,7 @@ MonoBehaviour:
   wumpLoc: {fileID: 0}
   tempConversion: {fileID: 0}
   wp: {fileID: 0}
-  wumpusUI: {fileID: 9070658001178930034}
+  wumpusUI: {fileID: 4795982913834150643, guid: 8533710201e8b06459b7d0b0884ec150, type: 3}
 --- !u!222 &5411500418105505564
 CanvasRenderer:
   m_ObjectHideFlags: 0
