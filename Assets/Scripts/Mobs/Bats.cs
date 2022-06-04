@@ -82,7 +82,7 @@ public void Start(){
 }
 
 
-public override void move(){
+public override int move(){
     rg.LoadRoom(Random.Range(0,29));
     ps.Reset();
     Destroy(batPB);
@@ -94,35 +94,37 @@ public override void move(){
     }
     if (this.batNo == 2){
         bat2Spawned = false;
-        batLoc2 = rg.rooms[Random.Range(0,30)];
+        batLoc2 = rg.rooms[Random.Range(0,29)];
     }
 
-    /*for (int i = 0; i < rg.rooms.Length; i++){
-        if (GameObject.Find("Bat") != null){
-        }
-        else{
-            if (bat1Spawned = false){
-                if (this.batNo == 1){
-                    Destroy(this.batPB); //HOPEFULLY this doesn't destroy my variable and just the attatched game object (im not super familiar w destroy)
-                   this.batLoc1 = rg.rooms[Random.Range(1,30)];
-                }
+        /*for (int i = 0; i < rg.rooms.Length; i++){
+            if (GameObject.Find("Bat") != null){
             }
-            if (bat2Spawned = false){
-                if (this.batNo == 2){
-                    Destroy(this.batPB);
-                   this.batLoc2 = rg.rooms[Random.Range(1,30)];
+            else{
+                if (bat1Spawned = false){
+                    if (this.batNo == 1){
+                        Destroy(this.batPB); //HOPEFULLY this doesn't destroy my variable and just the attatched game object (im not super familiar w destroy)
+                       this.batLoc1 = rg.rooms[Random.Range(1,30)];
+                    }
                 }
-            }
+                if (bat2Spawned = false){
+                    if (this.batNo == 2){
+                        Destroy(this.batPB);
+                       this.batLoc2 = rg.rooms[Random.Range(1,30)];
+                    }
+                }
 
 
-                  
-               }
-               }
-}
-    public override void animate()
-    {
-        throw new System.NotImplementedException();
-    }*/
+
+                   }
+                   }
+    }
+        public override void animate()
+        {
+            throw new System.NotImplementedException();
+        }*/
+
+        return -1;
 
 }
     public override void animate()

@@ -543,7 +543,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ip: {fileID: 1482234866}
-  iw: {fileID: 0}
 --- !u!1 &247773339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa50bab19ee65b2458f1bca5525186b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a88df6efd5b13a4a86bab0e1d65ce5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1537684141 stripped
@@ -1604,6 +1603,10 @@ PrefabInstance:
       propertyPath: i
       value: 
       objectReference: {fileID: 190345975}
+    - target: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
+      propertyPath: r
+      value: 
+      objectReference: {fileID: 190345972}
     - target: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
       propertyPath: bat
       value: 

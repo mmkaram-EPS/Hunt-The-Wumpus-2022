@@ -20,7 +20,7 @@ public class MobManager : MonoBehaviour
 
     void Start()
     {
-
+        PickEverythingRandomly();
     }
 
     void PickEverythingRandomly()
