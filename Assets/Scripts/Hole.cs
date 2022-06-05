@@ -10,10 +10,12 @@ public class Hole : Mobs{
     public Player p;
     public GameObject triviaScreen;
     public bool triviaActive;
+    public TriviaInput ShopInput;
+    public TriviaManager t;
     //public RoomGeneration rg
     void Start()
     {
-
+        t = GetComponent<TriviaManager>();
     }
 
     // Update is called once per frame
@@ -37,12 +39,9 @@ public class Hole : Mobs{
         //kinda useless unless we wanna like animate falling lmao
     }
     public override void whenPlayer(Player p){
-        if(!triviaScreen.scene.IsValid()){
-            Instantiate(triviaScreen, new Vector3(-0.92f, 0f, 0f), Quaternion.identity);
-            triviaScreen = GameObject.Find("Trivia_Screen(Clone)");
-            triviaScreen.SetActive(true);
-            triviaActive = true;
-        } 
+        triviaActive = true;
+        t.LoadTrivia(4, 2, ShopInput, "arrow");
+        
 
         //again assuming im getting a bool from trivia
         /*

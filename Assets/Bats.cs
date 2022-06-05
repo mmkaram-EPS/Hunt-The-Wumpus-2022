@@ -17,6 +17,8 @@ public bool bat1Spawned;
 public bool bat2Spawned;
 public int batNo;
 public RoomGen roomLoader;
+public int newroom;
+public int phroom;
 //assigning this object a room
 public Bats(){
 
@@ -84,7 +86,9 @@ public void Start(){
 
 
 public override void move(){
-    roomLoader.LoadRoom(Random.Range(1,30));
+    newroom = Random.Range(1,30);
+    //roomLoader.activeRoom = roomLoader.rooms[newroom];
+    roomLoader.LoadRoom(newroom);
     ps.Reset();
     Destroy(batPB);
     //this.SetActive(false);

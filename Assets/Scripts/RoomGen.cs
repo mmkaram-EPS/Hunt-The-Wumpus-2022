@@ -21,6 +21,7 @@ public class RoomGen : MonoBehaviour
     void Start()
     {
         LoadRoom(0);
+        manager = GetComponent<GameManager>();
     }
 
     public void LoadRoom(int roomToLoad)
@@ -29,12 +30,12 @@ public class RoomGen : MonoBehaviour
 
         if (activeRoom != null)
         {
-            Destroy(activeRoom);
+            Destroy(activeRoom);// throws data loss prevention error
         }
 
         activeRoom = roomObj;
 
-        manager.turns++;
+       // manager.turns++;
     }
 
     // Gain information about the rooms

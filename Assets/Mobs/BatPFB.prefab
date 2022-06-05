@@ -97,6 +97,7 @@ MonoBehaviour:
   bat2Spawned: 0
   batNo: 0
   roomLoader: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
+  newroom: 0
 --- !u!212 &-4855310139730500511
 SpriteRenderer:
   m_ObjectHideFlags: 0

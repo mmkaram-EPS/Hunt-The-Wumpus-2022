@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI counterText;
 
+    private GameManager instance;
+
     void Update()
     {
         string newText = "";
