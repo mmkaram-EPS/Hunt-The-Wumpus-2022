@@ -38,11 +38,13 @@ public class MobManager : MonoBehaviour
         // Add Pit 1
         roomWithPit1 = randomRoom;
         availableRooms.Remove(randomRoom);
+        Debug.Log("first pit, " + randomRoom);
 
         // Add Pit 2
         randomRoom = Random.Range(0, availableRooms.Count);
         roomWithPit2 = randomRoom;
         availableRooms.Remove(randomRoom);
+        Debug.Log("second pit, " + randomRoom);
 
         // Add Bat 1
         randomRoom = Random.Range(0, availableRooms.Count);

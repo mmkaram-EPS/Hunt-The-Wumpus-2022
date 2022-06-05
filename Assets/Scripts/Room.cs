@@ -15,4 +15,9 @@ public class Room : MonoBehaviour
 
     public bool hasPassed = false;
 
+    public void Start(){
+        this.tag = "Rooms";
+    }
+
+
 }
