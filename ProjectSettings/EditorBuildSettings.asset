@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Player/UI/UI.unity
     guid: e13f9940657fc2147bb5289b29dece98
+  - enabled: 1
+    path: Assets/Scenes/Start-Expo.unity
+    guid: b743e1a9ea302644eb55698b57ea534a
+  - enabled: 1
+    path: Assets/Scenes/Base Room.unity
+    guid: 18db38c9e1389c945b122cc27b41be5d
   m_configObjects: {}
