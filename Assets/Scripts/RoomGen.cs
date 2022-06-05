@@ -17,10 +17,14 @@ public class RoomGen : MonoBehaviour
 
     public GameManager manager;
 
+    //Assigning room ID
+    public int currentID = 0;
+
     // Start Function
     void Start()
     {
         LoadRoom(0);
+        currentID = 0;
         manager = GetComponent<GameManager>();
     }
 

@@ -52,6 +52,7 @@ public class Door : MonoBehaviour
             // Load the next room
             // Start Counting from 1
             roomLoader.LoadRoom(roomConnectedTo - 1);
+            roomLoader.currentID = roomConnectedTo;
 
             GameObject player = GameObject.FindWithTag(playerTag);
             player.GetComponent<Player>().Reset();

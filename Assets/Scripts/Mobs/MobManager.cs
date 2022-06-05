@@ -18,11 +18,19 @@ public class MobManager : MonoBehaviour
     public GameObject wumpusPrefab;
     public int roomWithWumpus;
 
+    public GameObject currentRoomObj;
+    public RoomGen currentRoomID;
+
     void Start()
     {
         PickEverythingRandomly();
     }
-
+    void Update() {
+        //currentRoomObj = GameObject.FindGameObjectWithTag("Rooms");
+        //currentRoomID = currentRoomObj.GetComponent<Room>();
+        print(currentRoomID.currentID);
+        LoadRoomMobs(currentRoomID.currentID);  
+    }
     void PickEverythingRandomly()
     {
         // List of available rooms
@@ -38,13 +46,13 @@ public class MobManager : MonoBehaviour
         // Add Pit 1
         roomWithPit1 = randomRoom;
         availableRooms.Remove(randomRoom);
-        Debug.Log("first pit, " + randomRoom);
+        //Debug.Log("first pit, " + randomRoom);
 
         // Add Pit 2
         randomRoom = Random.Range(0, availableRooms.Count);
         roomWithPit2 = randomRoom;
         availableRooms.Remove(randomRoom);
-        Debug.Log("second pit, " + randomRoom);
+        //Debug.Log("second pit, " + randomRoom);
 
         // Add Bat 1
         randomRoom = Random.Range(0, availableRooms.Count);
@@ -68,7 +76,9 @@ public class MobManager : MonoBehaviour
         // Pits
         if(roomWithPit1 == id)
         {
-            instantiate.holeinit(holePrefab);
+            if(!GameObject.Find("Hole(Clone)")){
+                instantiate.holeinit(holePrefab);
+            }
         }
         else if (roomWithPit2 == id)
         {
