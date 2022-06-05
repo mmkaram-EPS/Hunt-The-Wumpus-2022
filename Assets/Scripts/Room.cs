@@ -6,22 +6,13 @@ using TMPro;
 
 public class Room : MonoBehaviour
 {
+    public Door door1;
+    public Door door2;
+    public Door door3;
+
     public ArrayList connected = new ArrayList();
     public int id;
-    public void Create(int _id)
-    {
-        id = _id;
-    }
 
-    public void toString()
-    {
-        string printString = "";
-        printString += "Room: " + id;
-        printString += "Connected: ";
-        foreach (Room room in connected)
-        {
-            printString += room.id + ", ";
-        }
-    }
+    public bool hasPassed = false;
 
 }

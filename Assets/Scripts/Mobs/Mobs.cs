@@ -12,5 +12,5 @@ abstract public class Mobs : MonoBehaviour
     }
     abstract public void animate();
     abstract public void whenPlayer(Player p);
-    abstract public void move();
+    abstract public int move();
     }

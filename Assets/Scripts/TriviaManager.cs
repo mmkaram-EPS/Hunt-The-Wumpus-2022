@@ -9,6 +9,8 @@ public delegate void TriviaInput(bool correct, string type);
 
 public class TriviaManager : MonoBehaviour
 {
+    public GameManager manager;
+
     public New_Trivia trivia;
     public GameObject triviaUI;
 
@@ -27,6 +29,11 @@ public class TriviaManager : MonoBehaviour
 
     public void LoadTrivia(int amount, int correctNeeded, TriviaInput target, string type)
     {
+        if (manager.coins == 0)
+        {
+            manager.Lose();
+        }
+        manager.coins--;
         StartCoroutine(Load(amount, correctNeeded, target, type));
     }
 

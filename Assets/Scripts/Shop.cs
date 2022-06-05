@@ -19,6 +19,8 @@ public class Shop : MonoBehaviour
     public void ShopInput(bool correct, string type)
     {
         shopUI.SetActive(true);
+        manager.turns++;
+
         if (!correct)
         {
             return;

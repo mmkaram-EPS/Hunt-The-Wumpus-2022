@@ -26,4 +26,25 @@ public class GameManager : MonoBehaviour
         newText += " <b>(S)</b>" + secretCount.ToString();
         counterText.SetText(newText);
     }
+
+    public void Lose()
+    {
+        // Haha lose code here
+        Debug.Log("LLLLL");
+    }
+
+    public void Win(bool wumpus)
+    {
+        // win state W
+        int score = 100;
+        score -= turns;
+        score += coins;
+        score += 5 * arrowCount;
+        if(wumpus)
+        {
+            score += 50;
+        }
+
+        Debug.Log(score);
+    }
 }

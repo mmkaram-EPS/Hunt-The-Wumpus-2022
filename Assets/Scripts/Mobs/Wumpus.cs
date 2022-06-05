@@ -8,7 +8,6 @@ public class Wumpus : Mobs
     // Start is called before the first frame update
     public GameObject wumpusPB;
     public RoomGen rg;
-    public Trivia tr;
     public GameObject ph; 
 
     public GameObject[] objs;
@@ -88,13 +87,15 @@ public class Wumpus : Mobs
     {
 
     }
-    public override void move()
+    public override int move()
     {
         Destroy(wumpusPB);
         wumpusUI.SetActive(false);
         Debug.Log(wumpusUI.activeSelf);
         wumpSpawned = false;
-        wumpLoc = rg.rooms[Random.Range(0,30)];//wait for angads updates to change into different location
+        wumpLoc = rg.rooms[Random.Range(0,29)];//wait for angads updates to change into different location
+
+        return -1;
     }
     
 } 

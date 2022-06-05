@@ -63,8 +63,8 @@ public class Hole : Mobs{
         */
     }
 
-    public override void move()
+    public override int move()
     {
-        throw new System.NotImplementedException();
+        return -1;
     }
 }

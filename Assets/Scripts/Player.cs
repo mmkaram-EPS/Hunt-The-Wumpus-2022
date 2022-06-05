@@ -17,12 +17,14 @@ public class Player : MonoBehaviour{
 
     //wumpus spawn
     //im gonna move this to a separate script later if needed
+    /*
     public Wumpus w;
     public GameObject r;
     public GameObject wumpus;
     public GameObject bat;
     public GameObject hole;
     public Instantiate i;
+    */
 
     public Vector2 resetPos;
 
@@ -41,7 +43,9 @@ public class Player : MonoBehaviour{
         {
             return;
         }
-            //debug
+        
+        /*
+        //debug
         // Debug.Log(UIActive);
         r = GameObject.Find("Room");
         if(r = w.wumpLoc){
@@ -49,6 +53,7 @@ public class Player : MonoBehaviour{
            // wumpus = GameObject.Find("WumpusPFB(Clone)");
             wumpus.SetActive(true);
         }
+        */
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Movement
@@ -56,7 +61,7 @@ public class Player : MonoBehaviour{
             targetPos = new Vector2(mousePos.x, mousePos.y);
         }
 
-        Vector2 animPos = new Vector2(transform.position.x - targetPos.x, transform.position.y - targetPos.y);
+        Vector2 animPos = new Vector2(targetPos.x - transform.position.x , targetPos.y - transform.position.y);
 
         anim.SetFloat("x", animPos.x);
         anim.SetFloat("y", animPos.y);
@@ -75,6 +80,7 @@ public class Player : MonoBehaviour{
 
             }
         }
+        /*
         if(Input.GetKeyDown(KeyCode.P)){
             i.wumpinit(wumpus);
            // wumpus = GameObject.Find("WumpusPFB(Clone)");
@@ -90,6 +96,7 @@ public class Player : MonoBehaviour{
             i.holeinit(hole);
             hole.SetActive(true);
         }
+        */
         
     }
 
