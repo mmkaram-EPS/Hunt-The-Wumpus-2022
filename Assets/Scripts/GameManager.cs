@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     private GameManager instance;
 
+
     void Update()
     {
         string newText = "";
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         // Haha lose code here
         Debug.Log("LLLLL");
+        SceneManager.LoadScene("Death", LoadSceneMode.Additive);
     }
 
     public void Win(bool wumpus)
@@ -44,7 +47,7 @@ public class GameManager : MonoBehaviour
         {
             score += 50;
         }
-
+        SceneManager.LoadScene("Win", LoadSceneMode.Additive);
         Debug.Log(score);
     }
 }

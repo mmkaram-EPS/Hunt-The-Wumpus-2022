@@ -21,6 +21,8 @@ public class MobManager : MonoBehaviour
     public GameObject currentRoomObj;
     public RoomGen currentRoomID;
 
+    public GameManager gm;
+
     void Start()
     {
         PickEverythingRandomly();
@@ -32,6 +34,7 @@ public class MobManager : MonoBehaviour
 
 
         LoadRoomMobs(currentRoomID.currentID);  
+        gm = GetComponent<GameManager>();
     }
     void PickEverythingRandomly()
     {
@@ -119,6 +122,9 @@ public class MobManager : MonoBehaviour
         if (type == "hole")
         {
             Debug.Log("W");
+        }
+        if (type == "wumpus"){
+            gm.Win(true);
         }
     }
 }
