@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 4438147226394556849}
   m_Layer: 0
   m_Name: Trivia
-  m_TagString: Untagged
+  m_TagString: TriviaManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1218,6 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1755a0b01e72c0c4ea0a3b99c5a78a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   trivia: {fileID: 4438147226394556849}
   triviaUI: {fileID: 4438147226124420947}
   player: {fileID: 0}

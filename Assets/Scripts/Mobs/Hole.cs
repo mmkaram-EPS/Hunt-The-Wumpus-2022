@@ -8,30 +8,17 @@ public class Hole : Mobs{
     public GameObject holePB;
     public GameObject playerDied;
     public Player p;
-    public GameObject triviaScreen;
-    public bool triviaActive;
-    public TriviaInput ShopInput;
     public TriviaManager t;
+    public MobManager m;
+
     //public RoomGeneration rg
     void Start()
     {
-        t = GetComponent<TriviaManager>();
+        t = GameObject.FindWithTag("TriviaManager").GetComponent<TriviaManager>();
+        m = GameObject.FindWithTag("MobManager").GetComponent<MobManager>();
+        p = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(triviaActive){
-            if(Input.GetKeyDown(KeyCode.T)){
-                Debug.Log("microsoft u like our game right uwu");
-                DestroyImmediate(triviaScreen, true);
-                Destroy(holePB);
-                }
-            if(Input.GetKeyDown(KeyCode.F)){
-                Instantiate(playerDied, new Vector3(-0.94f, 0f, 0f), Quaternion.identity);
-                }
-        }
-    }
     void OnCollisionEnter2D(Collision2D other){
         whenPlayer(p);
     }
@@ -39,8 +26,7 @@ public class Hole : Mobs{
         //kinda useless unless we wanna like animate falling lmao
     }
     public override void whenPlayer(Player p){
-        triviaActive = true;
-        t.LoadTrivia(4, 2, ShopInput, "arrow");
+        t.LoadTrivia(4, 2, m.MobInput, "hole");
         
 
         //again assuming im getting a bool from trivia

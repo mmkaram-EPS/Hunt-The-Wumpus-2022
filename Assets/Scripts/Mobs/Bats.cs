@@ -47,18 +47,18 @@ public void Start(){
 
 public override int move(){
     //Destroy(phroom); incase room still isnt deleting on spawn
-    newroom = Random.Range(1,30);
+    newroom = Random.Range(0,29);
     //roomLoader.activeRoom = roomLoader.rooms[newroom];
     roomLoader.LoadRoom(newroom);
     ps.Reset();
     Destroy(batPB);
     if (this.batNo == 1){
         bat1Spawned = false;
-        batLoc1 = rg.rooms[Random.Range(0,30)];
+        batLoc1 = rg.rooms[Random.Range(0,29)];
     }
     if (this.batNo == 2){
         bat2Spawned = false;
-        batLoc2 = rg.rooms[Random.Range(0,30)];
+        batLoc2 = rg.rooms[Random.Range(0,29)];
     }
     return -1;
 }

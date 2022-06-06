@@ -94,6 +94,7 @@ MonoBehaviour:
   door2: {fileID: 8705237467615747726}
   door3: {fileID: 8705237467102598781}
   id: 0
+  hasPassed: 0
 --- !u!212 &3585891679875188987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -444,7 +445,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0824791, y: 0.6980901}
+  m_Offset: {x: 1.0824791, y: 0.6293758}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -455,7 +456,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25276732, y: 0.40381974}
+  m_Size: {x: 0.25276732, y: 0.5412483}
   m_EdgeRadius: 0
 --- !u!1001 &3585891679911693245
 PrefabInstance:

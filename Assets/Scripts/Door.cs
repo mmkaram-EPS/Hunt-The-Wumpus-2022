@@ -45,13 +45,13 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        doorUIPanel.SetText(roomConnectedTo.ToString());
+        doorUIPanel.SetText((roomConnectedTo + 1).ToString());
         // If they can press E and do
         if (canPressE && Input.GetKey(KeyCode.E))
         {
             // Load the next room
             // Start Counting from 1
-            roomLoader.LoadRoom(roomConnectedTo - 1);
+            roomLoader.LoadRoom(roomConnectedTo);
             roomLoader.currentID = roomConnectedTo;
 
             GameObject player = GameObject.FindWithTag(playerTag);

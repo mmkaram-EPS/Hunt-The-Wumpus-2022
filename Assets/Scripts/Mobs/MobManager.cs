@@ -43,7 +43,7 @@ public class MobManager : MonoBehaviour
             availableRooms.Add(i);
         }
 
-        int randomRoom = Random.Range(0, availableRooms.Count);
+        int randomRoom = Random.Range(1, availableRooms.Count);
 
         // Add Pit 1
         roomWithPit1 = randomRoom;
@@ -51,23 +51,23 @@ public class MobManager : MonoBehaviour
         //Debug.Log("first pit, " + randomRoom);
 
         // Add Pit 2
-        randomRoom = Random.Range(0, availableRooms.Count);
+        randomRoom = Random.Range(1, availableRooms.Count);
         roomWithPit2 = randomRoom;
         availableRooms.Remove(randomRoom);
         //Debug.Log("second pit, " + randomRoom);
 
         // Add Bat 1
-        randomRoom = Random.Range(0, availableRooms.Count);
+        randomRoom = Random.Range(1, availableRooms.Count);
         roomWithBat1 = randomRoom;
         availableRooms.Remove(randomRoom);
 
         // Add Bat 2
-        randomRoom = Random.Range(0, availableRooms.Count);
+        randomRoom = Random.Range(1, availableRooms.Count);
         roomWithBat2 = randomRoom;
         availableRooms.Remove(randomRoom);
 
         // Add Wumpus
-        randomRoom = Random.Range(0, availableRooms.Count);
+        randomRoom = Random.Range(1, availableRooms.Count);
         roomWithWumpus = randomRoom;
         availableRooms.Remove(randomRoom);
 
@@ -78,27 +78,47 @@ public class MobManager : MonoBehaviour
         // Pits
         if(roomWithPit1 == id)
         {
-            if(!GameObject.Find("Hole(Clone)")){
+            if(GameObject.Find("Hole(Clone)") == null){
                 instantiate.holeinit(holePrefab);
             }
         }
         else if (roomWithPit2 == id)
         {
-            instantiate.holeinit(holePrefab);
+            if (GameObject.Find("Hole(Clone)") == null)
+            {
+                instantiate.holeinit(holePrefab);
+            }
         }
         // Bats
         else if (roomWithBat1 == id)
         {
-            instantiate.batinit(batPrefab);
+            if (GameObject.Find("BatPFB(Clone)") == null)
+            {
+                instantiate.holeinit(holePrefab);
+            }
         }
         else if (roomWithBat2 == id)
         {
-            instantiate.batinit(batPrefab);
+            if (GameObject.Find("BatPFB(Clone)") == null)
+            {
+                instantiate.holeinit(holePrefab);
+            }
         }
         // Wumpus
         else if (roomWithWumpus == id)
         {
-            instantiate.wumpinit(wumpusPrefab);
+            if (GameObject.Find("WumpusPFB(Clone)") == null)
+            {
+                instantiate.holeinit(holePrefab);
+            }
+        }
+    }
+
+    public void MobInput(bool correct, string type)
+    {
+        if (type == "hole")
+        {
+            Debug.Log("W");
         }
     }
 }
