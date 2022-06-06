@@ -41,10 +41,10 @@ public class MobManager : MonoBehaviour
 
     void CheckNearby()
     {
-        List<string> hazards = new list<string>;
+        List<string> hazards = new List<string>();
         if (roomGen.DistanceTo(roomGen.currentID, roomWithPit1) <= 2)
         {
-            hazards.Add("I feel a draft.")
+            hazards.Add("I feel a draft.");
         }
         if (roomGen.DistanceTo(roomGen.currentID, roomWithPit2) <= 2)
         {
@@ -58,16 +58,17 @@ public class MobManager : MonoBehaviour
         {
             hazards.Add("Bats Nearby");
         }
-        if (roomGen.DistanceTo(roomGen.currentID, roomWithWumpus1) <= 2)
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithWumpus) <= 2)
         {
             hazards.Add("I smell a Wumpus!");
         }
+
+        Hazard(hazards.ToArray());
     }
 
-    void Hazard(string[ input)
+    void Hazard(string[] input)
     {
         d.StartText(input);
-        hazardNear = true;
     }
 
     void PickEverythingRandomly()
