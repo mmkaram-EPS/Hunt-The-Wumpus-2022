@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 160564434675064209}
   - component: {fileID: 160564434675064208}
-  - component: {fileID: 2913596133405942130}
   - component: {fileID: 994778399}
   - component: {fileID: 1250470833726159838}
   - component: {fileID: 991650186}
   - component: {fileID: 994778398}
+  - component: {fileID: 1431038797}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -89,30 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2913596133405942130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160564434675064211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a88df6efd5b13a4a86bab0e1d65ce5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  UI: {fileID: 8310091607620113500}
-  rb: {fileID: 1250470833726159838}
-  anim: {fileID: 994778399}
-  w: {fileID: 0}
-  r: {fileID: 0}
-  wumpus: {fileID: 0}
-  bat: {fileID: 0}
-  hole: {fileID: 0}
-  i: {fileID: 0}
-  resetPos: {x: 0, y: 0}
-  isFrozen: 0
 --- !u!95 &994778399
 Animator:
   serializedVersion: 3
@@ -195,6 +171,24 @@ CircleCollider2D:
   m_Offset: {x: 0.0025541305, y: -0.076550245}
   serializedVersion: 2
   m_Radius: 0.08600388
+--- !u!114 &1431038797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160564434675064211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a88df6efd5b13a4a86bab0e1d65ce5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  UI: {fileID: 8310091607620113500}
+  rb: {fileID: 1250470833726159838}
+  anim: {fileID: 994778399}
+  resetPos: {x: 0, y: 0}
+  isFrozen: 0
 --- !u!1 &542942958263613902
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,9 @@ public class MobManager : MonoBehaviour
     void Update() {
         //currentRoomObj = GameObject.FindGameObjectWithTag("Rooms");
         //currentRoomID = currentRoomObj.GetComponent<Room>();
-        print(currentRoomID.currentID);
+        //print(currentRoomID.currentID);
+
+
         LoadRoomMobs(currentRoomID.currentID);  
     }
     void PickEverythingRandomly()
