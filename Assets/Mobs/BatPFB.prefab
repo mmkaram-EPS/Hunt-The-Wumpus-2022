@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7304839538131689887}
   - component: {fileID: -4855310139730500511}
   - component: {fileID: 163125227369819348}
+  - component: {fileID: 3433525264287272901}
   m_Layer: 0
   m_Name: BatPFB
   m_TagString: Mob
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f40a09a79abf3d4d82bfc520a421375, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09b770071baca6c42abfc504ad2d56bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -98,6 +99,7 @@ MonoBehaviour:
   batNo: 0
   roomLoader: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
   newroom: 0
+  phroom: {fileID: 0}
 --- !u!212 &-4855310139730500511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -138,7 +140,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7f40a09a79abf3d4d82bfc520a421375, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09b770071baca6c42abfc504ad2d56bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -166,7 +168,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.84, y: 3.84}
+    oldSize: {x: 1.2, y: 1}
     newSize: {x: 6.84, y: 3.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -175,3 +177,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.8689365, y: 3.834342}
   m_EdgeRadius: 0
+--- !u!95 &3433525264287272901
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793768434406488444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d564ec1d743bda4db40f0795600aa75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
