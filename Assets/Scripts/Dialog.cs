@@ -13,7 +13,7 @@ public class Dialog : MonoBehaviour
 
     void Start()
     {
-        StartText(new string[] {"Hello", "I am robot"});
+        //StartText(new string[] {"Hello", "I am robot"});
     }
 
     public void StartText(string[] input)
