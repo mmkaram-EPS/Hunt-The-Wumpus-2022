@@ -8,6 +8,8 @@ public class RoomGen : MonoBehaviour
     // Currently Opened Room
     public Room activeRoom;
     public GameObject roomObj;
+    public Dialog dialog;
+    public New_Trivia triviaData;
 
     // Room With Wumpus object
     // This is not working yet, need to still work with Julian
@@ -103,14 +105,16 @@ public class RoomGen : MonoBehaviour
     public void LoadRoom(int roomToLoad)
     {
         currentID = roomToLoad;
-        // Coin anim + Trivia here !!!!
-        manager.turns++;
 
         // Destroy Old Room
         if (roomObj != null)
         {
             Destroy(roomObj.transform.parent.gameObject);
         }
+
+        // Coin anim + Trivia here !!!!
+        manager.turns++;
+        dialog.StartText(new string[] { triviaData.RandomAnswer()});
 
         // Get the child of the Instantiated object
         roomObj = Instantiate(rooms[roomToLoad]).transform.GetChild(0).gameObject;

@@ -109,6 +109,11 @@ public class New_Trivia : MonoBehaviour
 
         return randomOrder;
     }
+
+    public string RandomAnswer()
+    {
+        return doneQuestion[Random.Range(0, doneQuestion.Count)].data[1];
+    }
 }
 
     public class Question

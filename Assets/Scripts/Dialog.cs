@@ -10,6 +10,7 @@ public class Dialog : MonoBehaviour
     public Player player;
 
     bool ok = false;
+    bool isCycle = false;
 
     void Start()
     {
@@ -25,30 +26,44 @@ public class Dialog : MonoBehaviour
 
     IEnumerator LoadText(string[] input)
     {
-        // Keep doing dialogs until we are done with the array
-        for (int j = 0; j < input.Length; j++)
+        // Wait until previous cycle is over
+        if(isCycle)
         {
-            // Reset the Text
-            dialogBox.SetText("");
-            // Kinda Smooth Anim thing
-            for (int i = 0; i < input[j].Length; i++)
+            // Wait until
+            yield return new WaitUntil(() => !isCycle);
+        }
+
+        // Only go if its not cycle yet
+        if(!isCycle)
+        {
+            isCycle = true;
+            // Keep doing dialogs until we are done with the array
+            for (int j = 0; j < input.Length; j++)
             {
-                dialogBox.text += input[j][i];
-                yield return new WaitForSeconds(0.1f);
+                // Reset the Text
+                dialogBox.SetText("");
+                // Kinda Smooth Anim thing
+                for (int i = 0; i < input[j].Length; i++)
+                {
+                    dialogBox.text += input[j][i];
+                    yield return new WaitForSeconds(0.1f);
+                }
+
+                // Wait until they press next
+                yield return new WaitUntil(() => ok);
+
+                // Set pressedNext back to false;
+                ok = false;
             }
 
-            // Wait until they press next
-            yield return new WaitUntil(() => ok);
 
-            // Set pressedNext back to false;
-            ok = false;
+            // Unfreeze the player, reset the dialog box, disable the UI
+            player.Freeze();
+            dialogBox.SetText("");
+            holder.SetActive(false);
+
+            isCycle = false;
         }
-        
-
-        // Unfreeze the player, reset the dialog box, disable the UI
-        player.Freeze();
-        dialogBox.SetText("");
-        holder.SetActive(false);
     }
 
     public void PressOk()

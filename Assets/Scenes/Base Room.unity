@@ -1348,6 +1348,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1360770998}
     m_Modifications:
     - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 595364650}
+    - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
+      propertyPath: trivia
+      value: 
+      objectReference: {fileID: 1927356910}
+    - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1360770999}

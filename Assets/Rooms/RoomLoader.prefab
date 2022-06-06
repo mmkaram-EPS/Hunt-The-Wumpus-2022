@@ -45,6 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeRoom: {fileID: 0}
   roomObj: {fileID: 0}
+  dialog: {fileID: 0}
+  trivia: {fileID: 0}
   rooms:
   - {fileID: 3580891304317279068, guid: d9da6ce52b73dc342abf0d3774fa6f57, type: 3}
   - {fileID: 3580891304317279068, guid: 7ef48c7e42821cd4282c33f349d2c786, type: 3}
@@ -77,3 +79,4 @@ MonoBehaviour:
   - {fileID: 3580891304317279068, guid: 34e719c40706432429d6b303e783a029, type: 3}
   - {fileID: 3580891304317279068, guid: 7ad499ef738834643b4434ee6bc46c9d, type: 3}
   manager: {fileID: 0}
+  currentID: 0
