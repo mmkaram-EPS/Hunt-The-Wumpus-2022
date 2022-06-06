@@ -679,7 +679,8 @@ MonoBehaviour:
   roomWithWumpus: 0
   currentRoomObj: {fileID: 0}
   currentRoomID: {fileID: 1415086724}
-  gm: {fileID: 0}
+  gm: {fileID: 1360770999}
+  d: {fileID: 595364650}
 --- !u!4 &190345974
 Transform:
   m_ObjectHideFlags: 0

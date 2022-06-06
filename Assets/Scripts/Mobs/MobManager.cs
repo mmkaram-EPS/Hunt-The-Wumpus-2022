@@ -23,6 +23,8 @@ public class MobManager : MonoBehaviour
 
     public GameManager gm;
 
+    public Dialog d;
+
     void Start()
     {
         PickEverythingRandomly();
@@ -36,6 +38,38 @@ public class MobManager : MonoBehaviour
         LoadRoomMobs(currentRoomID.currentID);  
         gm = GetComponent<GameManager>();
     }
+
+    void CheckNearby()
+    {
+        List<string> hazards = new list<string>;
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithPit1) <= 2)
+        {
+            hazards.Add("I feel a draft.")
+        }
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithPit2) <= 2)
+        {
+            hazards.Add("I feel a draft.");
+        }
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithBat1) <= 2)
+        {
+            hazards.Add("Bats Nearby");
+        }
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithBat2) <= 2)
+        {
+            hazards.Add("Bats Nearby");
+        }
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithWumpus1) <= 2)
+        {
+            hazards.Add("I smell a Wumpus!");
+        }
+    }
+
+    void Hazard(string[ input)
+    {
+        d.StartText(input);
+        hazardNear = true;
+    }
+
     void PickEverythingRandomly()
     {
         // List of available rooms
@@ -119,12 +153,21 @@ public class MobManager : MonoBehaviour
 
     public void MobInput(bool correct, string type)
     {
-        if (type == "hole")
+        if (type == "hole" && correct)
         {
-            Debug.Log("W");
+            roomGen.LoadRoom(0);
         }
-        if (type == "wumpus"){
+        else if (type == "hole" && !correct)
+        {
+            gm.Lose();
+        }
+        else if (type == "wumpus" && correct)
+        {
             gm.Win(true);
+        }
+        else if (type == "wumpus" && !correct)
+        {
+            gm.Lose();
         }
     }
 }

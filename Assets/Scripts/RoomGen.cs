@@ -137,7 +137,7 @@ public class RoomGen : MonoBehaviour
     #region access_the_rooms
 
     // Find the distance to a room x from y
-    public int DistanceTo(Room start, Room end)
+    public int DistanceTo(int start, int end)
     {
         // Rooms that we have already finished
         ArrayList visited = new ArrayList();
@@ -156,7 +156,8 @@ public class RoomGen : MonoBehaviour
         {
             // Popping from fringe
             // We are taking the room object and removing it from the fringe
-            Room current = (Room)fringe[0];
+            int current = (int)fringe[0];
+
             // Remove the current state from the fringe
             fringe.Remove(current);
 
@@ -173,7 +174,7 @@ public class RoomGen : MonoBehaviour
             distance++;
 
             // Add the neighbors to the fringe
-            foreach (Room neighbor in current.connected)
+            foreach (int neighbor in activeMap()[current])
             {
                 // If it is in fringe, do not add it
                 if (!fringe.Contains(neighbor))

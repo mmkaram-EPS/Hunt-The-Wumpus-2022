@@ -26,7 +26,7 @@ public class Hole : Mobs{
         //kinda useless unless we wanna like animate falling lmao
     }
     public override void whenPlayer(Player p){
-        t.LoadTrivia(4, 2, m.MobInput, "hole");
+        t.LoadTrivia(3, 2, m.MobInput, "hole");
         
 
         //again assuming im getting a bool from trivia

@@ -49,8 +49,7 @@ public class Wumpus : Mobs
         }
     }
     public override void whenPlayer(Player p){
-        tr.LoadTrivia(3, 2, tri, "wumpus");
-        Invoke("move", 2);
+        tr.LoadTrivia(5, 3, tri, "wumpus");
         
     }
     public override void animate()
