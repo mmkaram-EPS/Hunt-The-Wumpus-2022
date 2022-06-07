@@ -26,7 +26,8 @@ public class RoomGen : MonoBehaviour
     int mapType = 0;
 
     // Current Map
-    Dictionary<int, int[]> activeMap()
+    [HideInInspector]
+    public Dictionary<int, int[]> activeMap()
     {
         if (mapType == 0)
         {
