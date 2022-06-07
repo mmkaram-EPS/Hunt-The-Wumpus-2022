@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4438147226394556812, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4438147226394556814, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: m_RootOrder
@@ -1303,7 +1303,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 641262699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1069963312}
+        m_TargetAssemblyTypeName: ArrowShooter, Assembly-CSharp
+        m_MethodName: ShootArrow
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1989943178}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &641262699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,7 +1436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648483606}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1069963312}
+        m_TargetAssemblyTypeName: ArrowShooter, Assembly-CSharp
+        m_MethodName: ShootArrow
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1426446216}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &648483606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,7 +2779,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1556283494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1069963312}
+        m_TargetAssemblyTypeName: ArrowShooter, Assembly-CSharp
+        m_MethodName: ShootArrow
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1332594907}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1556283494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3719,9 +3755,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1360770998}
     m_Modifications:
-    - target: {fileID: 2695947718359771248, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
-      propertyPath: player
+    - target: {fileID: 1831966104, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831966104, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1069963312}
+    - target: {fileID: 1831966104, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831966104, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ArrowShooter, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831966104, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2695947718359771248, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: manager
@@ -3778,10 +3830,6 @@ PrefabInstance:
     - target: {fileID: 2695947718359771250, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: m_Name
       value: Shop
-      objectReference: {fileID: 0}
-    - target: {fileID: 2695947718359771250, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
