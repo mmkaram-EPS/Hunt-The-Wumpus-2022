@@ -93,6 +93,8 @@ public class RoomGen : MonoBehaviour
     //Assigning room ID
     public int currentID = 0;
 
+    bool hasStarted = false;
+
     // Start Function
     void Start()
     {
@@ -112,9 +114,14 @@ public class RoomGen : MonoBehaviour
             Destroy(roomObj.transform.parent.gameObject);
         }
 
-        // Coin anim + Trivia here !!!!
-        manager.turns++;
-        dialog.StartText(new string[] { triviaData.RandomAnswer()});
+        if(hasStarted)
+        {
+            // Coin anim + Trivia here !!!!
+            manager.turns++;
+            dialog.StartText(new string[] { triviaData.RandomAnswer() });
+        }
+
+        hasStarted = true;
 
         // Get the child of the Instantiated object
         roomObj = Instantiate(rooms[roomToLoad]).transform.GetChild(0).gameObject;

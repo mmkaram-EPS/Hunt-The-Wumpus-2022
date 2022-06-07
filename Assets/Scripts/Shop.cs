@@ -32,6 +32,7 @@ public class Shop : MonoBehaviour
         else if (type == "secret")
         {
             manager.secretCount++;
+            manager.UseSecret();
         }
     }
 
