@@ -300,8 +300,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: <b>(C)</b> 0 <b>(A)</b> 0 <b>(S)</b> 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f2e7f71654e7a341bd2330cc96d3e5a, type: 2}
+  m_sharedMaterial: {fileID: 6422129463184344933, guid: 8f2e7f71654e7a341bd2330cc96d3e5a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
