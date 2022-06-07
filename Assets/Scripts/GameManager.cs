@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         {
             score += 50;
         }
-        SceneManager.LoadScene("Win", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Win");
         Debug.Log(score);
     }
 

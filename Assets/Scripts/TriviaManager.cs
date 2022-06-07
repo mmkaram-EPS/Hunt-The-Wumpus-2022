@@ -13,6 +13,7 @@ public class TriviaManager : MonoBehaviour
 
     public New_Trivia trivia;
     public GameObject triviaUI;
+    public Dialog d;
 
     private int questionsNeeded = 0;
     private int questionsCorrect = 0;
@@ -92,7 +93,7 @@ public class TriviaManager : MonoBehaviour
             // Update the questions correct count
             questionsCorrect++;
 
-            Debug.Log("Correct");
+            d.StartText(new string[] { "Correct" });
 
             // Set up correct UI anim here later
         }
