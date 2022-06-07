@@ -44,13 +44,15 @@ public class StartScreen : MonoBehaviour
         for (int i = 0; i < expoText.Length; i++)
         {
             expoTextObj.text += expoText[i];
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
 
             if (expoText[i] == ' ')
             {
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.02f);
             }
         }
+
+        yield return new WaitForSeconds(5f);
 
         expo.SetActive(false);
         SceneManager.LoadScene("Base Room");
