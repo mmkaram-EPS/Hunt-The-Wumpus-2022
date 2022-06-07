@@ -10,6 +10,7 @@ public class RoomGen : MonoBehaviour
     public GameObject roomObj;
     public Dialog dialog;
     public New_Trivia triviaData;
+    public GameObject coinFlipperObject;
 
     // Room With Wumpus object
     // This is not working yet, need to still work with Julian
@@ -116,8 +117,9 @@ public class RoomGen : MonoBehaviour
 
         if(hasStarted)
         {
-            // Coin anim + Trivia here !!!!
             manager.turns++;
+            GameObject obj = Instantiate(coinFlipperObject);
+            Destroy(obj, 1f);
             dialog.StartText(new string[] { triviaData.RandomAnswer() });
         }
 

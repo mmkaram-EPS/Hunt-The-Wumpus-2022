@@ -1147,7 +1147,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &595364650
 MonoBehaviour:
@@ -1355,10 +1355,6 @@ PrefabInstance:
       propertyPath: dialog
       value: 
       objectReference: {fileID: 595364650}
-    - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
-      propertyPath: trivia
-      value: 
-      objectReference: {fileID: 1927356910}
     - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
       propertyPath: manager
       value: 
