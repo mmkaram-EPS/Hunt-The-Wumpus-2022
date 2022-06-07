@@ -109,10 +109,10 @@ public class RoomGen : MonoBehaviour
     {
         currentID = roomToLoad;
 
-        // Destroy Old Room
+        // Set Old Room Inactive
         if (roomObj != null)
         {
-            Destroy(roomObj.transform.parent.gameObject);
+            roomObj.transform.parent.gameObject.SetActive(false);
         }
 
         StartCoroutine(LoadRoomWithAnim(roomToLoad));
@@ -120,19 +120,19 @@ public class RoomGen : MonoBehaviour
 
     IEnumerator LoadRoomWithAnim(int roomToLoad)
     {
-        if (hasStarted)
+        // Room(1)(Clone)
+        // Find the Room Object if it already exists, else instantiate it
+        Debug.Log(GameObject.Find("Room(" + (roomToLoad + 1) + ")(Clone)"));
+
+        if (GameObject.Find("Room(" + (roomToLoad + 1) + ")(Clone)") != null)
         {
-            manager.turns++;
-            GameObject obj = Instantiate(coinFlipperObject);
-            Destroy(obj, 1.5f);
-            yield return new WaitForSeconds(1.5f);
-            dialog.StartText(new string[] { triviaData.RandomAnswer() });
+            roomObj = GameObject.Find("Room(" + roomToLoad + ")(Clone)");
         }
-
-        hasStarted = true;
-
-        // Get the child of the Instantiated object
-        roomObj = Instantiate(rooms[roomToLoad]).transform.GetChild(0).gameObject;
+        else
+        {
+            // Get the child of the Instantiated object
+            roomObj = Instantiate(rooms[roomToLoad]).transform.GetChild(0).gameObject;
+        }
 
         // Get the room child of the Instantiated object and store the Room class
         Room room = roomObj.GetComponent<Room>();
@@ -145,6 +145,22 @@ public class RoomGen : MonoBehaviour
             manager.coins++;
             room.hasPassed = true;
         }
+
+        // If we haven't started, don't give preliminarytrivia q or trn count or loader object
+        if (hasStarted)
+        {
+            manager.turns++;
+            GameObject obj = Instantiate(coinFlipperObject);
+            Destroy(obj, 1.5f);
+            yield return new WaitForSeconds(1.5f);
+
+            if (!room.hasPassed)
+            {
+                dialog.StartText(new string[] { "This may be useful: ", triviaData.RandomAnswer() });
+            }
+        }
+        // We have now started
+        hasStarted = true;
 
         // Assign the door connections based off of the dictionary
         activeRoom.door1.roomConnectedTo = activeMap()[roomToLoad][0];

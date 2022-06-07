@@ -112,7 +112,7 @@ public class New_Trivia : MonoBehaviour
 
     public string RandomAnswer()
     {
-        return notDoneQuestion[Random.Range(0, doneQuestion.Count)].data[1];
+        return notDoneQuestion[Random.Range(0, notDoneQuestion.Count)].data[1];
     }
 
     public string RandomBadAnswer()
