@@ -115,11 +115,17 @@ public class RoomGen : MonoBehaviour
             Destroy(roomObj.transform.parent.gameObject);
         }
 
-        if(hasStarted)
+        StartCoroutine(LoadRoomWithAnim(roomToLoad));
+    }
+
+    IEnumerator LoadRoomWithAnim(int roomToLoad)
+    {
+        if (hasStarted)
         {
             manager.turns++;
             GameObject obj = Instantiate(coinFlipperObject);
-            Destroy(obj, 1f);
+            Destroy(obj, 1.5f);
+            yield return new WaitForSeconds(1.5f);
             dialog.StartText(new string[] { triviaData.RandomAnswer() });
         }
 
