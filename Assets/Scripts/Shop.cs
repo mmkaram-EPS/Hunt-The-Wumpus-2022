@@ -8,6 +8,7 @@ public class Shop : MonoBehaviour
     public GameManager manager;
 
     public GameObject shopUI;
+
     public Player player;
 
     void Start()
