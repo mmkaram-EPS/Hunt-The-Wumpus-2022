@@ -46,7 +46,8 @@ MonoBehaviour:
   activeRoom: {fileID: 0}
   roomObj: {fileID: 0}
   dialog: {fileID: 0}
-  trivia: {fileID: 0}
+  triviaData: {fileID: 0}
+  coinFlipperObject: {fileID: 3475207679238845905, guid: 0f48d383bc240a640b4f8de02f527585, type: 3}
   rooms:
   - {fileID: 3580891304317279068, guid: d9da6ce52b73dc342abf0d3774fa6f57, type: 3}
   - {fileID: 3580891304317279068, guid: 7ef48c7e42821cd4282c33f349d2c786, type: 3}

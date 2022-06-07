@@ -47,6 +47,11 @@ public class Dialog : MonoBehaviour
                 {
                     dialogBox.text += input[j][i];
                     yield return new WaitForSeconds(0.1f);
+
+                    if (input[j][i] == ' ')
+                    {
+                        yield return new WaitForSeconds(0.05f);
+                    }
                 }
 
                 // Wait until they press next

@@ -1221,6 +1221,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   trivia: {fileID: 4438147226394556849}
   triviaUI: {fileID: 4438147226124420947}
+  d: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &4438147226394556849
 MonoBehaviour:

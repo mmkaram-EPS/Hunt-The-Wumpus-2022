@@ -465,6 +465,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4438147226394556815, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
+      propertyPath: d
+      value: 
+      objectReference: {fileID: 595364650}
+    - target: {fileID: 4438147226394556815, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1649611246}
@@ -1143,7 +1147,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &595364650
 MonoBehaviour:
@@ -1351,10 +1355,6 @@ PrefabInstance:
       propertyPath: dialog
       value: 
       objectReference: {fileID: 595364650}
-    - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
-      propertyPath: trivia
-      value: 
-      objectReference: {fileID: 1927356910}
     - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
       propertyPath: manager
       value: 
