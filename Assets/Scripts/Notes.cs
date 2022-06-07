@@ -15,10 +15,6 @@ public class Notes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.ID ==1){
-
-        }
-        
     }
     public void loadNotePublic(string noteTXT, GameObject note, Text noteTXTObj){
         StartCoroutine(loadNote(noteTXT, note, noteTXTObj));
