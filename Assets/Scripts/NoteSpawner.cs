@@ -70,7 +70,6 @@ public void LoadNotes(int roomID){
 public void testNote(int roomID){
     Instantiate(notePFB);
     noteTextObj.text = " ";
-        Debug.Log("fart");
         for (int g = 0; g < noteRooms.Count; g++){
             n.loadNotePublic(noteTexts[g], noteObj, noteTextObj);
         }
