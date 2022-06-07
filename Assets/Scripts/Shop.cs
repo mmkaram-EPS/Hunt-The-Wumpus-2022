@@ -46,6 +46,7 @@ public class Shop : MonoBehaviour
     {
         shopUI.SetActive(false);
         triviaManager.LoadTrivia(3, 2, ShopInput, "secret");
+        player.Reset();
     }
 
     public void ShopOpen()

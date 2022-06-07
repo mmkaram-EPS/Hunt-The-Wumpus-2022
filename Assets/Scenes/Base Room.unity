@@ -403,7 +403,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2695947718359771248, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
   m_PrefabInstance: {fileID: 2695947718376036767}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 926134900}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ad6975cdabe8947ae69199fda4f2c1, type: 3}
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fb37798e968d144aa5d56feabf9651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ip: {fileID: 0}
+  ip: {fileID: 1322194248}
 --- !u!1 &247773339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1492,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5580079193123834784, guid: 248de7ce0d5757b46a8ef4253cdeef9a, type: 3}
   m_PrefabInstance: {fileID: 5580079192493628058}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &926134900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2695947718359771250, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
+  m_PrefabInstance: {fileID: 2695947718376036767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &932154756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowUI: {fileID: 1329074774}
+  shopUI: {fileID: 926134900}
   mobManager: {fileID: 190345973}
   roomGen: {fileID: 1415086724}
   manager: {fileID: 1360770999}
@@ -3488,7 +3494,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -255.8665, y: -334.9501}
+  m_SizeDelta: {x: -255.8665, y: -262.6985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2067125726
 MonoBehaviour:

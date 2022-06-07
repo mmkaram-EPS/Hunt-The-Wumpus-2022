@@ -36,7 +36,6 @@ public class MobManager : MonoBehaviour
 
 
         LoadRoomMobs(currentRoomID.currentID);  
-        gm = GetComponent<GameManager>();
     }
 
     void CheckNearby()
