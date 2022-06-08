@@ -350,6 +350,14 @@ PrefabInstance:
       propertyPath: roomConnectedTo
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8705237468434515257, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.1800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705237468434515257, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.7350006
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8703718608331898930, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}
     - {fileID: 871388905, guid: 7106e0099a1b24d4e8495de63a1c3073, type: 3}

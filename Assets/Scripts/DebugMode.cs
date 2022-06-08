@@ -100,37 +100,12 @@ public class DebugMode : MonoBehaviour
         textObj.text = textToDisplay;
     }
     public void SpawnBat(){
-        if (GameObject.Find("BatPFB(Clone)") == null)
-            {
-                mobRoom = rm.currentID + 1;
-                Debug.Log("Bat spawned in: " + rm.currentID + 2);
-                if (mobRoom == rm.currentID){
-                    i.batinit(batPFB);
-                    mobRoom = 0;
-                }
-
-            }
+        mobManager.roomWithBat1 = 1;
     }
     public void SpawnHole(){
-        if (GameObject.Find("HolePFB(Clone)") == null)
-            {
-                mobRoom = rm.currentID + 1;
-                Debug.Log("Hole spawned in: " + rm.currentID + 2);
-                if (mobRoom == rm.currentID){
-                    i.holeinit(holePFB);
-                    mobRoom = 0;
-                }
-            }
+        mobManager.roomWithPit1 = 1;
     }
     public void SpawnWumpus(){
-        if (GameObject.Find("WumpusPFB(Clone)") == null)
-            {
-                mobRoom = rm.currentID + 1;
-                Debug.Log("Wumpus spawned in: " + rm.currentID + 2);
-                if (mobRoom == rm.currentID){
-                    i.wumpinit(wumpusPFB);
-                    mobRoom = 0;
-                }
-            }
+        mobManager.roomWithWumpus = 1;
     }
 }
