@@ -35,7 +35,8 @@ public class MobManager : MonoBehaviour
         //print(currentRoomID.currentID);
 
 
-        LoadRoomMobs(currentRoomID.currentID);  
+        LoadRoomMobs(currentRoomID.currentID);
+        CheckNearby();
     }
 
     void CheckNearby()
