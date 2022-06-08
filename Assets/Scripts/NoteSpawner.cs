@@ -47,9 +47,7 @@ public class NoteSpawner : MonoBehaviour
     {
         foreach (int o in noteRooms){
             if (o == currentRoomID.currentID){
-                if (!GameObject.Find("Notes(Clone)")){
-                    Instantiate(notePFB);
-                }
+                //Instantiate(notePFB);
                 LoadNotes(currentRoomID.currentID);
             }
     }

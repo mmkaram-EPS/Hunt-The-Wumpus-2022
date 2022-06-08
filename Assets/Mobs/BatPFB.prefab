@@ -31,14 +31,14 @@ RectTransform:
   m_GameObject: {fileID: 8793768434406488444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.9903, y: 4.7738, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.02301, y: 0.058167}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1340148130703731055
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4015c2d8d0b9cf04684d118e7224940a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ps: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
+  ps: {fileID: 1322194248, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
   batPB: {fileID: 8793768434406488444}
   objs: []
   bat1Spawned: 0

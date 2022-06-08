@@ -39,16 +39,13 @@ public void Start(){
             bat2Spawned = true;
         }
     }
-    phroom = GameObject.FindGameObjectWithTag("Rooms");
-
 
 }
 
 
 public override int move(){
-    //Destroy(phroom); incase room still isnt deleting on spawn
     newroom = Random.Range(0,29);
-    //roomLoader.activeRoom = roomLoader.rooms[newroom];
+    roomLoader.gameObject.SetActive(true);
     roomLoader.LoadRoom(newroom);
     ps.Reset();
     Destroy(batPB);

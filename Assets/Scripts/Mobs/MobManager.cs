@@ -146,13 +146,12 @@ public class MobManager : MonoBehaviour
             if (GameObject.Find("BatPFB(Clone)") == null)
             {
                 instantiate.batinit(batPrefab);
-            }
-            if(Input.GetKeyDown(KeyCode.L)){
-            if(GameObject.Find("BatPFB(Clone)") == null){
-                Debug.Log("big gay balls");
-                instantiate.batinit(batPrefab);
             }            
         }
+        if(Input.GetKeyDown(KeyCode.L)){
+            if(GameObject.Find("BatPFB(Clone)") == null){
+                instantiate.batinit(batPrefab);
+            }
         }
         else if (roomWithBat2 == id)
         {
