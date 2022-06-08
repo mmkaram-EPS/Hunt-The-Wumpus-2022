@@ -1541,7 +1541,7 @@ GameObject:
   - component: {fileID: 472728226}
   m_Layer: 0
   m_Name: Notes
-  m_TagString: Untagged
+  m_TagString: NoteSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1579,11 +1579,13 @@ MonoBehaviour:
   randomRoom: 0
   n: {fileID: 1577137941}
   noteTexts: []
+  noteTextSecret: 
   noteObj: {fileID: 1751902856}
   noteTextObj: {fileID: 1725244886}
   notePFB: {fileID: 6142892395845894822, guid: cec7419ff899df745ba94c5c3c35ca5c, type: 3}
   noteExists: 0
   noteOnce: 0
+  notesCollected: 0
 --- !u!1 &472992428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4880,7 +4882,7 @@ GameObject:
   - component: {fileID: 1577137941}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
