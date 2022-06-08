@@ -20,6 +20,7 @@ public class TriviaManager : MonoBehaviour
     public string correctAnswer = "";
 
     private bool finished = false;
+    private bool queing;
 
     public Player player;
 
@@ -30,11 +31,10 @@ public class TriviaManager : MonoBehaviour
 
     public void LoadTrivia(int amount, int correctNeeded, TriviaInput target, string type)
     {
-        if (manager.coins == 0)
+        if (manager.coins == -1)
         {
-            manager.Lose();
+           manager.Lose();
         }
-        manager.coins--;
         StartCoroutine(Load(amount, correctNeeded, target, type));
     }
 
@@ -44,6 +44,7 @@ public class TriviaManager : MonoBehaviour
         triviaUI.SetActive(true);
 
         finished = false;
+        queing = true;
 
         // Set the questionsNeeded, and start the first question
         questionsNeeded = amount;
@@ -51,21 +52,22 @@ public class TriviaManager : MonoBehaviour
 
         // Wait until finished
         yield return new WaitUntil(() => finished);
-
         // Check if enough are correct
-        if (questionsCorrect >= correctNeeded)
+        if ((questionsCorrect >= correctNeeded) && (queing))
         {
+            Debug.Log("right");
             target(true, type);
         }
-        else
+        if ((questionsCorrect <= correctNeeded) && (queing))
         {
             target(false, type);
         }
-
+        queing = false;
         // Reset Everything
         questionsNeeded = 0;
         questionsCorrect = 0;
         correctAnswer = "";
+        //manager.coins--;
 
         // Set the UI inactive
         triviaUI.SetActive(false);

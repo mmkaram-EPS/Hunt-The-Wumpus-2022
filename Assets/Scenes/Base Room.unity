@@ -681,7 +681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130.1, y: 99.5}
+  m_AnchoredPosition: {x: 345, y: 219}
   m_SizeDelta: {x: 41.1931, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112260638
@@ -923,6 +923,7 @@ MonoBehaviour:
   currentRoomID: {fileID: 1415086724}
   gm: {fileID: 1360770999}
   d: {fileID: 595364650}
+  p: {fileID: 864813182}
 --- !u!4 &190345974
 Transform:
   m_ObjectHideFlags: 0
@@ -1470,8 +1471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -74.427, y: -59.107}
+  m_AnchoredPosition: {x: 3.0000076, y: -0.06237793}
+  m_SizeDelta: {x: -189.63, y: -121.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &472992430
 MonoBehaviour:
@@ -1530,8 +1531,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.4
-  m_fontSizeBase: 13.4
+  m_fontSize: 22.98
+  m_fontSizeBase: 22.98
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1908,7 +1909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 1169772732}
   holder: {fileID: 1017976713}
-  player: {fileID: 0}
+  player: {fileID: 1322194248, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
 --- !u!1 &641262696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,36 +2176,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648483603}
   m_CullTransparentMesh: 1
---- !u!1 &766507612
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 766507613}
-  m_Layer: 0
-  m_Name: Grid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &766507613
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766507612}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1360770998}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864813175 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 160564434675064211, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
@@ -2734,7 +2705,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3102,7 +3073,7 @@ MonoBehaviour:
   passcodeUI: {fileID: 1793074294}
   triviaManager: {fileID: 1927356910}
   mobManager: {fileID: 190345973}
-  p: {fileID: 0}
+  p: {fileID: 864813182}
 --- !u!1 &1169772730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,7 +3628,6 @@ Transform:
   - {fileID: 472728225}
   - {fileID: 1069963311}
   - {fileID: 1133474797}
-  - {fileID: 766507613}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4597,7 +4567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2.6483}
+  m_AnchoredPosition: {x: 0, y: -2.648285}
   m_SizeDelta: {x: -255.8665, y: -57.4631}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822701761
