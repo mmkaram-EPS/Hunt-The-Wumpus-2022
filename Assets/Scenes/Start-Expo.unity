@@ -907,11 +907,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back in 2011, a team participating in "Hunt the Wumpus" chose to create
-    a real life Wumpus and send the player into a real game of "catch the Wumpus."
-    However, they greatly underestimated the power of the Wumpus. It broke free of
-    its confines and fled to an abandoned arcade. 10 years later with no news, you
-    decide to investigate the scene of the crime and find the mythic Wumpus...
+  m_text: In 2011, a team participating in "Hunt the Wumpus" chose to create a real
+    life Wumpus and send the player into a real game of "catch the Wumpus." However,
+    they greatly underestimated the power of the Wumpus. It broke free of its confines
+    and fled to an abandoned arcade. 10 years later with no news, you decide to investigate
+    the scene of the crime and find the mythic Wumpus...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f2e7f71654e7a341bd2330cc96d3e5a, type: 2}
   m_sharedMaterial: {fileID: 6422129463184344933, guid: 8f2e7f71654e7a341bd2330cc96d3e5a, type: 2}
@@ -938,8 +938,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.74
-  m_fontSizeBase: 22.74
+  m_fontSize: 20.74
+  m_fontSizeBase: 20.74
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 52.448715, y: 0, z: 63.207397, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

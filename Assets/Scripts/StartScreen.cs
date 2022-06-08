@@ -37,7 +37,7 @@ public class StartScreen : MonoBehaviour
     {
         start.SetActive(false);
 
-        string expoText = "Back in 2011, a team participating in \"Hunt the Wumpus\" chose to create a real life Wumpus and send the player into a real game of \"catch the Wumpus.\" However, they greatly underestimated the power of the Wumpus. It broke free of its confines and fled to an abandoned arcade. 10 years later with no news, you decide to investigate the scene of the crime . . .";
+        string expoText = "In 2011, a team participating in \"Hunt the Wumpus\" chose to create a real life Wumpus and send the player into a real game of \"catch the Wumpus.\" However, they greatly underestimated the power of the Wumpus. It broke free of its confines and fled to an abandoned arcade. 10 years later with no news, you decide to investigate the scene of the crime . . .";
         expo.SetActive(true);
 
         expoTextObj.text = "";
