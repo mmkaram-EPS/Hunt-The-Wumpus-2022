@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4855310139730500511}
   - component: {fileID: 163125227369819348}
   - component: {fileID: 3433525264287272901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BatPFB
   m_TagString: Mob
   m_Icon: {fileID: 0}
