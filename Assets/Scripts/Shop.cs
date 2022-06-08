@@ -53,5 +53,6 @@ public class Shop : MonoBehaviour
     {
         shopUI.SetActive(!shopUI.activeSelf);
         player.Reset();
+        player.Freeze();
     }
 }

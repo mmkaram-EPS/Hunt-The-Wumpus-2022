@@ -19,7 +19,7 @@ public class TriviaManager : MonoBehaviour
     private int questionsCorrect = 0;
     public string correctAnswer = "";
 
-    private bool finished = true;
+    private bool finished = false;
     private bool queing;
 
     public Player player;
@@ -46,39 +46,35 @@ public class TriviaManager : MonoBehaviour
     IEnumerator Load(int amount, int correctNeeded, TriviaInput target, string type)
     {
         triviaUI.SetActive(true);
-        Debug.Log("Trivia called");
 
-        if (finished)
+        finished = false;
+        queing = true;
+
+        // Set the questionsNeeded, and start the first question
+        questionsNeeded = amount;
+        Next();
+
+        // Wait until finished
+        yield return new WaitUntil(() => finished);
+        // Check if enough are correct
+        if ((questionsCorrect >= correctNeeded) && (queing))
         {
-            finished = false;
-            queing = true;
+            Debug.Log("right");
+            target(true, type);
+        }
+        if ((questionsCorrect <= correctNeeded) && (queing))
+        {
+            target(false, type);
+        }
+        queing = false;
+        // Reset Everything
+        questionsNeeded = 0;
+        questionsCorrect = 0;
+        correctAnswer = "";
+        //manager.coins--;
 
-            // Set the questionsNeeded, and start the first question
-            questionsNeeded = amount;
-            Next();
-
-            // Wait until finished
-            yield return new WaitUntil(() => finished);
-            // Check if enough are correct
-            if ((questionsCorrect >= correctNeeded) && (queing))
-            {
-                Debug.Log("right");
-                target(true, type);
-            }
-            if ((questionsCorrect <= correctNeeded) && (queing))
-            {
-                target(false, type);
-            }
-            queing = false;
-            // Reset Everything
-            questionsNeeded = 0;
-            questionsCorrect = 0;
-            correctAnswer = "";
-            //manager.coins--;
-
-            // Set the UI inactive
-            triviaUI.SetActive(false);
-        }        
+        // Set the UI inactive
+        triviaUI.SetActive(false);
     }
 
     void Next()

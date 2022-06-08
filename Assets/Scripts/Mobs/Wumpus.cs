@@ -42,7 +42,11 @@ public class Wumpus : Mobs
     {
         
     }
-
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.name == "Player"){
+            StartCoroutine(whenPlayerNew(wp));
+        }
+    }
     IEnumerator whenPlayerNew(Player wp){
         yield return new WaitForSeconds (3);
         tr.LoadTrivia(5, 3, m.MobInput, "wumpus");
@@ -51,7 +55,7 @@ public class Wumpus : Mobs
         
     }
     public override void whenPlayer(Player wp){
-        whenPlayerNew(wp);
+        
     }
     public override void animate()
     {

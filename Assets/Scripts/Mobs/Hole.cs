@@ -17,18 +17,13 @@ public class Hole : Mobs{
     }
 
     void OnCollisionEnter2D(Collision2D other){
-        StartCoroutine(whenPlayerNew(p));
+        whenPlayer(p);
     }
     public override void animate(){
         //kinda useless unless we wanna like animate falling lmao
     }
-    IEnumerator whenPlayerNew(Player p){
-        yield return new WaitForSeconds (3);
-        t.LoadTrivia(3, 2, m.MobInput, "hole");
-        yield return false;
-    }
     public override void whenPlayer(Player p){
-
+        t.LoadTrivia(3, 2, m.MobInput, "hole");
     }
 
     public override int move()
