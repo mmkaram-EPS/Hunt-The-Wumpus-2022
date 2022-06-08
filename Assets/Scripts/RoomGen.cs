@@ -87,7 +87,39 @@ public class RoomGen : MonoBehaviour
         {28, new int[] { 26, 29, 27 } },
         {29, new int[] { 28, 27 } },
     };
-    Dictionary<int, int[]> map2;
+    Dictionary<int, int[]> map2 = new Dictionary<int, int[]>()
+    {
+        {0, new int[] { 2, 3, 4 } },
+        {1, new int[] { 4, 5, 7 } },
+        {2, new int[] { 0, 3, 4 } },
+        {3, new int[] { 0, 2, 8 } },
+        {4, new int[] { 1, 0, 2 } },
+        {5, new int[] { 1, 6, 8 } },
+        {6, new int[] { 7, 5, 9 } },
+        {7, new int[] { 10, 1, 6 } },
+        {8, new int[] { 3, 5, 10 } },
+        {9, new int[] { 6, 10, 11 } },
+        {10, new int[] { 1, 8, 9 } },
+        {11, new int[] { 9, 13,12 } },
+        {12, new int[] { 11, 13, 15 } },
+        {13, new int[] { 11, 12, 17 } },
+        {14, new int[] { 15, 17, 16 } },
+        {15, new int[] { 12, 14, 24 } },
+        {16, new int[] { 17, 14, 18 } },
+        {17, new int[] { 13, 14, 16 } },
+        {18, new int[] { 20, 19, 16 } },
+        {19, new int[] { 21, 18, 20 } },
+        {20, new int[] { 21, 19, 18 } },
+        {21, new int[] { 22, 19, 20 } },
+        {22, new int[] { 23, 25, 21 } },
+        {23, new int[] { 26, 24, 22 } },
+        {24, new int[] { 23, 25, 15 } },
+        {25, new int[] { 26, 24, 22 } },
+        {26, new int[] { 28, 23, 25 } },
+        {27, new int[] { 28, 29 } },
+        {28, new int[] { 26, 29, 27 } },
+        {29, new int[] { 28, 27 } },
+    };
     Dictionary<int, int[]> map3;
     Dictionary<int, int[]> map4;
     Dictionary<int, int[]> map5;
