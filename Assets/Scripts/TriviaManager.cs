@@ -29,7 +29,7 @@ public class TriviaManager : MonoBehaviour
         triviaUI.SetActive(false);
     }
 
-    public void LoadTrivia(int amount, int correctNeeded, TriviaInput target, string type)
+    public void LoadTrivia(int amount, int correctNeeded, TriviaInput target, string type, int sodifjosdijofisdjfiojo)
     {
         if (manager.coins == -1)
         {
