@@ -53,14 +53,7 @@ public class TriviaManager : MonoBehaviour
         yield return new WaitUntil(() => finished);
 
         // Check if enough are correct
-        if (questionsCorrect >= correctNeeded)
-        {
-            target(true, type);
-        }
-        else
-        {
-            target(false, type);
-        }
+        target(questionsCorrect >= correctNeeded, type);
 
         // Reset Everything
         questionsNeeded = 0;
