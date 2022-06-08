@@ -21,14 +21,13 @@ public class NoteSpawner : MonoBehaviour
         for (int i = 0; i < 30; i++){
             freeRoom.Add(i);
         }
-        for (int r = 0; r < 11; r++){
+        for (int r = 0; r < 9; r++){
             randomRoom = Random.Range(1, freeRoom.Count);
-            if (!freeRoom.Contains(randomRoom)){
-                noteRooms[r] = randomRoom;
-                freeRoom.Remove(randomRoom);
-            }
+            noteRooms.Add(randomRoom);
+            Debug.Log(noteRooms[r]);
+            freeRoom.Remove(randomRoom);
         }
-        noteTexts.Add("You find a note. 'For the first time ever, it's Hunt the wumpus IN REAL LIFE! Come see the first ever capture of a REAL Wumpus! Featuring the geniuses behind the effort, Cadence Ching, Jan Espelien, Mahdy Karam, Annika Chan, Seamus Fu, Angad Josan, Julian Yarkoni and-' The paper is torn to hide the note.");
+        noteTexts.Add("You find a note. 'For the first time ever, it's Hunt the Wumpus IN REAL LIFE! Come see the first ever capture of a REAL Wumpus! Featuring the geniuses behind the effort, Cadence Ching, Jan Espelien, Mahdy Karam, Annika Chan, Seamus Fu, Angad Josan, Julian Yarkoni and-' The paper is torn to hide the note.");
         noteTexts.Add("Day 1, Log 1. Date, 5th of Febuary, 2011. Beginning of experiment. The Wumpus embreyo is stable. The faux host emulatir is keeping it well and alive. Features predicted to begin showing in around 1 week. Will update with any future info. Signing off, Jan Espelien.");
         noteTexts.Add("Day 5, Log 2. Date, 10th of Febuary, 2011. Wumpus showing unexpected development early on. Vitals are stable. Predicted to be ready for extraction from emulator week earlier than planned. Habitat preparations are being rushed because of this, but I have faith in Angad's team that he'll get it done soon. Will update with further news. Signing off, Jan Espelien");
         noteTexts.Add ("Documentation of construction permit issued to Seamus Fu. Date 16th April, 2011. Permits comstruction of: Wildlife habitat certified for single mammal under 3.5 meters, indoor plumbing system, outdoor plumbing system, electroshock therapy chamber, attatched observation chamber, single room veterinary facility. Address of building property: 14th Northup Road, ' The city and country have been scratched out.");
@@ -39,9 +38,8 @@ public class NoteSpawner : MonoBehaviour
         //gonna try to add additional formatting
         noteTexts.Add("Annika just up and dissapeared today. Which is... bad. Cause now we dont have anyone to feed Maid. I've been trying my best, but every time I go in she just gets angrier and louder. Shes like, 20 feet now. Its insane. Worse thing is, she keeps getting shocked by Riley for getting mad at me. Really its just, [sigh] its just making it worse. I don't know how we're gonna keep this up. Signing off, Julian Yarkoni, July 23rd.");
         noteTexts.Add("You have 1 new message. Hey Riley. I just wanted to update you. Julian is in critical condition as of July 30th in the hospital. 3214 is entirely out of control. We tried to contact you after it happened but since you've been MIA recently we... just decided to take matters into our own hands. Look man, at this point don't even bother coming back. Just fill out the paperwork I sent you and promise to keep quiet about this, ok? We're working on killing 3214 right now, so this whole mess will be over soon. Cadence is heading in now to try and- oh god. Whats happening? [Crash and screaming can be heard] Crap. Oh no [footsteps as though they running, suddenly cut of by a slam and the recording ends].");
-        noteTexts.Add("Note 11: Science experiment leaves 1 dead, several injured. This morning, renowed animal researcher Julian Yarkoni, best known for his work with Stegostoma Fasciatum, was reported to have passed away in his sleep while in recovery at NorthWest hospital. He died of severe lacerations and head wounds from what appears to be a large mammal that was being tested inside the Lewellen Labs. No team members have offered any explanation for how or what caused Julian's death and simply remark that they offer sincere condolences to his family. Other team member, Cadence Ching, was also found dead due to severe wounds. Her body was discovered in the woods 40 feet from the lab missing an arm and coverved in severe flesh wounds. Her body appeared to be dragged, and the area is currently under heavy surveillance. Please report any strange lifeforms or activities you see nearby.");
+        //noteTexts.Add("Note 11: Science experiment leaves 1 dead, several injured. This morning, renowed animal researcher Julian Yarkoni, best known for his work with Stegostoma Fasciatum, was reported to have passed away in his sleep while in recovery at NorthWest hospital. He died of severe lacerations and head wounds from what appears to be a large mammal that was being tested inside the Lewellen Labs. No team members have offered any explanation for how or what caused Julian's death and simply remark that they offer sincere condolences to his family. Other team member, Cadence Ching, was also found dead due to severe wounds. Her body was discovered in the woods 40 feet from the lab missing an arm and coverved in severe flesh wounds. Her body appeared to be dragged, and the area is currently under heavy surveillance. Please report any strange lifeforms or activities you see nearby.");
 
-        
     }
 
     // Update is called once per frame
@@ -56,23 +54,22 @@ public class NoteSpawner : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.N)){
         testNote(currentRoomID.currentID);
     }
+    LoadNotes(currentRoomID.currentID);
 
 }
 public void LoadNotes(int roomID){
-    noteTextObj.text = " ";
+    //noteTextObj.text = " ";
         for (int g = 0; g < noteRooms.Count; g++){
             if (noteRooms[g] == roomID){
-            n.loadNotePublic(noteTexts[g], noteObj, noteTextObj);
+                Instantiate(notePFB);
         }
         }
 
     }
 public void testNote(int roomID){
-    Instantiate(notePFB);
+    n = Instantiate(notePFB).GetComponent<Notes>();
     noteTextObj.text = " ";
-        for (int g = 0; g < noteRooms.Count; g++){
-            n.loadNotePublic(noteTexts[g], noteObj, noteTextObj);
-        }
+    n.loadNotePublic(noteTexts[Random.Range(0,10)], noteObj, noteTextObj);
 
 }
 }
