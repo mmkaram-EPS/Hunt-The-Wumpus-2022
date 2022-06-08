@@ -25,7 +25,7 @@ public class NoteSpawner : MonoBehaviour
         for (int i = 0; i < 30; i++){
             freeRoom.Add(i);
         }
-        for (int r = 0; r < 9; r++){
+        for (int r = 0; r < 10; r++){
             randomRoom = Random.Range(1, freeRoom.Count);
             noteRooms.Add(randomRoom);
             freeRoom.Remove(randomRoom);
@@ -41,7 +41,7 @@ public class NoteSpawner : MonoBehaviour
         //gonna try to add additional formatting
         noteTexts.Add("Annika just up and dissapeared today. Which is... bad. Cause now we dont have anyone to feed Maid. I've been trying my best, but every time I go in she just gets angrier and louder. Shes like, 20 feet now. Its insane. Worse thing is, she keeps getting shocked by Riley for getting mad at me. Really its just, [sigh] its just making it worse. I don't know how we're gonna keep this up. Signing off, Julian Yarkoni, July 23rd.");
         noteTexts.Add("You have 1 new message. Hey Riley. I just wanted to update you. Julian is in critical condition as of July 30th in the hospital. 3214 is entirely out of control. We tried to contact you after it happened but since you've been MIA recently we... just decided to take matters into our own hands. Look man, at this point don't even bother coming back. Just fill out the paperwork I sent you and promise to keep quiet about this, ok? We're working on killing 3214 right now, so this whole mess will be over soon. Cadence is heading in now to try and- oh god. Whats happening? [Crash and screaming can be heard] Crap. Oh no [footsteps as though they running, suddenly cut of by a slam and the recording ends].");
-        noteTextSecret = "Note 11: Science experiment leaves 1 dead, several injured. This morning, renowed animal researcher Julian Yarkoni, best known for his work with Stegostoma Fasciatum, was reported to have passed away in his sleep while in recovery at NorthWest hospital. He died of severe lacerations and head wounds from what appears to be a large mammal that was being tested inside the Lewellen Labs. No team members have offered any explanation for how or what caused Julian's death and simply remark that they offer sincere condolences to his family. Other team member, Cadence Ching, was also found dead due to severe wounds. Her body was discovered in the woods 40 feet from the lab missing an arm and coverved in severe flesh wounds. Her body appeared to be dragged, and the area is currently under heavy surveillance. Please report any strange lifeforms or activities you see nearby.";
+        noteTexts.Add("Note 11: Science experiment leaves 1 dead, several injured. This morning, renowed animal researcher Julian Yarkoni, best known for his work with Stegostoma Fasciatum, was reported to have passed away in his sleep while in recovery at NorthWest hospital. He died of severe lacerations and head wounds from what appears to be a large mammal that was being tested inside the Lewellen Labs. No team members have offered any explanation for how or what caused Julian's death and simply remark that they offer sincere condolences to his family. Other team member, Cadence Ching, was also found dead due to severe wounds. Her body was discovered in the woods 40 feet from the lab missing an arm and coverved in severe flesh wounds. Her body appeared to be dragged, and the area is currently under heavy surveillance. Please report any strange lifeforms or activities you see nearby.");
 
     }
 
@@ -64,7 +64,7 @@ public class NoteSpawner : MonoBehaviour
                 if (noteOnce){
                     noteOnce = false;
                     n.loadNotePublic(noteTexts[Random.Range(0,10)], noteObj, noteTextObj);
-                    notesCollected += 1;
+                    //notesCollected += 1;
             }
             else{
                 n.loadNotePublic(noteTexts[Random.Range(0,10)], noteObj, noteTextObj);

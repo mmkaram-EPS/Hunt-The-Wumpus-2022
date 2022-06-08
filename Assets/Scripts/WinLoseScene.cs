@@ -15,8 +15,6 @@ public class WinLoseScene : MonoBehaviour
 
     void Start()
     {
-        n = GameObject.FindWithTag("NoteSpawner").GetComponent<NoteSpawner>();
-        no = GameObject.FindWithTag("Note").GetComponent<Notes>();
         text.text = "You " + w + " Score: " + GameObject.FindWithTag("GameManager").GetComponent<GameManager>().score.ToString();
     }
 
@@ -26,10 +24,5 @@ public class WinLoseScene : MonoBehaviour
         {
             Application.Quit();
         }
-        if (n.notesCollected >= 10){
-            noteGameObj.SetActive(true);
-            no.loadNotePublic(n.noteTextSecret, noteGameObj, noteTextGameObj);
-        }
-
     }
 }
