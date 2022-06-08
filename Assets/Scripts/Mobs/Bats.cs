@@ -22,11 +22,11 @@ public GameObject phroom;
 //assigning this object a room
 private void OnCollisionEnter2D(Collision2D other) {
     if (other.gameObject.name == "Player"){
-        move();
+        whenPlayer(ps);
     }
 }
 public override void whenPlayer(Player p){
-    move();
+    Invoke("move", 3.0f);
 }
 
 
@@ -39,15 +39,16 @@ public void Start(){
             bat2Spawned = true;
         }
     }
+    roomLoader = GameObject.Find("RoomLoader").GetComponent<RoomGen>();
 
 }
 
 
 public override int move(){
+    ps.Reset();
     newroom = Random.Range(0,29);
     roomLoader.gameObject.SetActive(true);
     roomLoader.LoadRoom(newroom);
-    ps.Reset();
     Destroy(batPB);
     if (this.batNo == 1){
         bat1Spawned = false;

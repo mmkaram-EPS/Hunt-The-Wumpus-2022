@@ -34,6 +34,7 @@ public class Player : MonoBehaviour{
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
         rb = GetComponent<Rigidbody2D>();
+        Physics.IgnoreLayerCollision(7,7);
         this.transform.position = new Vector3(0, -3.18f, 0);
         //wumpus spawn
     }
@@ -119,8 +120,11 @@ public class Player : MonoBehaviour{
     // Called when new room is loaded
     public void Reset()
     {
+        /*
         transform.position = new Vector3(0, -3.18f, 0);;
         targetPos = new Vector3(0, -3.18f, 0);;
+        */
+        this.transform.position = new Vector3(0, 0f, 0);
     }
 
     public void Freeze()
