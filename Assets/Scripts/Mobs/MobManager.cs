@@ -115,14 +115,12 @@ public class MobManager : MonoBehaviour
         // Pits
         if(roomWithPit1 == id)
         {
-            print("hole open");
             if(GameObject.Find("Hole(Clone)") == null){
                 instantiate.holeinit(holePrefab);
             }
         }
         else if (roomWithPit2 == id)
         {
-            print("hole open");
             if (GameObject.Find("Hole(Clone)") == null)
             {
                 instantiate.holeinit(holePrefab);
@@ -133,14 +131,14 @@ public class MobManager : MonoBehaviour
         {
             if (GameObject.Find("BatPFB(Clone)") == null)
             {
-                instantiate.batinit(batPrefab);
+                instantiate.holeinit(holePrefab);
             }
         }
         else if (roomWithBat2 == id)
         {
             if (GameObject.Find("BatPFB(Clone)") == null)
             {
-                instantiate.batinit(batPrefab);
+                instantiate.holeinit(holePrefab);
             }
         }
         // Wumpus
@@ -148,7 +146,7 @@ public class MobManager : MonoBehaviour
         {
             if (GameObject.Find("WumpusPFB(Clone)") == null)
             {
-                instantiate.wumpinit(wumpusPrefab);
+                instantiate.holeinit(holePrefab);
             }
         }
     }

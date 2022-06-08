@@ -47,10 +47,8 @@ public class NoteSpawner : MonoBehaviour
     {
         foreach (int o in noteRooms){
             if (o == currentRoomID.currentID){
+                Instantiate(notePFB);
                 LoadNotes(currentRoomID.currentID);
-            }
-            else{
-                Destroy(GameObject.Find("Notes(Clone)"));
             }
     }
     if (Input.GetKeyDown(KeyCode.N)){

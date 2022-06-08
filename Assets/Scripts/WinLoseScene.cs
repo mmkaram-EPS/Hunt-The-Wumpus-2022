@@ -10,6 +10,6 @@ public class WinLoseScene : MonoBehaviour
 
     void Start()
     {
-//        text.text = "You " + w + " Score: " + GameObject.FindWithTag("GameManager").GetComponent<GameManager>().score.ToString();
+        text.text = "You " + w + " Score: " + GameObject.FindWithTag("GameManager").GetComponent<GameManager>().score.ToString();
     }
 }
