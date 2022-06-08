@@ -34,6 +34,7 @@ public class Player : MonoBehaviour{
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
         rb = GetComponent<Rigidbody2D>();
+        this.transform.position = new Vector3(0, -3.18f, 0);
         //wumpus spawn
     }
 

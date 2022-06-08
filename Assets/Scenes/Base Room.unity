@@ -1967,7 +1967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 1169772732}
   holder: {fileID: 1017976713}
-  player: {fileID: 0}
+  player: {fileID: 864813182}
 --- !u!1 &641262696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,7 +2295,6 @@ MonoBehaviour:
   UI: {fileID: 7115570674699030187, guid: d12a0785847392948a38cffdaeec365f, type: 3}
   rb: {fileID: 864813178}
   anim: {fileID: 864813179}
-  seeker: {fileID: 48009156}
   resetPos: {x: 0, y: 0}
   isFrozen: 0
 --- !u!1 &865354342

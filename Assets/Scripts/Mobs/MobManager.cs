@@ -121,7 +121,6 @@ public class MobManager : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.L)){
             if(GameObject.Find("Hole(Clone)") == null){
-                Debug.Log("annika wants to put me down");
                 instantiate.holeinit(holePrefab);
             }            
         }
