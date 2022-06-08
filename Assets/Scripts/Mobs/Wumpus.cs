@@ -18,7 +18,7 @@ public class Wumpus : Mobs
     public GameObject tempConversion;
     public Player wp;
     public TriviaManager tr;
-    public TriviaInput tri;
+    public MobManager m;
     void Start()
     {
     foreach (GameObject go in objs){
@@ -49,7 +49,7 @@ public class Wumpus : Mobs
         }
     }
     public override void whenPlayer(Player p){
-        tr.LoadTrivia(5, 3, tri, "wumpus");
+        tr.LoadTrivia(5, 3, m.MobInput, "wumpus");
         
     }
     public override void animate()
