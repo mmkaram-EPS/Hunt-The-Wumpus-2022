@@ -35,6 +35,10 @@ public class TriviaManager : MonoBehaviour
         {
            manager.Lose();
         }
+        Debug.Log(amount);
+        Debug.Log(correctNeeded);
+        Debug.Log(target);
+        Debug.Log(type);
         StartCoroutine(Load(amount, correctNeeded, target, type));
     }
 

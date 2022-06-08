@@ -19,27 +19,44 @@ public class Wumpus : Mobs
     public Player wp;
     public TriviaManager tr;
     public MobManager m;
-
-
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.name == "Player"){
-            whenPlayer(wp);
+    void Start()
+    {
+    foreach (GameObject go in objs){
+        /*if (((GameObject.FindGameObjectWithTag("Mobs")) && (wumpSpawned = false))){
+            init(wumpusLoc);
+            wumpSpawned = true;
+        }*/
+        if (go.name == "WumpusPFB"){
+            wumpSpawned = true;
         }
+        wumpLoc = rg.rooms[Random.Range(0,29)];
+        Debug.Log(wumpLoc);
+        tempConversion = GameObject.FindGameObjectWithTag("Rooms");
+    }
+    //wumpusUI = Instantiate(Resources.Load("Assets/Mobs/WumpusPFB/WumpUI")) as GameObject;
+        
     }
 
-    IEnumerator whenPlayerNew(Player wp)
+    // Update is called once per frame
+    void Update()
     {
-        yield return new WaitForSeconds(3);
+        
+    }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.name == "Player"){
+            StartCoroutine(whenPlayerNew(wp));
+        }
+    }
+    IEnumerator whenPlayerNew(Player wp){
+        yield return new WaitForSeconds (3);
         tr.LoadTrivia(5, 3, m.MobInput, "wumpus");
         move();
         yield return false;
-
+        
     }
-    public override void whenPlayer(Player wp)
-    {
-        StartCoroutine(whenPlayerNew(wp));
+    public override void whenPlayer(Player wp){
+        
     }
-
     public override void animate()
     {
 
@@ -47,8 +64,8 @@ public class Wumpus : Mobs
     public override int move()
     {
         //Destroy(tempConversion);
-        m.roomWithWumpus = m.RoomsFarAway(Random.Range(2, 4));
         Destroy(wumpusPB);
+        wumpLoc = rg.rooms[Random.Range(0,29)];
 
         return -1;
     }
