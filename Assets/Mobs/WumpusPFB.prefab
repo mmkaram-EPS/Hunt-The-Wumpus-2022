@@ -1108,7 +1108,7 @@ MonoBehaviour:
   wumpSpawned: 0
   wumpLoc: {fileID: 0}
   tempConversion: {fileID: 0}
-  wp: {fileID: 1322194248, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
+  wp: {fileID: 0}
   tr: {fileID: 0}
   m: {fileID: 0}
 --- !u!222 &5411500418105505564
@@ -1189,7 +1189,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 38544657141c1074dbb89527d15d950d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2abb0f474fc79524c8ce8cbff59d3a49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1217,7 +1217,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.77, y: 3.74}
+    oldSize: {x: 3.2, y: 1.8}
     newSize: {x: 6.77, y: 3.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
