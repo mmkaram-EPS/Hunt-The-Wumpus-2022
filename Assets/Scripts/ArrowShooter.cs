@@ -10,6 +10,7 @@ public class ArrowShooter : MonoBehaviour
     public MobManager mobManager;
     public RoomGen roomGen;
     public GameManager manager;
+    public Player p;
 
     public TextMeshProUGUI button1;
     public TextMeshProUGUI button2;
@@ -29,6 +30,8 @@ public class ArrowShooter : MonoBehaviour
         button1.text = (room.door1.roomConnectedTo + 1).ToString();
         button2.text = (room.door2.roomConnectedTo + 1).ToString();
         button3.text = (room.door3.roomConnectedTo + 1).ToString();
+
+        p.Reset();
     }
 
     public void ShootArrow(TextMeshProUGUI textMesh)
@@ -44,5 +47,6 @@ public class ArrowShooter : MonoBehaviour
         }
 
         arrowUI.SetActive(false);
+        p.Reset();
     }
 }

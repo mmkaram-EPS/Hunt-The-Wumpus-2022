@@ -12,6 +12,8 @@ TagManager:
   - TriviaManager
   - MobManager
   - GameManager
+  - NoteSpawner
+  - Note
   layers:
   - Default
   - TransparentFX
