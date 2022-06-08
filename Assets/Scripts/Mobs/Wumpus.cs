@@ -26,9 +26,20 @@ public class Wumpus : Mobs
             whenPlayer(wp);
         }
     }
-    public override void whenPlayer(Player wp){
-        tr.LoadTrivia(5, 3, m.MobInput, "wumpus");        
+
+    IEnumerator whenPlayerNew(Player wp)
+    {
+        yield return new WaitForSeconds(3);
+        tr.LoadTrivia(5, 3, m.MobInput, "wumpus");
+        move();
+        yield return false;
+
     }
+    public override void whenPlayer(Player wp)
+    {
+        StartCoroutine(whenPlayerNew(wp));
+    }
+
     public override void animate()
     {
 
