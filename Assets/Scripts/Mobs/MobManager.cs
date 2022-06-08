@@ -163,7 +163,10 @@ public class MobManager : MonoBehaviour
         // Wumpus
         else if (roomWithWumpus == id)
         {
-            wumpSpawned = (Mobs) instantiate.wumpinit(wumpusPrefab).GetComponent<Wumpus>();
+            if (wumpSpawned == null)
+            {
+                wumpSpawned = (Mobs)instantiate.wumpinit(wumpusPrefab).GetComponent<Wumpus>();
+            }
         }
     }
 
