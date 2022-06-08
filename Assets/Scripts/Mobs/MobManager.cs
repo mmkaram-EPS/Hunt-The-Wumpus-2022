@@ -26,6 +26,8 @@ public class MobManager : MonoBehaviour
     public Dialog d;
 
     public Player p;
+    public bool boxNoRun;
+    public int rnCurrentRoom;
 
     void Start()
     {
@@ -70,7 +72,16 @@ public class MobManager : MonoBehaviour
 
     void Hazard(string[] input)
     {
-        d.StartText(input);
+        if (boxNoRun){
+            d.StartText(input);
+            rnCurrentRoom = currentRoomID.currentID;
+            boxNoRun = false;
+        }
+        if (rnCurrentRoom != currentRoomID.currentID){
+            boxNoRun = true;
+        }
+
+
     }
 
     void PickEverythingRandomly()
@@ -122,11 +133,6 @@ public class MobManager : MonoBehaviour
                 instantiate.holeinit(holePrefab);
             }
         }
-        if(Input.GetKeyDown(KeyCode.L)){
-            if(GameObject.Find("Hole(Clone)") == null){
-                instantiate.holeinit(holePrefab);
-            }            
-        }
         else if (roomWithPit2 == id)
         {
             if (GameObject.Find("Hole(Clone)") == null)
@@ -139,8 +145,14 @@ public class MobManager : MonoBehaviour
         {
             if (GameObject.Find("BatPFB(Clone)") == null)
             {
-                instantiate.holeinit(holePrefab);
+                instantiate.batinit(batPrefab);
             }
+            if(Input.GetKeyDown(KeyCode.L)){
+            if(GameObject.Find("BatPFB(Clone)") == null){
+                Debug.Log("big gay balls");
+                instantiate.batinit(batPrefab);
+            }            
+        }
         }
         else if (roomWithBat2 == id)
         {
