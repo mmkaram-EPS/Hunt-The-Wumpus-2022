@@ -37,7 +37,8 @@ public class MobManager : MonoBehaviour
         //print(currentRoomID.currentID);
 
 
-        LoadRoomMobs(currentRoomID.currentID);  
+        LoadRoomMobs(currentRoomID.currentID);
+        CheckNearby();
     }
 
     void CheckNearby()
@@ -120,6 +121,11 @@ public class MobManager : MonoBehaviour
             if(GameObject.Find("Hole(Clone)") == null){
                 instantiate.holeinit(holePrefab);
             }
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+            if(GameObject.Find("Hole(Clone)") == null){
+                instantiate.holeinit(holePrefab);
+            }            
         }
         else if (roomWithPit2 == id)
         {

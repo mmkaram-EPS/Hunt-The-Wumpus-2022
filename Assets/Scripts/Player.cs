@@ -16,8 +16,6 @@ public class Player : MonoBehaviour{
     public Rigidbody2D rb;
     public Animator anim;
 
-    public Seeker seeker;
-
     //wumpus spawn
     //im gonna move this to a separate script later if needed
     /*
@@ -36,16 +34,27 @@ public class Player : MonoBehaviour{
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
         rb = GetComponent<Rigidbody2D>();
+        this.transform.position = new Vector3(0, -3.18f, 0);
         //wumpus spawn
     }
 
-    Vector2 lastFrame;
     void Update(){
 
         if (isFrozen)
         {
             return;
         }
+        
+        /*
+        //debug
+        // Debug.Log(UIActive);
+        r = GameObject.Find("Room");
+        if(r = w.wumpLoc){
+            i.wumpinit(wumpus);
+           // wumpus = GameObject.Find("WumpusPFB(Clone)");
+            wumpus.SetActive(true);
+        }
+        */
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Movement
@@ -53,15 +62,10 @@ public class Player : MonoBehaviour{
             targetPos = new Vector2(mousePos.x, mousePos.y);
         }
 
-        // AI new code
-        seeker.StartPath(transform.position, targetPos);
-
-        Vector2 animPos = new Vector2(lastFrame.x - transform.position.x, lastFrame.y - transform.position.y);
+        Vector2 animPos = new Vector2(targetPos.x - transform.position.x, targetPos.y - transform.position.y);
 
         anim.SetFloat("x", animPos.x);
         anim.SetFloat("y", animPos.y);
-
-        lastFrame = transform.position;
 
         //UI
         if (Input.GetButtonDown("Fire1")){
@@ -77,7 +81,38 @@ public class Player : MonoBehaviour{
 
             }
         }
+        /*
+        if(Input.GetKeyDown(KeyCode.P)){
+            i.wumpinit(wumpus);
+           // wumpus = GameObject.Find("WumpusPFB(Clone)");
+            wumpus.SetActive(true);
+            //Debug.Log(wumpus.activeSelf);
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+           i.batinit(bat);
+           bat.SetActive(true);
+           Debug.Log(wumpus.activeSelf);
+        }
+        if(Input.GetKeyDown(KeyCode.H)){
+            i.holeinit(hole);
+            hole.SetActive(true);
+        }
+        */
         
+    }
+
+    // Doing movement in this method makes the code smoother, as per the docs.
+    void FixedUpdate()
+    {
+        if (!(targetPos.x == 0 && targetPos.y == 0) && UIActive == false)
+        {
+            // New GigaChad rigidbody code
+            // Using the same vector, just changing to Rigidbody
+            rb.MovePosition(Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed));
+            // Old transform.position code
+            // We need to use Rigidbody to get smooth movement with colliders
+            //transform.position = Vector2.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
+        }
     }
 
     // Reset the player's position when called
