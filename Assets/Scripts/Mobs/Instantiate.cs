@@ -32,7 +32,7 @@ public class Instantiate : MonoBehaviour {
         GameObject hole = Instantiate(pfab, new Vector3(0, 0, -1.5f), Quaternion.identity);
         hole.GetComponent<Hole>().t = GameObject.FindWithTag("TriviaManager").GetComponent<TriviaManager>();
         hole.GetComponent<Hole>().m = GameObject.FindWithTag("MobManager").GetComponent<MobManager>();
-        hole.GetComponent<Hole>().p = GameObject.FindWithTag("Player").GetComponent<Player>();
+        hole.GetComponent<Hole>().p = ip;
 
         return hole;
     }
