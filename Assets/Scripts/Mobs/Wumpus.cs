@@ -44,7 +44,7 @@ public class Wumpus : Mobs
     }
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.name == "Player"){
-            whenPlayerNew(wp);
+            StartCoroutine(whenPlayerNew(wp));
         }
     }
     IEnumerator whenPlayerNew(Player wp){

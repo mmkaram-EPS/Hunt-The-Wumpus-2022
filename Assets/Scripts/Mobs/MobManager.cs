@@ -129,13 +129,13 @@ public class MobManager : MonoBehaviour
         // Pits
         if(roomWithPit1 == id)
         {
-            if(GameObject.Find("Hole(Clone)") == null){
+            if(!GameObject.Find("Hole(Clone)")){
                 instantiate.holeinit(holePrefab);
             }
         }
         else if (roomWithPit2 == id)
         {
-            if (GameObject.Find("Hole(Clone)") == null)
+            if (!GameObject.Find("Hole(Clone)"))
             {
                 instantiate.holeinit(holePrefab);
             }
