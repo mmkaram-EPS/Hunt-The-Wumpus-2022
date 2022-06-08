@@ -12,4 +12,12 @@ public class WinLoseScene : MonoBehaviour
     {
         text.text = "You " + w + " Score: " + GameObject.FindWithTag("GameManager").GetComponent<GameManager>().score.ToString();
     }
+
+    void Update()
+    {
+        if(Input.GetKey(KeyCode.Return))
+        {
+            Application.Quit();
+        }
+    }
 }
