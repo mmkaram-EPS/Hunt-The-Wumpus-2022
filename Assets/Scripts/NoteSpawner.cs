@@ -25,6 +25,7 @@ public class NoteSpawner : MonoBehaviour
         for (int r = 0; r < 9; r++){
             randomRoom = Random.Range(1, freeRoom.Count);
             noteRooms.Add(randomRoom);
+            Debug.Log(randomRoom);
             freeRoom.Remove(randomRoom);
         }
         noteTexts.Add("You find a note. 'For the first time ever, it's Hunt the Wumpus IN REAL LIFE! Come see the first ever capture of a REAL Wumpus! Featuring the geniuses behind the effort, Cadence Ching, Jan Espelien, Mahdy Karam, Annika Chan, Seamus Fu, Angad Josan, Julian Yarkoni and-' The paper is torn to hide the note.");
@@ -47,9 +48,7 @@ public class NoteSpawner : MonoBehaviour
     {
         foreach (int o in noteRooms){
             if (o == currentRoomID.currentID){
-                if (!GameObject.Find("Notes(Clone)")){
-                    Instantiate(notePFB);
-                }
+                //Instantiate(notePFB);
                 LoadNotes(currentRoomID.currentID);
             }
     }
