@@ -1103,14 +1103,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wumpusPB: {fileID: 8960823132468390223}
   rg: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
-  tr: {fileID: 0}
   ph: {fileID: 0}
   objs: []
   wumpSpawned: 0
   wumpLoc: {fileID: 0}
   tempConversion: {fileID: 0}
-  wp: {fileID: 0}
-  wumpusUI: {fileID: 4795982913834150643, guid: 8533710201e8b06459b7d0b0884ec150, type: 3}
+  wp: {fileID: 1322194248, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
+  tr: {fileID: 0}
+  m: {fileID: 0}
 --- !u!222 &5411500418105505564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7, y: 4}
+  m_Size: {x: 11, y: 11}
   m_EdgeRadius: 0
 --- !u!1 &9070658001178930034
 GameObject:

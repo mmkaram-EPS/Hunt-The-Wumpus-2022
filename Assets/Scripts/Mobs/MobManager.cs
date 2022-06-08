@@ -148,11 +148,6 @@ public class MobManager : MonoBehaviour
                 instantiate.batinit(batPrefab);
             }            
         }
-        if(Input.GetKeyDown(KeyCode.L)){
-            if(GameObject.Find("BatPFB(Clone)") == null){
-                instantiate.batinit(batPrefab);
-            }
-        }
         else if (roomWithBat2 == id)
         {
             if (GameObject.Find("BatPFB(Clone)") == null)
@@ -166,6 +161,11 @@ public class MobManager : MonoBehaviour
             if (GameObject.Find("WumpusPFB(Clone)") == null)
             {
                 instantiate.holeinit(holePrefab);
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.L)){
+            if(GameObject.Find("WumpusPFB(Clone)") == null){
+                instantiate.wumpinit(wumpusPrefab);
             }
         }
     }
