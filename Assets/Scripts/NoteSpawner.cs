@@ -15,6 +15,7 @@ public class NoteSpawner : MonoBehaviour
     public Text noteTextObj;
     public GameObject notePFB;
     public bool noteExists;
+    public bool noteOnce;
 
     // Start is called before the first frame update
     void Start()
@@ -56,9 +57,15 @@ public class NoteSpawner : MonoBehaviour
     }
     LoadNotes(currentRoomID.currentID);
     if (noteExists){
-        if (Input.GetKeyDown(KeyCode.R)){
-            n.loadNotePublic(noteTexts[Random.Range(0,10)], noteObj, noteTextObj);
+        noteOnce = true;
+            if (Input.GetKeyDown(KeyCode.R)){
+                if (noteOnce){
+                    noteOnce = false;
+                    Debug.Log(noteOnce);
+                    n.loadNotePublic(noteTexts[Random.Range(0,10)], noteObj, noteTextObj);
+            }
         }
+
     }
 
 }
