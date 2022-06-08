@@ -11,10 +11,23 @@ public class DebugMode : MonoBehaviour
     public TriviaManager triviaManager;
     public MobManager mobManager;
     public Player p;
+    public Instantiate i;
+
+    public GameObject wumpusPFB;
+    public GameObject batPFB;
+    public GameObject holePFB;
+
+    public GameObject wumpusButton;
+    public GameObject batButton;
+    public GameObject holeButton;
+    public GameObject noteText;
 
     string passcode = "EPS-TeamC";
     bool hasPassed = false;
     bool open = false;
+
+    public int mobRoom;
+    public RoomGen rm;
 
     void Start()
     {
@@ -27,6 +40,10 @@ public class DebugMode : MonoBehaviour
         if (!open && Input.GetKey("d"))
         {
             OpenDebug();
+            wumpusButton.SetActive(false);
+            batButton.SetActive(false);
+            holeButton.SetActive(false);
+            noteText.SetActive(false);
         }
     }
 
@@ -55,7 +72,6 @@ public class DebugMode : MonoBehaviour
         debugUI.SetActive(!debugUI.activeSelf);
         open = !open;
         p.Freeze();
-
         if (open)
         {
             SetDebug();
@@ -69,6 +85,10 @@ public class DebugMode : MonoBehaviour
             passcodeUI.SetActive(true);
             return;
         }
+        wumpusButton.SetActive(true);
+        batButton.SetActive(true);
+        holeButton.SetActive(true);
+        noteText.SetActive(true);
 
         string textToDisplay = "";
 
@@ -78,5 +98,39 @@ public class DebugMode : MonoBehaviour
         textToDisplay += "\n\nRoom With Hole: " + (mobManager.roomWithPit1 + 1).ToString() + ", " + mobManager.roomWithPit2.ToString();
 
         textObj.text = textToDisplay;
+    }
+    public void SpawnBat(){
+        if (GameObject.Find("BatPFB(Clone)") == null)
+            {
+                mobRoom = rm.currentID + 1;
+                Debug.Log("Bat spawned in: " + rm.currentID + 2);
+                if (mobRoom == rm.currentID){
+                    i.batinit(batPFB);
+                    mobRoom = 0;
+                }
+
+            }
+    }
+    public void SpawnHole(){
+        if (GameObject.Find("HolePFB(Clone)") == null)
+            {
+                mobRoom = rm.currentID + 1;
+                Debug.Log("Hole spawned in: " + rm.currentID + 2);
+                if (mobRoom == rm.currentID){
+                    i.holeinit(holePFB);
+                    mobRoom = 0;
+                }
+            }
+    }
+    public void SpawnWumpus(){
+        if (GameObject.Find("WumpusPFB(Clone)") == null)
+            {
+                mobRoom = rm.currentID + 1;
+                Debug.Log("Wumpus spawned in: " + rm.currentID + 2);
+                if (mobRoom == rm.currentID){
+                    i.wumpinit(wumpusPFB);
+                    mobRoom = 0;
+                }
+            }
     }
 }
