@@ -14,9 +14,6 @@ public class Hole : Mobs{
     //public RoomGeneration rg
     void Start()
     {
-        t = GameObject.FindWithTag("TriviaManager").GetComponent<TriviaManager>();
-        m = GameObject.FindWithTag("MobManager").GetComponent<MobManager>();
-        p = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
     void OnCollisionEnter2D(Collision2D other){
@@ -27,26 +24,6 @@ public class Hole : Mobs{
     }
     public override void whenPlayer(Player p){
         t.LoadTrivia(3, 2, m.MobInput, "hole");
-        
-
-        //again assuming im getting a bool from trivia
-        /*
-        if (tr.askQuestion){
-            GameObject newLoc = rg.locations[Random.Range(1,30)];
-            //if location is stored by player
-            p.location = newLoc;
-            //if location is stored by RoomGeneration
-            for (int i = 0; i << rg.locations.count; i++){
-                if (rg.locations.containsPlayer){
-                    Destroy(p);
-                    newLoc.codeThatInitializesPlayer();
-                }
-                else(){
-                    pass;
-                }
-            }
-        }
-        */
     }
 
     public override int move()
