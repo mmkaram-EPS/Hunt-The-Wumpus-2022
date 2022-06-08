@@ -50,31 +50,34 @@ public class TriviaManager : MonoBehaviour
         finished = false;
         queing = true;
 
-        // Set the questionsNeeded, and start the first question
-        questionsNeeded = amount;
-        Next();
-
-        // Wait until finished
-        yield return new WaitUntil(() => finished);
-        // Check if enough are correct
-        if ((questionsCorrect >= correctNeeded) && (queing))
+        if(finished)
         {
-            Debug.Log("right");
-            target(true, type);
-        }
-        if ((questionsCorrect <= correctNeeded) && (queing))
-        {
-            target(false, type);
-        }
-        queing = false;
-        // Reset Everything
-        questionsNeeded = 0;
-        questionsCorrect = 0;
-        correctAnswer = "";
-        //manager.coins--;
+            // Set the questionsNeeded, and start the first question
+            questionsNeeded = amount;
+            Next();
 
-        // Set the UI inactive
-        triviaUI.SetActive(false);
+            // Wait until finished
+            yield return new WaitUntil(() => finished);
+            // Check if enough are correct
+            if ((questionsCorrect >= correctNeeded) && (queing))
+            {
+                Debug.Log("right");
+                target(true, type);
+            }
+            if ((questionsCorrect <= correctNeeded) && (queing))
+            {
+                target(false, type);
+            }
+            queing = false;
+            // Reset Everything
+            questionsNeeded = 0;
+            questionsCorrect = 0;
+            correctAnswer = "";
+            //manager.coins--;
+
+            // Set the UI inactive
+            triviaUI.SetActive(false);
+        }
     }
 
     void Next()
