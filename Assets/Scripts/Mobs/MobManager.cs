@@ -46,23 +46,23 @@ public class MobManager : MonoBehaviour
     void CheckNearby()
     {
         List<string> hazards = new List<string>();
-        if (roomGen.DistanceTo(roomGen.currentID, roomWithPit1) <= 2)
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithPit1) <= 2 && roomGen.DistanceTo(roomGen.currentID, roomWithPit1) != 0)
         {
             hazards.Add("I feel a draft.");
         }
-        if (roomGen.DistanceTo(roomGen.currentID, roomWithPit2) <= 2)
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithPit2) <= 2 && roomGen.DistanceTo(roomGen.currentID, roomWithPit2) != 0)
         {
             hazards.Add("I feel a draft.");
         }
-        if (roomGen.DistanceTo(roomGen.currentID, roomWithBat1) <= 2)
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithBat1) <= 2 && roomGen.DistanceTo(roomGen.currentID, roomWithBat1) != 0)
         {
             hazards.Add("Bats Nearby");
         }
-        if (roomGen.DistanceTo(roomGen.currentID, roomWithBat2) <= 2)
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithBat2) <= 2 && roomGen.DistanceTo(roomGen.currentID, roomWithBat2) != 0)
         {
             hazards.Add("Bats Nearby");
         }
-        if (roomGen.DistanceTo(roomGen.currentID, roomWithWumpus) <= 2)
+        if (roomGen.DistanceTo(roomGen.currentID, roomWithWumpus) <= 2 && roomGen.DistanceTo(roomGen.currentID, roomWithWumpus) != 0)
         {
             hazards.Add("I smell a Wumpus!");
         }
