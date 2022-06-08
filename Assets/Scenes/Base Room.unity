@@ -479,7 +479,7 @@ PrefabInstance:
     - target: {fileID: 4438147226394556815, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 864813182}
+      objectReference: {fileID: 0}
     - target: {fileID: 4438147226394556815, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: manager
       value: 
@@ -927,7 +927,7 @@ MonoBehaviour:
   currentRoomID: {fileID: 1415086724}
   gm: {fileID: 1360770999}
   d: {fileID: 595364650}
-  p: {fileID: 864813182}
+  p: {fileID: 0}
   boxNoRun: 0
   rnCurrentRoom: 0
   holeSpawned: {fileID: 0}
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fb37798e968d144aa5d56feabf9651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ip: {fileID: 864813182}
+  ip: {fileID: 0}
 --- !u!1 &199506077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 1169772732}
   holder: {fileID: 1017976713}
-  player: {fileID: 864813182}
+  player: {fileID: 0}
 --- !u!1 &641262696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  UI: {fileID: 1915707810}
+  UI: {fileID: 7115570674699030187, guid: d12a0785847392948a38cffdaeec365f, type: 3}
   rb: {fileID: 864813178}
   anim: {fileID: 864813179}
   resetPos: {x: 0, y: 0}
@@ -2887,7 +2887,7 @@ PrefabInstance:
     - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 864813182}
+      objectReference: {fileID: 1322194248, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
     - target: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
       propertyPath: manager
       value: 
@@ -3086,7 +3086,7 @@ MonoBehaviour:
   passcodeUI: {fileID: 1793074294}
   triviaManager: {fileID: 1927356910}
   mobManager: {fileID: 190345973}
-  p: {fileID: 864813182}
+  p: {fileID: 0}
 --- !u!1 &1169772730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,11 +4696,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835574891}
   m_CullTransparentMesh: 1
---- !u!1 &1915707810 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8310091607620113500, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
-  m_PrefabInstance: {fileID: 160564434321095702}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1927356910 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4438147226394556815, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
@@ -5346,7 +5341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 160564434675064209, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.18
       objectReference: {fileID: 0}
     - target: {fileID: 160564434675064209, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5421,7 +5416,7 @@ PrefabInstance:
     - target: {fileID: 2695947718359771248, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 864813182}
+      objectReference: {fileID: 0}
     - target: {fileID: 2695947718359771248, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: manager
       value: 
