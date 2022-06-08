@@ -76,11 +76,13 @@ public class New_Trivia : MonoBehaviour
         button3.SetText(currQ.data[randomizedOrder[2]]);
         button4.SetText(currQ.data[randomizedOrder[3]]);
 
+        string correct = currQ.data[1];
+
         // Removes the question from the list of selectable questions
         notDoneQuestion.RemoveAt(index);
         doneQuestion.Add(currQ);
         
-        return currQ.data[1];
+        return correct;
     }
 
     List<int> RandomizeOrder(int count)
