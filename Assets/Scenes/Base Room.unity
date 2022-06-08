@@ -1583,6 +1583,7 @@ MonoBehaviour:
   noteTextObj: {fileID: 1725244886}
   notePFB: {fileID: 6142892395845894822, guid: cec7419ff899df745ba94c5c3c35ca5c, type: 3}
   noteExists: 0
+  noteOnce: 0
 --- !u!1 &472992428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4387,7 +4388,7 @@ GameObject:
   - component: {fileID: 1360770999}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
