@@ -14,6 +14,7 @@ public class NoteSpawner : MonoBehaviour
     public GameObject noteObj;
     public Text noteTextObj;
     public GameObject notePFB;
+    public bool noteExists;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,6 @@ public class NoteSpawner : MonoBehaviour
         for (int r = 0; r < 9; r++){
             randomRoom = Random.Range(1, freeRoom.Count);
             noteRooms.Add(randomRoom);
-            Debug.Log(noteRooms[r]);
             freeRoom.Remove(randomRoom);
         }
         noteTexts.Add("You find a note. 'For the first time ever, it's Hunt the Wumpus IN REAL LIFE! Come see the first ever capture of a REAL Wumpus! Featuring the geniuses behind the effort, Cadence Ching, Jan Espelien, Mahdy Karam, Annika Chan, Seamus Fu, Angad Josan, Julian Yarkoni and-' The paper is torn to hide the note.");
@@ -55,15 +55,24 @@ public class NoteSpawner : MonoBehaviour
         testNote(currentRoomID.currentID);
     }
     LoadNotes(currentRoomID.currentID);
+    if (noteExists){
+        if (Input.GetKeyDown(KeyCode.R)){
+            n.loadNotePublic(noteTexts[Random.Range(0,10)], noteObj, noteTextObj);
+        }
+    }
 
 }
 public void LoadNotes(int roomID){
     //noteTextObj.text = " ";
         for (int g = 0; g < noteRooms.Count; g++){
             if (noteRooms[g] == roomID){
-                Instantiate(notePFB);
+                if (!GameObject.Find("Notes(Clone)")){
+                    Instantiate(notePFB);
+                }
+                
         }
         }
+        noteExists = true;
 
     }
 public void testNote(int roomID){

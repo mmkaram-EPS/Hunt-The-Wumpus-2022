@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4438147226394556812, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4438147226394556814, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: m_RootOrder
@@ -1435,6 +1435,7 @@ MonoBehaviour:
   noteObj: {fileID: 1751902856}
   noteTextObj: {fileID: 1725244886}
   notePFB: {fileID: 6142892395845894822, guid: cec7419ff899df745ba94c5c3c35ca5c, type: 3}
+  noteExists: 0
 --- !u!1 &472992428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,7 +2973,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1577137937}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3649,6 +3650,7 @@ MonoBehaviour:
   roomGen: {fileID: 1415086724}
   mobManager: {fileID: 190345973}
   triviaData: {fileID: 1088609964}
+  score: 100
 --- !u!114 &1415086724 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 663516207, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
@@ -4102,9 +4104,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1116457535}
   - {fileID: 1751902857}
   - {fileID: 1725244885}
-  - {fileID: 1116457535}
   m_Father: {fileID: 472728225}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4303,7 +4305,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1577137937}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4382,7 +4384,7 @@ RectTransform:
   m_LocalScale: {x: 6.55799, y: 4.9676, z: 1}
   m_Children: []
   m_Father: {fileID: 1577137937}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5458,7 +5460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2695947718359771250, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2695947720174423180, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: m_IsActive
