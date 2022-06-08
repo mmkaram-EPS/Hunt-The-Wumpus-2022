@@ -7,7 +7,7 @@ using TMPro;
 
 public class New_Trivia : MonoBehaviour
 {
-    public Object data;
+    public TextAsset data;
 
     public List<Question> notDoneQuestion = new List<Question>();
 
@@ -30,7 +30,7 @@ public class New_Trivia : MonoBehaviour
 
     void FormatData()
     {
-        string[] input = System.IO.File.ReadAllLines(AssetDatabase.GetAssetPath(data));
+        string[] input = data.text.Split('\n');
 
         /*data is formatted as follows: 
          Question

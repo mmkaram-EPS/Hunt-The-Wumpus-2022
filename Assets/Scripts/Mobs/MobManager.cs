@@ -163,11 +163,24 @@ public class MobManager : MonoBehaviour
         }
         else if (type == "wumpus" && correct)
         {
-            // Don't win here anymore
+            // Don't win here anymore, wumpus runs away
+            roomWithWumpus = RoomsFarAway(Random.Range(2, 4));
         }
         else if (type == "wumpus" && !correct)
         {
             gm.Lose();
         }
+    }
+
+    public int RoomsFarAway(int distance)
+    {
+        int id = roomGen.currentID;
+        for (int i = 0; i < distance - 1; i++)
+        {
+            // Pick a random one of the rooms, 
+            id = roomGen.activeMap()[id][Random.Range(0, 2)];
+        }
+
+        return id;
     }
 }

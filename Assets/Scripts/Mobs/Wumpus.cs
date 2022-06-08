@@ -60,7 +60,7 @@ public class Wumpus : Mobs
     {
         //Destroy(tempConversion);
         Destroy(wumpusPB);
-        wumpLoc = rg.rooms[Random.Range(0,29)];//wait for angads updates to change into different location
+        wumpLoc = rg.rooms[Random.Range(0,29)];
 
         return -1;
     }

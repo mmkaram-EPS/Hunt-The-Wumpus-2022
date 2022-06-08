@@ -37,6 +37,11 @@ public class ArrowShooter : MonoBehaviour
         {
             manager.Win(true);
         }
+        else
+        {
+            // Wumpus runs away
+            mobManager.roomWithWumpus = mobManager.RoomsFarAway(1);
+        }
 
         arrowUI.SetActive(false);
     }

@@ -819,7 +819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4438147226124420951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1222,6 +1222,7 @@ MonoBehaviour:
   trivia: {fileID: 4438147226394556849}
   triviaUI: {fileID: 4438147226124420947}
   d: {fileID: 0}
+  correctAnswer: 
   player: {fileID: 0}
 --- !u!114 &4438147226394556849
 MonoBehaviour:
@@ -1235,7 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16077d5a7c2799f49bb7025acbf34ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 4900000, guid: 0d23148801cb5d645938ee6e20ddbee5, type: 3}
+  data: {fileID: 4900000, guid: 99e99491279c7654d949556dbe943979, type: 3}
   questionText: {fileID: 4438147225268870314}
   button1: {fileID: 4438147226261930205}
   button2: {fileID: 4438147226886848744}

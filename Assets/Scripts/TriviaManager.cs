@@ -17,7 +17,7 @@ public class TriviaManager : MonoBehaviour
 
     private int questionsNeeded = 0;
     private int questionsCorrect = 0;
-    private string correctAnswer = "";
+    public string correctAnswer = "";
 
     private bool finished = false;
 
