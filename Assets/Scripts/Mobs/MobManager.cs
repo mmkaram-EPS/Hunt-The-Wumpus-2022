@@ -25,6 +25,8 @@ public class MobManager : MonoBehaviour
 
     public Dialog d;
 
+    public Player p;
+
     void Start()
     {
         PickEverythingRandomly();
@@ -159,9 +161,12 @@ public class MobManager : MonoBehaviour
 
     public void MobInput(bool correct, string type)
     {
+        Debug.Log(correct);
         if (type == "hole" && correct)
         {
+            Destroy(GameObject.Find("Hole(Clone)"));
             roomGen.LoadRoom(0);
+            p.Reset();
         }
         else if (type == "hole" && !correct)
         {

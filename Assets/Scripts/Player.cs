@@ -119,8 +119,8 @@ public class Player : MonoBehaviour{
     // Called when new room is loaded
     public void Reset()
     {
-        transform.position = resetPos;
-        targetPos = resetPos;
+        transform.position = new Vector3(0, -3.18f, 0);;
+        targetPos = new Vector3(0, -3.18f, 0);;
     }
 
     public void Freeze()

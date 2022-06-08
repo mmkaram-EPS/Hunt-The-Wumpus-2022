@@ -475,7 +475,7 @@ PrefabInstance:
     - target: {fileID: 4438147226394556815, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 864813182}
+      objectReference: {fileID: 0}
     - target: {fileID: 4438147226394556815, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
       propertyPath: manager
       value: 
@@ -923,6 +923,7 @@ MonoBehaviour:
   currentRoomID: {fileID: 1415086724}
   gm: {fileID: 1360770999}
   d: {fileID: 595364650}
+  p: {fileID: 864813182}
 --- !u!4 &190345974
 Transform:
   m_ObjectHideFlags: 0
@@ -1908,7 +1909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 1169772732}
   holder: {fileID: 1017976713}
-  player: {fileID: 864813182}
+  player: {fileID: 1322194248, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
 --- !u!1 &641262696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,11 +2200,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 864813175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a88df6efd5b13a4a86bab0e1d65ce5c, type: 3}
+  m_Script: {fileID: 11500000, guid: ff80fe22079d4a34e8d6c5b79407191f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  UI: {fileID: 1272101268}
+  UI: {fileID: 7115570674699030187, guid: d12a0785847392948a38cffdaeec365f, type: 3}
   rb: {fileID: 864813178}
   anim: {fileID: 864813179}
   resetPos: {x: 0, y: 0}
@@ -3211,11 +3212,6 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6428827370601142583, guid: a0866b55ef6d2f74fa903f38bfc06053, type: 3}
   m_PrefabInstance: {fileID: 1087320879}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1272101268 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8310091607620113500, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
-  m_PrefabInstance: {fileID: 160564434321095702}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1291526327
 GameObject:
@@ -5407,7 +5403,7 @@ PrefabInstance:
     - target: {fileID: 2695947718359771248, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 864813182}
+      objectReference: {fileID: 0}
     - target: {fileID: 2695947718359771248, guid: 6ece675bf9762964c9792b8b4d0a2413, type: 3}
       propertyPath: manager
       value: 
