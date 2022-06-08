@@ -52,10 +52,7 @@ public class Shop : MonoBehaviour
     public void ShopOpen()
     {
         shopUI.SetActive(!shopUI.activeSelf);
-        if (shopUI.activeSelf)
-        {
-            player.Reset();
-        }
+        player.Reset();
         player.Freeze();
     }
 }
