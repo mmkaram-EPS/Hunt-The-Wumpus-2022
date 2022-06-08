@@ -124,21 +124,20 @@ public class MobManager : MonoBehaviour
 
     }
 
+    public Mobs holeSpawned;
+    public Mobs batSpawned;
+    public Mobs wumpSpawned;
+
     public void LoadRoomMobs(int id)
     {
         // Pits
         if(roomWithPit1 == id)
         {
-            if(!GameObject.Find("Hole(Clone)")){
-                instantiate.holeinit(holePrefab);
-            }
+            holeSpawned = (Mobs) instantiate.holeinit(holePrefab).GetComponent<Hole>();
         }
         else if (roomWithPit2 == id)
         {
-            if (!GameObject.Find("Hole(Clone)"))
-            {
-                instantiate.holeinit(holePrefab);
-            }
+            holeSpawned = (Mobs)instantiate.holeinit(holePrefab).GetComponent<Hole>();
         }
         // Bats
         else if (roomWithBat1 == id)
@@ -158,15 +157,7 @@ public class MobManager : MonoBehaviour
         // Wumpus
         else if (roomWithWumpus == id)
         {
-            if (GameObject.Find("WumpusPFB(Clone)") == null)
-            {
-                instantiate.holeinit(holePrefab);
-            }
-        }
-        if(Input.GetKeyDown(KeyCode.L)){
-            if(GameObject.Find("WumpusPFB(Clone)") == null){
-                instantiate.wumpinit(wumpusPrefab);
-            }
+            wumpSpawned = (Mobs) instantiate.wumpinit(wumpusPrefab).GetComponent<Wumpus>();
         }
     }
 

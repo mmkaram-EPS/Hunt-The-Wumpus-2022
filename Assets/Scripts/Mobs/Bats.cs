@@ -49,17 +49,19 @@ public override int move(){
     newroom = Random.Range(0,29);
     roomLoader.gameObject.SetActive(true);
     roomLoader.LoadRoom(newroom);
-    Destroy(batPB);
-    if (this.batNo == 1){
+    if (this.batNo == 1)
+    {
         bat1Spawned = false;
-        batLoc1 = rg.rooms[Random.Range(0,29)];
+        batLoc1 = rg.rooms[Random.Range(0, 29)];
     }
-    if (this.batNo == 2){
+    if (this.batNo == 2)
+    {
         bat2Spawned = false;
-        batLoc2 = rg.rooms[Random.Range(0,29)];
+        batLoc2 = rg.rooms[Random.Range(0, 29)];
     }
+    Destroy(batPB);
 
-        Debug.Log("I have moved");
+    Debug.Log("I have moved");
     return -1;
 }
     public override void animate()

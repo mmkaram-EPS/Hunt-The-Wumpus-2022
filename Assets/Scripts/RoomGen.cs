@@ -11,6 +11,7 @@ public class RoomGen : MonoBehaviour
     public Dialog dialog;
     public New_Trivia triviaData;
     public GameObject coinFlipperObject;
+    public Player player;
 
     // Room With Wumpus object
     // This is not working yet, need to still work with Julian
@@ -196,6 +197,8 @@ public class RoomGen : MonoBehaviour
         }
         // We have now started
         hasStarted = true;
+
+        player.Reset();
 
         // Assign the door connections based off of the dictionary
         activeRoom.door1.roomConnectedTo = activeMap()[roomToLoad][0];

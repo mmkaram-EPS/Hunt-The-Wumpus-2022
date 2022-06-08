@@ -33,7 +33,7 @@ public class StartScreen : MonoBehaviour
         }
         if (Input.GetKeyDown("t"))
         {
-            SceneManager.LoadScene("Tutorial Room");
+            SceneManager.LoadScene("Tutorial");
             return;
         }
     }
