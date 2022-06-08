@@ -11,6 +11,7 @@ TagManager:
   - Rooms
   - TriviaManager
   - MobManager
+  - GameManager
   layers:
   - Default
   - TransparentFX
