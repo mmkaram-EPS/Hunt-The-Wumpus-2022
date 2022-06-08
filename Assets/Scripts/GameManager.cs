@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     // 0 coins at the start, 100 to collect
-    public int coins = 2;
+    public int coins = 0;
     // 0 turns at the start
     public int turns = 0;
     // Three arrows by default

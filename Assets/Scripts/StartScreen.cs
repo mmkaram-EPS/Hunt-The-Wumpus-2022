@@ -31,11 +31,6 @@ public class StartScreen : MonoBehaviour
             StartCoroutine("loadStart");
             started = true;
         }
-        if (Input.GetKeyDown("t"))
-        {
-            SceneManager.LoadScene("Tutorial Room");
-            return;
-        }
     }
 
     IEnumerator loadStart()

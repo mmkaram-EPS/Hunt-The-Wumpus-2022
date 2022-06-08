@@ -31,10 +31,11 @@ public class TriviaManager : MonoBehaviour
 
     public void LoadTrivia(int amount, int correctNeeded, TriviaInput target, string type)
     {
-        if (manager.coins == -1)
+        if (manager.coins == 0)
         {
-           manager.Lose();
+            manager.Lose();
         }
+        manager.coins--;
         StartCoroutine(Load(amount, correctNeeded, target, type));
     }
 
@@ -55,7 +56,6 @@ public class TriviaManager : MonoBehaviour
         // Check if enough are correct
         if ((questionsCorrect >= correctNeeded) && (queing))
         {
-            Debug.Log("right");
             target(true, type);
         }
         if ((questionsCorrect <= correctNeeded) && (queing))
@@ -67,7 +67,6 @@ public class TriviaManager : MonoBehaviour
         questionsNeeded = 0;
         questionsCorrect = 0;
         correctAnswer = "";
-        //manager.coins--;
 
         // Set the UI inactive
         triviaUI.SetActive(false);
