@@ -55,7 +55,7 @@ public class Wumpus : Mobs
         
     }
     public override void whenPlayer(Player wp){
-        
+        whenPlayerNew(wp);
     }
     public override void animate()
     {
