@@ -21,6 +21,13 @@ public class GameManager : MonoBehaviour
     public MobManager mobManager;
     public New_Trivia triviaData;
 
+    public int score = 100;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Update()
     {
         string newText = "";
@@ -37,14 +44,17 @@ public class GameManager : MonoBehaviour
     public void Lose()
     {
         // Haha lose code here
-        Debug.Log("LLLLL");
+        // win state W
+        score -= turns;
+        score += coins;
+        score += 5 * arrowCount;
+
         SceneManager.LoadScene("Death");
     }
 
     public void Win(bool wumpus)
     {
         // win state W
-        int score = 100;
         score -= turns;
         score += coins;
         score += 5 * arrowCount;
