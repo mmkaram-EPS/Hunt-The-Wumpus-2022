@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
         newText += "<b>(C)</b>" + coins.ToString();
         newText += " <b>(A)</b>" + arrowCount.ToString();
         counterText.SetText(newText);
+
+        if (arrowCount == 0)
+        {
+            Lose();
+        }
     }
 
     public void Lose()

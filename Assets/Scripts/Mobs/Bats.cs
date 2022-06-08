@@ -60,6 +60,8 @@ public override int move(){
         bat2Spawned = false;
         batLoc2 = rg.rooms[Random.Range(0,29)];
     }
+
+        Debug.Log("I have moved");
     return -1;
 }
     public override void animate()

@@ -18,6 +18,7 @@ public class RoomGen : MonoBehaviour
 
     // Prefab for rooms
     public GameObject[] rooms;
+    List<GameObject> roomsInstantiated = new List<GameObject>();
 
     public GameManager manager;
 
@@ -99,6 +100,15 @@ public class RoomGen : MonoBehaviour
     // Start Function
     void Start()
     {
+
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            GameObject iRoom = Instantiate(rooms[i]);
+            iRoom.SetActive(false);
+
+            roomsInstantiated.Add(iRoom);
+        }
+
         LoadRoom(0);
         //mapType = Random.Range(0, 4);
         currentID = 0;
@@ -122,17 +132,9 @@ public class RoomGen : MonoBehaviour
     {
         // Room(1)(Clone)
         // Find the Room Object if it already exists, else instantiate it
-        Debug.Log(GameObject.Find("Room(" + (roomToLoad + 1) + ")(Clone)"));
 
-        if (GameObject.Find("Room(" + (roomToLoad + 1) + ")(Clone)") != null)
-        {
-            roomObj = GameObject.Find("Room(" + roomToLoad + ")(Clone)");
-        }
-        else
-        {
-            // Get the child of the Instantiated object
-            roomObj = Instantiate(rooms[roomToLoad]).transform.GetChild(0).gameObject;
-        }
+        roomObj = roomsInstantiated[roomToLoad].transform.GetChild(0).gameObject;
+        roomObj.transform.parent.gameObject.SetActive(true);
 
         // Get the room child of the Instantiated object and store the Room class
         Room room = roomObj.GetComponent<Room>();

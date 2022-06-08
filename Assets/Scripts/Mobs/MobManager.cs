@@ -36,7 +36,6 @@ public class MobManager : MonoBehaviour
 
 
         LoadRoomMobs(currentRoomID.currentID);  
-        gm = GetComponent<GameManager>();
     }
 
     void CheckNearby()
@@ -164,7 +163,7 @@ public class MobManager : MonoBehaviour
         }
         else if (type == "wumpus" && correct)
         {
-            gm.Win(true);
+            // Don't win here anymore
         }
         else if (type == "wumpus" && !correct)
         {
