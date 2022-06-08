@@ -45,11 +45,11 @@ public class Wumpus : Mobs
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.name == "Player"){
             whenPlayer(wp);
-            move();
         }
     }
-    public override void whenPlayer(Player p){
+    public override void whenPlayer(Player wp){
         tr.LoadTrivia(5, 3, m.MobInput, "wumpus");
+        move();
         
     }
     public override void animate()
