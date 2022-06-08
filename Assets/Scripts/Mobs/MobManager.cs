@@ -119,6 +119,12 @@ public class MobManager : MonoBehaviour
                 instantiate.holeinit(holePrefab);
             }
         }
+        if(Input.GetKeyDown(KeyCode.L)){
+            if(GameObject.Find("Hole(Clone)") == null){
+                Debug.Log("annika wants to put me down");
+                instantiate.holeinit(holePrefab);
+            }            
+        }
         else if (roomWithPit2 == id)
         {
             if (GameObject.Find("Hole(Clone)") == null)

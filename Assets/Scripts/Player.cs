@@ -18,17 +18,6 @@ public class Player : MonoBehaviour{
 
     public Seeker seeker;
 
-    //wumpus spawn
-    //im gonna move this to a separate script later if needed
-    /*
-    public Wumpus w;
-    public GameObject r;
-    public GameObject wumpus;
-    public GameObject bat;
-    public GameObject hole;
-    public Instantiate i;
-    */
-
     public Vector2 resetPos;
 
     public bool isFrozen = false;
@@ -36,7 +25,7 @@ public class Player : MonoBehaviour{
     void Start(){
         UI.SetActive(!gameObject.activeSelf);
         rb = GetComponent<Rigidbody2D>();
-        //wumpus spawn
+        this.transform.position= new Vector3(0f, -3.18f, 0f);
     }
 
     Vector2 lastFrame;
@@ -54,7 +43,7 @@ public class Player : MonoBehaviour{
         }
 
         // AI new code
-        seeker.StartPath(transform.position, targetPos);
+//        seeker.StartPath(transform.position, targetPos);
 
         Vector2 animPos = new Vector2(lastFrame.x - transform.position.x, lastFrame.y - transform.position.y);
 
