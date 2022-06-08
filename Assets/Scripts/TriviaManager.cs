@@ -32,7 +32,7 @@ public class TriviaManager : MonoBehaviour
     {
         if (manager.coins == 0)
         {
-            manager.Lose();
+           manager.Lose();
         }
         manager.coins--;
         StartCoroutine(Load(amount, correctNeeded, target, type));

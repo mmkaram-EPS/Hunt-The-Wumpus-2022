@@ -48,9 +48,8 @@ MonoBehaviour:
   holePB: {fileID: 640223309724096655}
   playerDied: {fileID: 2274319318433575868, guid: dcfd2ba1d7f741c43a792bba9d21b0ac, type: 3}
   p: {fileID: 2913596133405942130, guid: 16906f4c0b4891e448c3c34e10a17a35, type: 3}
-  triviaScreen: {fileID: 4438147226394556812, guid: 6fc5316c5e38cbd4389221f52d97b1c6, type: 3}
-  triviaActive: 0
   t: {fileID: 0}
+  m: {fileID: 0}
 --- !u!212 &5100734910596329807
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126,5 +125,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.57, y: 3.76}
+  m_Size: {x: 11, y: 11}
   m_EdgeRadius: 0
