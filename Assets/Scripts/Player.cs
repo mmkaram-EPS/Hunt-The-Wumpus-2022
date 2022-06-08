@@ -43,17 +43,6 @@ public class Player : MonoBehaviour{
         {
             return;
         }
-        
-        /*
-        //debug
-        // Debug.Log(UIActive);
-        r = GameObject.Find("Room");
-        if(r = w.wumpLoc){
-            i.wumpinit(wumpus);
-           // wumpus = GameObject.Find("WumpusPFB(Clone)");
-            wumpus.SetActive(true);
-        }
-        */
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Movement
@@ -80,23 +69,6 @@ public class Player : MonoBehaviour{
 
             }
         }
-        /*
-        if(Input.GetKeyDown(KeyCode.P)){
-            i.wumpinit(wumpus);
-           // wumpus = GameObject.Find("WumpusPFB(Clone)");
-            wumpus.SetActive(true);
-            //Debug.Log(wumpus.activeSelf);
-        }
-        if(Input.GetKeyDown(KeyCode.L)){
-           i.batinit(bat);
-           bat.SetActive(true);
-           Debug.Log(wumpus.activeSelf);
-        }
-        if(Input.GetKeyDown(KeyCode.H)){
-            i.holeinit(hole);
-            hole.SetActive(true);
-        }
-        */
         
     }
 
