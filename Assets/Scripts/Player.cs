@@ -124,7 +124,8 @@ public class Player : MonoBehaviour{
         transform.position = new Vector3(0, -3.18f, 0);;
         targetPos = new Vector3(0, -3.18f, 0);;
         */
-        this.transform.position = new Vector3(0, -3.18f, 0);
+        targetPos = new Vector2(0, 0);
+        this.transform.position = new Vector2(0, 0);
     }
 
     public void Freeze()
