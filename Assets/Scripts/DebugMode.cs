@@ -45,7 +45,6 @@ public class DebugMode : MonoBehaviour
             holeButton.SetActive(false);
             noteText.SetActive(false);
         }
-        Debug.Log(rm.currentID);
     }
 
     public void EnterPasscode(TMP_InputField code)
